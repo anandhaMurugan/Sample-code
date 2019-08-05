@@ -1,0 +1,6 @@
+﻿[
+    {
+        "title": "Vi er opptatt av at dine helseopplysninger er sikret så godt som overhodet mulig",
+        "description": "Vi forholder oss alltid til de oppdaterte retningslinjene fra Direktoratet for e-helse gjennom Norm for informasjonssikkerhet. Videre sørger vi for at våre tjenester er i samsvar med det nye personverndirektivet (GDPR) og til enhver tid gjeldende nasjonal rett på dette området. \n\nVi har valgt å lagre dine data trygt på skybaserte Azure-servere hos Microsoft i Europa, selv om det oppleves som om de ligger på din telefon. Det er dermed ingen risiko for at helsedata går tapt, selv om telefonen din skulle bli ødelagt eller forsvinne.\n\nVi bruker den aller siste krypteringsteknologien. Det innebærer at dataene krypteres hele veien mellom din telefon, våre servere og legen din via Norsk Helsenett.\n\nNår du logger inn i appen skjer det etter såkalt nivå 4-sikkerhet med BankID.\n\nDet er kun du som bruker, og de du velger å dele helsedata med gjennom Helseboka, som vil ha tilgang til dine helsedata.\n\nI henhold til personverndirektivet kan du trekke tilbake din BankID-innlogging og samtykket til at vi behandler dataene dine. Da vil vi slette dine helsedata etter 30 dager."
+    }   
+]

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/selectionBox"
+        style="@style/checkbox_style"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" />
+    <TextView
+        android:id="@+id/medicineName"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="#3F3F3F"
+        android:fontFamily="@font/avenir_next"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/selectionBox"
+        android:layout_marginRight="10dp" />
+    <View
+        android:id="@+id/separator"
+        style="@style/separator_listview_style"
+        android:layout_below="@id/medicineName" />
+</RelativeLayout>

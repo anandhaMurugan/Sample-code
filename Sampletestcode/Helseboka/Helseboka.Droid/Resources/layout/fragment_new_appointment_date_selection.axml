@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/helpButton"
+        android:layout_width="@dimen/help_button_width"
+        android:layout_height="@dimen/help_button_height"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/help_button_margin_top"
+        android:layout_marginRight="@dimen/help_button_margin_right"
+        android:src="@drawable/help_icon" />
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/helpButton"
+        app:layout_constraintBottom_toBottomOf="@id/helpButton"
+        android:layout_marginStart="25dp"
+        android:src="@drawable/back_icon"
+        android:scaleType="fitStart" />
+    <TextView
+        android:id="@+id/pageTitle"
+        style="@style/page_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="5dp"
+        android:text="@string/appointment_dateselection_title"
+        app:layout_constraintStart_toStartOf="@id/back"
+        app:layout_constraintEnd_toEndOf="@id/helpButton"
+        app:layout_constraintTop_toBottomOf="@id/helpButton" />
+    <Button
+        android:id="@+id/nextButton"
+        style="@style/button_action_large"
+        android:text="@string/general_view_next"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/pageTitle"
+        app:layout_constraintBottom_toTopOf="@id/nextButton">
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.constraint.Guideline
+                android:id="@+id/startMargin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_begin="25dp" 
+                android:orientation="vertical" />
+            <android.support.constraint.Guideline
+                android:id="@+id/endMargin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_end="@dimen/help_button_margin_right"
+                android:orientation="vertical" />
+            <TextView
+                android:id="@+id/pageSubTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/avenir_next"
+                android:fontWeight="500"
+                android:text="@string/appointment_dateselection_subtitle"
+                android:textColor="#c13f3f3f"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                app:layout_constraintStart_toStartOf="@id/startMargin"
+                app:layout_constraintEnd_toEndOf="@id/endMargin" />
+            <LinearLayout
+                android:id="@+id/weekViewContainer"
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                app:layout_constraintStart_toStartOf="@id/startMargin"
+                app:layout_constraintEnd_toEndOf="@id/endMargin"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/pageSubTitle" />
+            <ImageView
+                android:id="@+id/separator"
+                style="@style/separator_shadow_style"
+                android:layout_marginTop="30dp"
+                app:layout_constraintTop_toBottomOf="@id/weekViewContainer" />
+            <ImageView
+                android:id="@+id/morningSelection"
+                style="@style/checkbox_style"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@id/startMargin"
+                app:layout_constraintTop_toBottomOf="@id/separator" />
+            <TextView
+                android:id="@+id/morningSelectionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/avenir_next"
+                android:fontWeight="500"
+                android:text="@string/appointment_dateselection_earlyday_label"
+                android:textColor="#3f3f3f"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                android:layout_marginStart="10dp"
+                app:layout_constraintTop_toTopOf="@id/morningSelection"
+                app:layout_constraintBottom_toBottomOf="@id/morningSelection"
+                app:layout_constraintStart_toEndOf="@id/morningSelection" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/avenir_next"
+                android:fontWeight="500"
+                android:text="@string/appointment_dateselection_earlyday_value"
+                android:textColor="#a9a9a9"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBaseline_toBaselineOf="@id/morningSelectionLabel"
+                app:layout_constraintEnd_toEndOf="@id/endMargin" />
+            <View
+                android:id="@+id/firstSeparator"
+                style="@style/separator_listview_style"
+                android:layout_width="0dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/morningSelection"
+                app:layout_constraintStart_toStartOf="@id/startMargin"
+                app:layout_constraintEnd_toEndOf="@id/endMargin" />
+            <ImageView
+                android:id="@+id/middaySelection"
+                style="@style/checkbox_style"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@id/startMargin"
+                app:layout_constraintTop_toBottomOf="@id/firstSeparator" />
+            <TextView
+                android:id="@+id/middaySelectionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/avenir_next"
+                android:fontWeight="500"
+                android:text="@string/appointment_dateselection_midday_label"
+                android:textColor="#3f3f3f"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                android:layout_marginStart="10dp"
+                app:layout_constraintTop_toTopOf="@id/middaySelection"
+                app:layout_constraintBottom_toBottomOf="@id/middaySelection"
+                app:layout_constraintStart_toEndOf="@id/middaySelection" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/avenir_next"
+                android:fontWeight="500"
+                android:text="@string/appointment_dateselection_midday_value"
+                android:textColor="#a9a9a9"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBaseline_toBaselineOf="@id/middaySelectionLabel"
+                app:layout_constraintEnd_toEndOf="@id/endMargin" />
+            <View
+                android:id="@+id/secondSeparator"
+                style="@style/separator_listview_style"
+                android:layout_width="0dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/middaySelection"
+                app:layout_constraintStart_toStartOf="@id/startMargin"
+                app:layout_constraintEnd_toEndOf="@id/endMargin" />
+            <ImageView
+                android:id="@+id/afternoonSelection"
+                style="@style/checkbox_style"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@id/startMargin"
+                app:layout_constraintTop_toBottomOf="@id/secondSeparator" />
+            <TextView
+                android:id="@+id/afternoonSelectionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/avenir_next"
+                android:fontWeight="500"
+                android:text="@string/appointment_dateselection_lateday_label"
+                android:textColor="#3f3f3f"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                android:layout_marginStart="10dp"
+                app:layout_constraintTop_toTopOf="@id/afternoonSelection"
+                app:layout_constraintBottom_toBottomOf="@id/afternoonSelection"
+                app:layout_constraintStart_toEndOf="@id/afternoonSelection" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/avenir_next"
+                android:fontWeight="500"
+                android:text="@string/appointment_dateselection_lateday_value"
+                android:textColor="#a9a9a9"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBaseline_toBaselineOf="@id/afternoonSelectionLabel"
+                app:layout_constraintEnd_toEndOf="@id/endMargin" />
+            <View
+                android:id="@+id/thirdSeparator"
+                style="@style/separator_listview_style"
+                android:layout_width="0dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/afternoonSelection"
+                app:layout_constraintStart_toStartOf="@id/startMargin"
+                app:layout_constraintEnd_toEndOf="@id/endMargin" />
+            <TextView
+                android:id="@+id/timeSelectionHelpText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/avenir_next"
+                android:fontWeight="500"
+                android:text="@string/appointment_dateselection_help"
+                android:textColor="#a9a9a9"
+                android:textSize="12sp"
+                android:lineSpacingExtra="2dp"
+                android:textStyle="normal"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/thirdSeparator"
+                app:layout_constraintStart_toStartOf="@id/startMargin"
+                app:layout_constraintEnd_toEndOf="@id/endMargin" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                app:layout_constraintTop_toBottomOf="@id/timeSelectionHelpText" />
+            
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

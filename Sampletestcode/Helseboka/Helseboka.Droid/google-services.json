@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "185779124735",
+    "firebase_url": "https://helseboka-9fde2.firebaseio.com",
+    "project_id": "helseboka-9fde2",
+    "storage_bucket": "helseboka-9fde2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:185779124735:android:28b5406ca15ccc53",
+        "android_client_info": {
+          "package_name": "com.helseapps.helseboka"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "185779124735-av0fn12oejabou10m64ejua2f9ktvthu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5cR19iqsaMB0YkBzW1ijEwODrqXKgsbs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

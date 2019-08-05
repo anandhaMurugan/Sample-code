@@ -1,0 +1,339 @@
+﻿<resources>
+     <style name="Theme.HelsebokaTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:colorPrimary">#FFFFFF</item>
+        <item name="android:colorPrimaryDark">@color/application_theme_color</item>
+        <item name="android:colorAccent">#03B5BD</item>
+        <item name="android:fontFamily">@font/avenir_next</item>
+    </style>
+    
+    <style name="button_action_large">
+        <!--AvenirNext-Medium - 17-->
+        <item name="android:fontFamily">@font/avenir_next</item>
+        <item name="android:fontWeight">500</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:background">@drawable/selector_large_button_background</item>
+        <item name="android:layout_width">@dimen/button_large_width</item>
+        <item name="android:layout_height">@dimen/button_large_height</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/selector_large_button_text_color</item>
+    </style>
+
+    <style name="button_action_medium">
+        <!--AvenirNext-Medium - 17-->
+        <item name="android:fontFamily">@font/avenir_next</item>
+        <item name="android:fontWeight">500</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:background">@drawable/selector_medium_button_background</item>
+        <item name="android:layout_width">@dimen/button_medium_width</item>
+        <item name="android:layout_height">@dimen/button_medium_height</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/selector_large_button_text_color</item>
+    </style>
+
+    <style name="checkbox_style">
+        <item name="android:src">@drawable/selector_checkbox_background</item>
+        <item name="android:layout_width">35dp</item>
+        <item name="android:layout_height">35dp</item>
+        <item name="android:scaleType">centerInside</item>s
+        <item name="android:adjustViewBounds">true</item>
+    </style>
+  
+    <style name="button_action_small">
+        <!--AvenirNext-Medium - 17-->
+        <item name="android:fontFamily">@font/avenir_next</item>
+        <item name="android:fontWeight">500</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:background">@drawable/selector_small_button_background</item>
+        <item name="android:layout_width">@dimen/button_small_width</item>
+        <item name="android:layout_height">@dimen/button_small_height</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/selector_large_button_text_color</item>
+    </style>
+
+    <style name="text_help_login">
+        <!--AvenirNext-Medium 16pt-->
+        <item name="android:textColor">@color/login_help_text</item>
+        <item name="android:fontFamily">@font/avenir_next</item>
+        <item name="android:fontWeight">500</item>
+        <item name="android:textSize">16sp</item>  
+    </style>
+
+    <style name="error_label">
+        <!--AvenirNext-Medium 16pt-->
+        <item name="android:textColor">@color/error_text</item>
+        <item name="android:fontFamily">@font/avenir_next</item>
+        <item name="android:fontWeight">500</item>
+        <item name="android:textSize">16sp</item>        
+    </style>
+
+    <style name="text_button">
+        <!--AvenirNext-Medium 16pt-->
+        <item name="android:textColor">@color/login_help_text</item>
+        <item name="android:background">@null</item>           
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/avenir_next</item>
+        <item name="android:fontWeight">500</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="startup_subtitle">
+        <!--AvenirNext-Medium 16pt-->
+        <item name="android:textColor">@color/startup_subtitle</item>       
+        <item name="android:fontFamily">@font/avenir_next</item>
+        <item name="android:fontWeight">500</item>
+        <item name="android:textSize">16sp</item>        
+    </style>
+
+    <style name="page_title">
+        <!--AvenirNext-Bold 24pt-->
+        <item name="android:textColor">@color/page_title</item>
+        <item name="android:fontFamily">@font/avenir_next</item>
+        <item name="android:fontWeight">700</item>
+        <item name="android:textSize">24sp</item>  
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="modal_help_title">
+        <!--AvenirNext-Bold 17pt-->
+        <item name="android:textColor">@color/modal_title_color</item>
+        <item name="android:fontFamily">@font/avenir_next</item>
+        <item name="android:fontWeight">700</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="modal_help_description">
+        <!--AvenirNext-Regular 17pt-->
+        <item name="android:textColor">@color/page_title</item>
+        <item name="android:fontFamily">@font/avenir_next</item>
+        <item name="android:fontWeight">400</item>
+        <item name="android:textSize">17sp</item>        
+    </style>
+
+    <style name="description_text_style">
+        <!--AvenirNext-Regular 14pt-->
+        <item name="android:textColor">@color/description_text_color</item>
+        <item name="android:fontFamily">@font/avenir_next</item>
+        <item name="android:fontWeight">400</item>
+        <item name="android:textSize">14sp</item> 
+        <item name="android:lineSpacingExtra">10dp</item>
+    </style>
+
+    <style name="help_title_style">
+        <!--AvenirNext-bold 16pt-->
+        <item name="android:textColor">@color/description_text_color</item>
+        <item name="android:fontFamily">@font/avenir_next</item>
+        <item name="android:fontWeight">700</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="home_chat_title_style">
+        <!--AvenirNext-bold 16pt-->
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:fontFamily">@font/avenir_next</item>
+        <item name="android:fontWeight">700</item>
+        <item name="android:textSize">16sp</item>    
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="home_chat_subtitle_style">
+        <!--AvenirNext-midium 14pt-->
+        <item name="android:textColor">@color/home_chat_description_color</item>
+        <item name="android:fontFamily">@font/avenir_next</item>
+        <item name="android:fontWeight">500</item>
+        <item name="android:textSize">14sp</item>        
+    </style>
+
+    <style name="chat_chatview_title_style">
+        <!--AvenirNext-midium 14pt-->
+        <item name="android:textColor">@color/page_title</item>
+        <item name="android:fontFamily">@font/avenir_next</item>
+        <item name="android:fontWeight">500</item>
+        <item name="android:textSize">14sp</item>        
+    </style>
+
+    <style name="chat_chatview_sent_message_style">
+        <!--AvenirNext-midium 15pt-->
+        <item name="android:textColor">@color/chat_chatview_sent_message_text_color</item>
+        <item name="android:fontFamily">@font/avenir_next</item>
+        <item name="android:fontWeight">500</item>
+        <item name="android:textSize">15sp</item> 
+    </style>
+
+    <style name="terms_paragraph_style">
+      <!--AvenirNext-midium 15pt-->
+      <item name="android:textColor">#6b6b6b</item>
+      <item name="android:fontFamily">@font/avenir_next</item>
+      <item name="android:fontWeight">500</item>
+      <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="terms_switchboxtext_style">
+      <!--AvenirNext-midium 15pt-->
+      <item name="android:textColor">#000000</item>
+      <item name="android:fontFamily">@font/avenir_next</item>
+      <item name="android:fontWeight">500</item>
+      <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="chat_chatview_received_message_style">
+        <!--AvenirNext-midium 15pt-->
+        <item name="android:textColor">@color/chat_chatview_received_message_text_color</item>
+        <item name="android:fontFamily">@font/avenir_next</item>
+        <item name="android:fontWeight">500</item>
+        <item name="android:textSize">15sp</item>  
+    </style>
+
+    <style name="chat_newchat_nodata_style">
+        <!--AvenirNext-midium 15pt-->
+        <item name="android:textColor">#964D4D4D</item>
+        <item name="android:fontFamily">@font/avenir_next</item>
+        <item name="android:fontWeight">500</item>
+        <item name="android:textSize">15sp</item>  
+    </style>
+
+    <style name="chat_newchat_label_style">
+        <!--AvenirNext-midium 15pt-->
+        <item name="android:textColor">#121212</item>
+        <item name="android:fontFamily">@font/avenir_next</item>
+        <item name="android:fontWeight">500</item>
+        <item name="android:textSize">15sp</item>  
+    </style>
+
+    <style name="chat_chatview_message_date_style">
+        <!--AvenirNext-midium 12pt-->
+        <item name="android:textColor">@color/chat_chatview_date_text_color</item>
+        <item name="android:fontFamily">@font/avenir_next</item>
+        <item name="android:fontWeight">500</item>
+        <item name="android:textSize">12sp</item>  
+    </style>
+
+    <style name="medicine_search_text_style">
+        <item name="android:background">@null</item>
+        <item name="android:textColorHint">#3F3F3F</item>
+        <item name="android:textColor">@color/page_title</item>
+        <item name="android:fontFamily">@font/avenir_next</item>
+        <item name="android:fontWeight">700</item>
+        <item name="android:textSize">16sp</item> 
+        <item name="android:textStyle">bold</item>
+        <item name="android:inputType">textNoSuggestions</item>
+    </style>
+
+    <style name="home_medicine_name_style">
+        <!--AvenirNext-bold 16pt-->
+        <item name="android:textColor">@color/startup_subtitle</item>
+        <item name="android:fontFamily">@font/avenir_next</item>
+        <item name="android:fontWeight">700</item>
+        <item name="android:textSize">16sp</item>    
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="dialog_title_style">
+        <!--AvenirNext-bold 16pt-->
+        <item name="android:textColor">#008D8D</item>
+        <item name="android:fontFamily">@font/avenir_next</item>
+        <item name="android:fontWeight">700</item>
+        <item name="android:textSize">16sp</item>    
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="home_medicine_strength_style">
+        <!--AvenirNext-regular 14pt-->
+        <item name="android:textColor">@color/startup_subtitle</item>
+        <item name="android:fontFamily">@font/avenir_next</item>
+        <item name="android:fontWeight">400</item>
+        <item name="android:textSize">14sp</item>    
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="dialog_loading_style" parent="@android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="separator_listview_style">
+        <item name="android:background">@color/separator_fill_color</item>
+        <item name="android:layout_width">match_parent</item>   
+        <item name="android:layout_height">1dp</item>
+    </style>
+
+    <style name="home_chat_separator_style">
+        <item name="android:background">@color/home_chat_separator_color</item>
+        <item name="android:layout_width">match_parent</item>   
+        <item name="android:layout_height">1dp</item>
+    </style>
+
+    <style name="separator_shadow_style">
+        <item name="android:layout_height">8dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:src">@drawable/shadow_separator</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+    
+    <style name="nodata_selectable_view_style">
+        <!--AvenirNext-Medium 16pt-->
+        <item name="android:background">@drawable/shape_selectable_nodata_background</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:minHeight">50dp</item>
+        <item name="android:minWidth">250dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:textColor">@color/startup_subtitle</item>
+        <item name="android:fontFamily">@font/avenir_next</item>
+        <item name="android:fontWeight">500</item>
+        <item name="android:textSize">16sp</item>   
+    </style>
+
+    <style name="withdata_selectable_view_style">
+        <!--AvenirNext-Bold 16pt-->
+        <item name="android:background">@drawable/shape_selectable_active_background</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:minHeight">50dp</item>
+        <item name="android:minWidth">250dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:textColor">@color/page_title</item>
+        <item name="android:fontFamily">@font/avenir_next</item>
+        <item name="android:fontWeight">700</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="profile_label_style">
+        <item name="android:fontFamily">@font/avenir_next</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/page_title</item>
+        <item name="android:fontWeight">500</item>
+    </style>
+
+    <style name="profile_value_style">
+        <item name="android:fontFamily">@font/avenir_next</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/page_title</item>
+        <item name="android:fontWeight">700</item>
+    </style>
+
+    <style name="MobilePhone_Number_label_style">
+        <item name="android:fontFamily">@font/avenir_next</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/application_theme_color</item>
+        <item name="android:fontWeight">700</item>
+    </style>
+    
+</resources>

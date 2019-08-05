@@ -1,0 +1,14 @@
+﻿[
+  {
+    "title": "Hva kan jeg gjøre her?",
+    "description": "Her kan du angi hvilke ukedager og tidsrom på dagen som passer best for deg. Legekontoret foreslår time basert på dette, men kan også velge å gi deg time på et annet tidspunkt hvis ønsket ditt ikke kan imøtekommes innen én til to uker. \n\nTrykk «neste» uten å angi tidsrom dersom du vil at legekontoret skal finne første mulige time uavhengig av dine ønsker. Dette kan gi kortere ventetid.\n\nDu kan endre eller avbestille en time som ikke passer."
+  },
+  {
+    "title": "Når får jeg time?",
+    "description": "Ventetid varierer fra legekontor til legekontor. Det er normalt å måtte vente én til to uker på en vanlig legetime."
+  },
+  {
+    "title": "Hva gjør jeg ved behov for øyeblikkelig hjelp?",
+    "description": "Ikke bruk denne tjenesten ved akutt sykdom og behov for øyeblikkelig hjelp. Dersom du trenger rask helsehjelp på dagtid, vennligst ring legekontoret. Utenfor legekontorets åpningstider, ring legevakt for øyeblikkelig hjelp hele døgnet. Ved alvorlig akutt sykdom eller skade, ring nødnummer 113."
+  }
+]

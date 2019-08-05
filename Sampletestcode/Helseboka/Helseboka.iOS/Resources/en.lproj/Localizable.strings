@@ -1,0 +1,107 @@
+﻿"Today" = "Today";
+"Tomorrow" = "Tomorrow";
+"Yesterday" = "Yesterday";
+"Monday" = "Monday";
+"Tuesday" = "Tuesday";
+"Wednesday" = "Wednesday";
+"Thursday" = "Thursday";
+"Friday" = "Friday";
+"Saturday" = "Saturday";
+"Sunday" = "Sunday";
+
+"Dashboard.Appointment.Title" = "You have an appointment with";
+"Dashboard.Appointment.NoData" = "I have no important messages for you";
+"Dashboard.Alarm.Confirmation.Title" = "Confirmation";
+"Dashboard.Alarm.Confirmation.Message" = "I have taken this medicine now.";
+"Dashboard.Alarm.Confirmation.Yes" = "Confirm";
+
+"Chat.Dialog.Title.Doctor" = "Doctor";
+"Chat.Dialog.Title.Office" = "Office";
+"Chat.NewDialog.Placeholder" = "Your question";
+
+"Home.TabBar.Chat.Title" = "CHAT";
+"Home.TabBar.Appointment.Title" = "APPOINTMENT";
+"Home.TabBar.Medicine.Title" = "MEDICINES";
+"Home.TabBar.Profile.Title" = "PROFILE";
+"Home.TabBar.Dashboard.Title" = "NEWS";
+
+"Appointment.Home.Pending.Title" = "Not confirmed yet";
+"Appointment.Home.Cancelled.Title" = "Cancelled";
+"Appointment.Details.Symptom.Title" = "Symptom";
+"Appointment.New.SelectTime.HelpText" = "In case of urgent healthcare during the day, please call the doctor's office on telephone";
+"Appointment.Details.Feedback.Button" = "Cancel";
+"Appointment.Home.Header.Upcomming" = "Upcoming appointments";
+"Appointment.Home.Header.Previous" = "Previous appointments";
+"Appointment.New.SelectTime.Monday" = "Man";
+"Appointment.New.SelectTime.Tuesday" = "Tue";
+"Appointment.New.SelectTime.Wednesday" = "Wed";
+"Appointment.New.SelectTime.Thursday" = "Thu";
+"Appointment.New.SelectTime.Friday" = "Fri";
+"Appointment.Confirmation.NotEnabled.Title" = "The appointment booking request has not been sent.";
+
+"Medicine.Reminder.Monday" = "M";
+"Medicine.Reminder.Tuesday" = "T";
+"Medicine.Reminder.Wednesday" = "W";
+"Medicine.Reminder.Thursday" = "T";
+"Medicine.Reminder.Friday" = "F";
+"Medicine.Reminder.Saturday" = "S";
+"Medicine.Reminder.Sunday" = "S";
+"Medicine.Reminder.EndDate.Undefined" = "undefined";
+"Medicine.Reminder.Alert.NoMedicine" = "You don't have any medicine into your list. Please add them first";
+"Medicine.Reminder.SelectFrequency.Title" = "Choose time";
+"Medicine.Reminder.SelectStartDate" = "Choose start date";
+"Medicine.Reminder.SelectEndDate" = "Choose end date";
+"Medicine.Overview.AlarmLabel.Add.Title" = "Add reminder";
+"Medicine.Overview.AlarmLabel.Edit.Title" = "Edit reminder";
+"Medicine.Overview.Monday" = "M";
+"Medicine.Overview.Tuesday" = "Tu";
+"Medicine.Overview.Wednesday" = "W";
+"Medicine.Overview.Thursday" = "Th";
+"Medicine.Overview.Friday" = "F";
+"Medicine.Overview.Saturday" = "Sa";
+"Medicine.Overview.Sunday" = "Su";
+"Medicine.Home.Button.RenewPrescription" = "Renew prescription";
+"Medicine.Home.HelpText" = "Here you can search and get an overview of the medicines you use, get help to take medicine on time, and ask your doctor to get a prescription for your regular medication.";
+
+"Profile.Doctor.Details.Mobile" = "Tel";
+"Profile.Home.PersonalSettings" = "Personal details";
+"Profile.Home.MedicalCenter" = "Doctor's office";
+"Profile.Home.Doctor" = "Doctor";
+"Profile.Home.ChangePIN" = "PIN code";
+"Profile.Home.GDPR" = "Privacy and consent";
+"Profile.Home.Logout" = "Log out";
+"Profile.Home.DeleteProfile" = "Withdraw consent and delete profile";
+"Profile.Home.Feedback" = "Feedback";
+"Profile.Home.Change" = "Change";
+"Profile.PersonalSettings.DOB" = "Date of birth";
+"Profile.PersonalSettings.Gender" = "Gender";
+"Profile.PersonalSettings.Address" = "Address";
+"Profile.PersonalSettings.Telefone" = "Telephone";
+"Profile.PersonalSettings.ErrorMessage" = "Enter your mobile number";
+"Profile.PersonalSettings.ErrorMessageText" = "Please enter valid phone number";
+
+"Login.Biometric.HelpText" = "Login";
+"Login.Error.WrongPIN" = "Wrong PIN. Please try again";
+"Login.FaceID.Button" = "Face ID";
+"Login.TouchId.Button" = "Touch ID";
+"Login.Biometric.Registration.HelpText" = "Biometric registration";
+"Login.PIN.New.Header" = "Enter new PIN";
+"Login.PIN.Confirm" = "Confirm PIN";
+
+"General.Error.API.Generic" = "Something went wrong. Please try again";
+"General.Error.API.Timeout" = "Server takes too long to respond. Please try after sometime";
+"General.View.Loading" = "Please wait...";
+"General.View.TimePrefix" = "";
+"General.View.Next" = "Next";
+"General.View.Cancel" = "Cancel";
+"General.Push.Reminder.Title" = "Reminder to take medicine";
+
+"Update.Title.Text"="Hi";
+"Update.UpdateButton.Text"="Update";
+"Update.CloseButton.Text"="Close";
+"Update.NotNowButton.Text"="Not Now";
+
+"Terms.Page.Title" = "Declaration Of Consent";
+"Terms.ContinueButton.Text" = "Continue";
+"Terms.ShowMore.Text" = "Show More";
+"Terms.ShowLess.Text" = "Show Less";

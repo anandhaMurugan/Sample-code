@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/continueText"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        android:layout_margin="30dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:fontFamily="@font/avenir_next"
+        android:fontWeight="500"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:background="@drawable/large_button_disabled_background"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true" />
+    <LinearLayout
+        android:id="@+id/tabDots"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/continueText">
+        <View
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:tag="0"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/selector_tab_dot" />
+        <View
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:tag="1"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/selector_tab_dot" />
+        <View
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:tag="2"
+            android:background="@drawable/selector_tab_dot" />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        android:layout_above="@id/tabDots">
+        
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        
+        <ImageView
+            android:id="@+id/leftArrow"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/dashboard_left_arrow"
+            android:scaleType="centerInside"
+            android:layout_centerVertical="true" />
+        <ImageView
+            android:id="@+id/rightArrow"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/dashboard_right_arrow"
+            android:scaleType="centerInside"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+</RelativeLayout>

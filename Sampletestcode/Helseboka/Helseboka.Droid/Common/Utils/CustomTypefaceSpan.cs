@@ -1,0 +1,55 @@
+﻿using System;
+using Android.Graphics;
+using Android.Text;
+using Android.Text.Style;
+
+namespace Helseboka.Droid.Common.Utils
+{
+    public class CustomTypefaceSpan : TypefaceSpan
+    {
+        private Typeface newType;
+
+        public CustomTypefaceSpan(String family, Typeface typeFace) : base(family)
+        {
+            this.newType = typeFace;
+        }
+
+        public override void UpdateDrawState(TextPaint ds)
+        {
+            base.UpdateDrawState(ds);
+            applyCustomTypeFace(ds, newType);
+        }
+
+        public override void UpdateMeasureState(TextPaint paint)
+        {
+            base.UpdateMeasureState(paint);
+
+            applyCustomTypeFace(paint, newType);
+        }
+
+        private static void applyCustomTypeFace(Paint paint, Typeface tf)
+        {
+            TypefaceStyle oldStyle;
+            Typeface old = paint.Typeface;
+            if (old == null)
+            {
+                oldStyle = 0;
+            }
+            else
+            {
+                oldStyle = old.Style;
+            }
+
+            TypefaceStyle fake = oldStyle & ~tf.Style;
+            if ((fake & TypefaceStyle.Bold) != 0)
+            {
+                paint.FakeBoldText = true;
+            }
+
+            if ((fake & TypefaceStyle.Italic) != 0)
+            {
+                paint.TextSkewX = (-0.25f);
+            }
+        }
+    }
+}

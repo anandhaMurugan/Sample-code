@@ -1,0 +1,6 @@
+﻿[
+    {
+        "title": "We are concerned that your health information is secured as much as possible",
+        "description": "We always deal with the updated guidelines of the e-Health Directorate through the Norm for Information Security. In addition, we ensure that our services are in accordance with the new Personal Protection Directive (GDPR) and current national law in this area.\n\nWe have chosen to safely store your data on cloud-based Azure servers at Microsoft in Europe, even though they appear to be on your phone. Therefor there is no risk that health data will be lost, even if your phone is getting corrupted or disappeared.\n\nWe use the latest encryption technology. This means that the data is encrypted all the way between your phone, our servers and your doctor via the Norwegian Health Center.\n\nWhen you log in to the app, it happens after the Level 4 security with BankID.\n\nYou only use, and those you choose to share health data with through the Health Book, which will have access to your health data.\n\nIn accordance with the GDPR, you can withdraw your BankID login and consent to process your data. Then we will delete your health data after 30 days."
+    }
+]

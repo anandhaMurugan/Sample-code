@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DoctorSelectionSubtitleEnabled" xml:space="preserve">
+    <value>Du har valgt følgende lege å kommunisere med. Trykk på legens navn for å endre.</value>
+  </data>
+  <data name="DoctorSelectionSubtitleDisabled" xml:space="preserve">
+    <value>Du har ikke valgt noen person eller organisasjon å kommunisere med. Trykk på feltet under for søke på helsepersonell.</value>
+  </data>
+  <data name="DoctorSelectionHelpText" xml:space="preserve">
+    <value>Du kan kun regne med at meldingene kommer frem og du får svar dersom dette er din fastlege eller din privatlege.</value>
+  </data>
+  <data name="DeleteProfileConfirmationTitle" xml:space="preserve">
+    <value>Slett alt innhold</value>
+  </data>
+  <data name="DeleteProfileConfirmationMessage" xml:space="preserve">
+    <value>Er du sikker på at du vil slette profilen? Den vil uansett kunne hentes tilbake igjen innen 30 dager.</value>
+  </data>
+  <data name="DeleteProfileConfirmationButton" xml:space="preserve">
+    <value>Ja, slett</value>
+  </data>
+  <data name="DoctorSearchPlaceholder" xml:space="preserve">
+    <value>Søk på lege eller legekontor...</value>
+  </data>
+  <data name="AppLongDateTimeFormat" xml:space="preserve">
+    <value>dd.MM.yy kl. HH.mm</value>
+  </data>
+  <data name="Salutation" xml:space="preserve">
+    <value>Hei</value>
+  </data>
+  <data name="OnBoardingFirstTitle" xml:space="preserve">
+    <value>Kommuniser direkte med legen og legekontoret</value>
+  </data>
+  <data name="OnBoardingSecondTitle" xml:space="preserve">
+    <value>Bestill time hos legen eller på legekontoret</value>
+  </data>
+  <data name="OnBoardingThirdTitle" xml:space="preserve">
+    <value>Få oversikt over medisinene dine og forny resepter</value>
+  </data>
+  <data name="OnBoardingNextButton" xml:space="preserve">
+    <value>Hopp over intro</value>
+  </data>
+  <data name="OnBoardingGoToButton" xml:space="preserve">
+    <value>Gå til appen</value>
+  </data>
+  <data name="AppointmentHomeCancelledStatus" xml:space="preserve">
+    <value>Avbestilt</value>
+  </data>
+  <data name="AppointmentHomeHelpText" xml:space="preserve">
+    <value>Her kan du bestille time hos legen din, se dine bestilte timer og avbestille disse.{0}{0}Via Helseboka kan du bestille time hos legen din uansett hvor i landet du er. Det krever bare at legen din har åpnet opp for kommunikasjon på helseboka.no. Du må ikke betale gebyr til Helseboka for å bruke tjenesten.{0}{0}Slå på varslinger i telefonens varslingsinnstillinger slik at du får påminnelser om timen din.</value>
+  </data>
+  <data name="ChatHomeHelpTitle" xml:space="preserve">
+    <value>Her kan du stille spørsmål direkte til legekontoret og legen din. Helseboka kan kommunisere med alle legekontorer i Norge forutsatt at legekontoret har åpnet opp for kommunikasjon på helseboka.no.</value>
+  </data>
+  <data name="AppointmentNoMessage" xml:space="preserve">
+    <value>Ingen melding fra lege</value>
+  </data>
+  <data name="ErrorInfoTitle" xml:space="preserve">
+    <value>Oops..</value>
+  </data>
+  <data name="BasicInfoTitle" xml:space="preserve">
+    <value>Hei</value>
+  </data>
+  <data name="NewChatSenderPrefix" xml:space="preserve">
+    <value>Til: </value>
+  </data>
+  <data name="NewChatSenderPlaceholder" xml:space="preserve">
+    <value>Velg lege eller legekontoret her...</value>
+  </data>
+  <data name="AppointmentHomeNoDateExpired" xml:space="preserve">
+    <value>Ikke bekreftet</value>
+  </data>
+  <data name="AppointmentHomeNoAppointmentPopupMessage" xml:space="preserve">
+    <value>Her vil du få viktige beskjeder.</value>
+  </data>
+  <data name="AppointmentHomeNoAlarmPopupMessage" xml:space="preserve">
+    <value>Du kan legge til medisinpåminnelser på siden Medisiner. Se hovedmeny nederst på siden.</value>
+  </data>
+  <data name="FeedbackPopupMessage" xml:space="preserve">
+    <value>Send oss gjerne tilbakemeldinger om feil eller mangler til e-postadressen {0}</value>
+  </data>
+  <data name="FeedbackPopupAlert" xml:space="preserve">
+    <value>NB: Ikke send sensitiv informasjon i denne eposten!</value>
+  </data>
+  <data name="FeedbackPopupTitle" xml:space="preserve">
+    <value>Hei!</value>
+  </data>
+  <data name="FeedbackMailSubject" xml:space="preserve">
+    <value>Tilbakemelding fra bruker av Helseboka</value>
+  </data>
+  <data name="FeedbackMailAppSelectorTitle" xml:space="preserve">
+    <value>Send tilbakemelding</value>
+  </data>
+  <data name="ChatStatusSent" xml:space="preserve">
+    <value>Sendt</value>
+  </data>
+  <data name="ChatStatusDelivered" xml:space="preserve">
+    <value>Levert</value>
+  </data>
+  <data name="ChatStatusError" xml:space="preserve">
+    <value>Feilet</value>
+  </data>
+  <data name="ChatStatusReceived" xml:space="preserve">
+    <value>Mottatt</value>
+  </data>
+  <data name="ChatResendConfirmationTitle" xml:space="preserve">
+    <value>Send melding igjen</value>
+  </data>
+  <data name="ChatResendConfirmationMessage" xml:space="preserve">
+    <value>Denne meldingen er ikke levert til legen. Vil du sende meldingen igjen?</value>
+  </data>
+  <data name="GeneralTextContinue" xml:space="preserve">
+    <value>Fortsett</value>
+  </data>
+  <data name="GeneralTextCancel" xml:space="preserve">
+    <value>Avbryt</value>
+  </data>
+  <data name="MobilePhoneNumberPageErrorMessage" xml:space="preserve">
+    <value>Skriv inn ditt mobilnummer</value>
+  </data>
+  <data name="MobilePhoneNumberPageErrorMessageText" xml:space="preserve">
+    <value>Vennligst skriv inn gyldig telefonnummer</value>
+  </data>
+  <data name="MobilePhoneNumberPageText" xml:space="preserve">
+    <value>Registrer ditt mobilnummer. Nummeret vil sendes med meldingene du sender fra Helseboka.</value>
+  </data>
+  <data name="OkButtonText" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="PhoneNumberPopupTitle" xml:space="preserve">
+    <value>Mobilnummer mangler</value>
+  </data>
+  <data name="AppointmentLinkButtonText" xml:space="preserve">
+    <value>Videotime-kø</value>
+  </data>
+</root>

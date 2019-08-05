@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+    <color name="application_theme_color">#6508BF</color>
+    <color name="login_bankid_sparator">#E3E3E3</color>
+    <color name="login_help_text">#7A7A7A</color>
+    <color name="startup_subtitle">#3F3F3F</color>
+    <color name="page_title">#121212</color>
+    <color name="error_text">#D0021B</color>
+    <color name="inactive_border">#19CED6</color>
+    <color name="active_border">#03B5BD</color>
+    <color name="light_fill_color">#F5FFFF</color>
+    <color name="separator_fill_color">#E9E9E9</color>
+    <color name="description_text_color">#454545</color>
+    <color name="help_border_color">#D7D7D7</color>
+    <color name="home_chat_separator_color">#E9E9E9</color>
+    <color name="home_chat_description_color">#974D4D4D</color>
+    <color name="chat_chatview_placeholder_color">#64787878</color>
+    <color name="chat_chatview_separator_color">#2D979797</color>
+    <color name="chat_chatview_background_color">#FBFBFD</color>
+    <color name="chat_chatview_sent_message_text_color">#787878</color>
+    <color name="chat_chatview_sent_message_border_color">#ECECEC</color>
+    <color name="chat_chatview_received_message_text_color">#1D1D1D</color>
+    <color name="chat_chatview_received_message_border_color">#19CED6</color>
+    <color name="chat_chatview_date_text_color">#BFBEBE</color>
+    <color name="chat_newchat_fill_color">#E4FDFC</color>
+    <color name="modal_title_color">#11A18F</color>
+    <color name="medicine_home_reminder_day_color">#808080</color>
+</resources>

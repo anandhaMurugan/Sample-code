@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/chat_chatview_background_color">
+	 <TextView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_alignParentTop="true"
+        android:text="@string/terms_page_title"
+        android:layout_marginTop="20dp"
+        style="@style/page_title"
+		android:layout_alignParentStart="true"
+		android:layout_marginLeft="25dp"
+	/>
+
+	<android.support.v7.widget.RecyclerView
+        android:id="@+id/termsListView"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+		android:paddingBottom="62dp"
+	    android:clipToPadding="false"
+        android:layout_below="@id/back"
+        android:layout_marginTop="20dp" />
+
+	  <RelativeLayout
+        android:id="@+id/floatingBottomView"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:background="#80000000"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:id="@+id/continueButton"
+			style="@style/button_action_large"
+			android:layout_width="200dp"
+			android:layout_height="50dp"
+        	android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/terms_continue_button"
+         />
+    </RelativeLayout>
+	
+</RelativeLayout>

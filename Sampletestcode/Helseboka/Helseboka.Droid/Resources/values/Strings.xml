@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Helseboka</string>
+
+    <string name="today">Today</string>
+    <string name="tomorrow">Tomorrow</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="sunday">Sunday</string>
+    
+    <!--Dashboard-->
+    <string name="dashboard_appointment_title">You have an appointment with</string>
+    <string name="dashboard_welcome_title">Welcome to Helseboka!</string>
+    <string name="dashboard_appointment_nodata">I have no important messages for you</string>
+    <string name="dashboard_alarm_confirmation_title">Confirmation</string>
+    <string name="dashboard_alarm_confirmation_message">I have taken this medicine now.</string>
+    <string name="dashboard_alarm_confirmation_yes">Confirm</string>
+    <string name="dashboard_noalarm_title">Set reminder</string>
+    <string name="dashboard_noalarm_message">So that you don\'t forget to take your medicine</string>
+    
+    <string name="chat_dialog_title_doctor">Doctor</string>
+    <string name="chat_dialog_title_office">Office</string>
+    <string name="chat_newdialog_placeholder">Your question</string>
+    <string name="chat_newdialog_senderprefix">To</string>
+    <string name="home_tabbar_chat_title">CHAT</string>
+    <string name="home_tabbar_appointment_title">APPOINTMENT</string>
+    <string name="home_tabbar_medicine_title">MEDICINES</string>
+    <string name="home_tabbar_profile_title">PROFILE</string>
+    <string name="home_tabbar_dashboard_title">NEWS</string>
+    <string name="appointment_home_pending_title">Not confirmed yet</string>
+    <string name="appointment_home_cancelled_title">Cancelled</string>
+    <string name="appointment_details_symptom_title">Symptom</string>
+    <string name="appointment_new_selecttime_helptext">In case of urgent healthcare during the day, please call the doctor\'s office on .... (tel.).</string>
+    <string name="appointment_details_feedback_button"><u>Cancel</u></string>
+    <string name="appointment_home_header_upcomming">Upcoming appointments</string>
+    <string name="appointment_home_header_previous">Previous appointments</string>
+    <string name="appointment_new_selecttime_monday">Man</string>
+    <string name="appointment_new_selecttime_tuesday">Tue</string>
+    <string name="appointment_new_selecttime_wednesday">Wed</string>
+    <string name="appointment_new_selecttime_thursday">Thu</string>
+    <string name="appointment_new_selecttime_friday">Fri</string>
+    <string name="medicine_reminder_monday">M</string>
+    <string name="medicine_reminder_tuesday">T</string>
+    <string name="medicine_reminder_wednesday">W</string>
+    <string name="medicine_reminder_thursday">T</string>
+    <string name="medicine_reminder_friday">F</string>
+    <string name="medicine_reminder_saturday">S</string>
+    <string name="medicine_reminder_sunday">S</string>
+    <string name="medicine_reminder_enddate_undefined">undefined</string>
+    <string name="medicine_reminder_alert_nomedicine">You don\'t have any medicine into your list. Please add them first</string>
+    <string name="medicine_reminder_selectfrequency_title">Choose time</string>
+    <string name="medicine_reminder_selectstartdate">Choose start date</string>
+    <string name="medicine_reminder_selectenddate">Choose end date</string>
+    <string name="medicine_overview_alarmlabel_add_title">Add reminder</string>
+    <string name="medicine_overview_alarmlabel_edit_title">Edit reminder</string>
+    <string name="medicine_overview_monday">M</string>
+    <string name="medicine_overview_tuesday">Tu</string>
+    <string name="medicine_overview_wednesday">W</string>
+    <string name="medicine_overview_thursday">Th</string>
+    <string name="medicine_overview_friday">F</string>
+    <string name="medicine_overview_saturday">Sa</string>
+    <string name="medicine_overview_sunday">Su</string>
+    <string name="medicine_home_button_renewprescription">Renew prescription</string>
+    <string name="medicine_home_helptext">Here you can search and get an overview of the medicines you use, get help to take medicine on time, and ask your doctor to get a prescription for your regular medication.</string>
+    <string name="profile_doctor_details_mobile">Tel:</string>
+    <string name="profile_home_personalsettings">Personal details</string>
+    <string name="profile_home_medicalcenter">Doctor\'s office</string>
+    <string name="profile_home_doctor">Doctor</string>
+    <string name="profile_home_changepin">PIN code</string>
+    <string name="profile_home_gdpr">Privacy and consent</string>
+    <string name="profile_home_delete_profile">Withdraw consent and delete profile</string>  
+    <string name="profile_home_logout">Log out</string>
+    <string name="profile_home_feedback">Feedback</string>
+    <string name="profile_home_change">Change</string>
+    <string name="profile_personalsettings_dob">Date of birth</string>
+    <string name="profile_personalsettings_gender">Gender</string>
+    <string name="profile_personalsettings_address">Address</string>
+    <string name="profile_personalsettings_telefone">Telephone</string>
+    <string name="login_biometric_helptext">Login</string>
+    <string name="login_error_wrongpin">Wrong PIN. Please try again</string>
+    <string name="login_faceid_button">Face ID</string>
+    <string name="login_touchid_button">Touch ID</string>
+    <string name="login_biometric_registration_helptext">Biometric registration</string>
+    <string name="login_pin_new_header">Enter new PIN</string>
+    <string name="login_pin_confirm">Confirm PIN</string>
+    <string name="general_error_api_generic">Something went wrong. Please try again</string>
+    <string name="general_error_api_timeout">Server takes too long to respond. Please try after sometime</string>
+    <string name="general_view_loading">Please wait</string>
+    <string name="general_view_timeprefix"></string>
+    <string name="general_view_next">Next</string>
+    <string name="general_view_ok">Ok</string>
+    <string name="general_view_cancel">Cancel</string>
+    <string name="general_view_yes">Yes</string>
+    <string name="general_view_no">No</string>
+    <string name="general_view_alert_title">Hi</string>
+    <string name="general_push_reminder_title">Reminder to take medicine</string>
+    <string name="general_push_foreground_service_description">Helseboka medicine reminder service running</string>
+
+    <string name="onboarding_continue_title">Move on</string>
+    <string name="onboarding_first_title">Communicate directly with your doctor</string>
+    <string name="onboarding_second_title">Book an appointment with the GP</string>
+    <string name="onboarding_third_title">Get an overview of your medicines</string>
+
+    <!--BankID/BankIDMobile option view-->
+    <string name="login_bankid_button">BankID</string>
+    <string name="login_bankid_mobile_button">BankID for mobile</string>
+    <string name="login_bankid_option_help">Hopp over</string>
+    <string name="login_bankid_option_title">Login with</string>
+
+    <!--PIN/TouchID registration option-->
+    <string name="startup_registration_option_title">Select login method</string>
+    <string name="startup_registration_option_subtitle">How do you want to unlock the app after it has been idle?</string>
+    <string name="startup_registration_option_touchid">TouchID</string>
+    <string name="startup_registration_option_pin">PIN code</string>
+
+    <!--TouchID Authentication-->
+    <string name="touchid_dialog_title">Fingerprint Verification</string>
+    <string name="touchid_dialog_description">Confirm fingerprint to continue</string>
+    <string name="touchid_registration_failure">Unable to verify fingerprint. Please try again or continue with PIN</string>
+    <string name="touchid_login_failure">Unable to verify fingerprint. Press Yes to try again or continue with bankID</string>
+
+    <!--Doctor selection view-->
+    <string name="startup_doctor_selection_placeholder">Select doctor or doctor office</string>
+
+    <!--Enter pin view-->
+    <string name="login_pin_header">Enter PIN</string>
+    <string name="startup_enterPin_forgotPIN">Forgot PIN?</string>
+
+    <!--Chat home view-->
+    <string name="chat_home_title">Chat</string>
+    <string name="chat_home_newChat_title">New question</string>
+
+    <!--Chat chatView-->
+    <string name="chat_chatview_placeholder">Write your message …</string>
+    <string name="chat_chatview_send_message">Svar</string>
+
+    <!--Chat new chat creation-->
+    <string name="chat_newchat_to">To:</string>
+    <string name="chat_newchat_to_placeholder">To:  Select doctor or office here...</string>
+    <string name="chat_newchat_subject_hint">Symptom:</string>
+    <string name="chat_newchat_body_hint">Your question…</string>
+    <string name="chat_newchat_doctor_hint">Select doctor if you have questions about illness, symptoms, medication, sick leave etc.</string>
+    <string name="chat_newchat_medical_center_hint">Select the doctor\'s office if you have practical questions to the health secretaries about timing, lab services, status of samples or equivalent</string>
+    <string name="chat_newchat_button_title">Send</string>
+    <string name="chat_newchat_alert_message">NB: You will be able to receive up to one invoice per request you send to your doctor here until you will receive a free card that covers this.</string>
+
+    <!--Medicine home view -->
+    <string name="medicine_home_title">Medicines</string>
+    <string name="medicine_renew_prescription_title">The following message will be sent to your doctor:</string>
+    <string name="medicine_renew_prescription_message">I would like to renew my prescription:</string>
+    <string name="medicine_renew_prescription_footer_text">Note that it may take 2-3 business days before a new prescription is available at the pharmacy. \n\nYou will find this message and any response from your doctor in the Chat.</string>
+    <string name="medicine_renew_prescription_button">Send</string>
+    <string name="medicine_home_search_hint">Add medicine</string>
+
+    <!--Medicine overview view -->
+    <string name="medicine_overview_external_link_title">Read more on Felleskatalogen.no</string>
+    <string name="medicine_overview_add_to_profile_button">Add to My Profile</string>
+    <string name="medicine_overview_confirm_delete_title">Do you want to remove the medicine from the list?</string>
+    <string name="medicine_overview_confirm_delete_message">The medicine will be deleted from your medical overview in Helseboka.</string>
+
+     <!--Medicine alarmView view -->
+    <string name="medicine_alarmview_save">Save</string>
+    <string name="medicine_alarmview_alarm">Alarm</string>
+    <string name="medicine_alarmview_add_medicine_header">Other medicines which needs to be taken at the same time:</string>
+    <string name="medicine_alarmview_add_medicine_title">Add more</string>
+    <string name="medicine_alarmview_add_reminder_header">Times</string>
+    <string name="medicine_alarmview_add_reminder_title">Set new time</string>
+    <string name="medicine_alarmview_select_medicine_title">Select medicine to be taken with</string>
+    <string name="medicine_alarmview_conflict_reminder_title">You already have a reminder for the following medicine:</string>
+
+    <!--Appointment home view -->
+    <string name="appointment_home_title">Appointments</string>
+    <string name="appointment_home_new_appointment">Book appointment</string>
+
+    <!--Appointment details view -->
+    <string name="appointment_details_title">Appointment</string>
+    <string name="appointment_details_doctor_message_label">Message from the doctor\'s office/doctor:</string>
+    <string name="appointment_details_symptom_header">You wrote:</string>
+
+    <!--Appointment date selection view-->
+    <string name="appointment_dateselection_title">When do you want to book appointment?</string>
+    <string name="appointment_dateselection_subtitle">Choose which days and times of the day best fits for the appointment. You can use one of the fields on the next page to describe more closely.</string>
+    <string name="appointment_dateselection_earlyday_label">Morning</string>
+    <string name="appointment_dateselection_earlyday_value">08.00-10:00</string>
+    <string name="appointment_dateselection_midday_label">Noon</string>
+    <string name="appointment_dateselection_midday_value">10.00-13.00</string>
+    <string name="appointment_dateselection_lateday_label">Afternoon</string>
+    <string name="appointment_dateselection_lateday_value">13.00-15.00</string>
+    <string name="appointment_dateselection_help">In case of urgent healthcare during the day, please call the doctor\'s office on telephone</string>
+    
+    <!--Appointment date selection view-->
+    <string name="appointment_symptom_selection_title">What do you want to consult with your doctor?</string>
+    <string name="appointment_symptom_selection_add_more">Add more</string>
+    <string name="appointment_symptom_selection_hint_1">For ex. fever</string>
+    <string name="appointment_symptom_selection_hint_2">For ex. headache</string>
+
+    <!--Appointment confirmation view-->
+    <string name="appointment_confirmation_title">The appointment booking request has been sent.</string>
+    <string name="appointment_confirmation_notenabled_title">The appointment booking request has not been sent.</string>
+    <string name="appointment_confirmation_help">The request is processed as soon as possible by the doctor\'s office. You will receive a confirmation in the app.\n\n<font color="#cf2323">Remember to turn on notifications for Helseboka so that you wouldn\'t forget about the appointment!</font></string>
+
+    <!--Profile personal settings view-->
+    <string name="profile_personal_settings_save">SAVE</string>
+
+    <!--Notification-->
+    <string name="channel_name">Medicine reminder</string>
+    <string name="channel_description">Notification for reminders to take medicine</string>       
+    
+    <!--ConfigUrlSelection-->
+    <string name="config_header_title">Environment Settings</string>
+    <string name="config_title_1">Select Environment</string>
+    <string name="config_server_dev">DEV</string>
+    <string name="config_server_test">TEST</string>
+    <string name="config_server_stag">STAGING</string>
+    <string name="config_server_prod">PROD</string>
+    <string name="config_title_2">Select BankID System</string>
+    <string name="config_bankid_preprod">PREPROD</string>
+    <string name="config_bankid_prod">PROD</string>
+    <string name="config_btn_continue">Continue to Login</string>
+    <string name="config_err_label">Select any 1 from each group</string>
+    
+    <!--Terms-->
+    <string name="terms_page_title">DECLARATION OF CONSENT</string>
+    <string name="terms_continue_button">Continue</string>
+    <string name="terms_text_showmore">Show More</string>
+    <string name="terms_text_showless">Show Less</string>
+
+    <!--ForceUpdate-->
+    <string name="update_page_title">Hi</string>
+    <string name="update_update_buttonText">Update</string>
+    <string name="update_close_buttonText">Close</string>
+    <string name="update_NotNow_buttonText">Not Now</string>
+
+    <!--MobilePhoneNumber-->
+    <string name="mobilephone_number_text">Register your mobile phone number in order to communicate with Helseboka. The number will be included in messages you send from Helseboka.</string>
+    <string name="mobilephone_number_errormessage_hint">Enter your mobile number</string>
+    <string name="mobilephone_number_errormessagetext_hint">Please enter valid phone number</string>
+    <string name="mobilephone_number_popup_title">Mobile phone number is missing</string>
+
+</resources>

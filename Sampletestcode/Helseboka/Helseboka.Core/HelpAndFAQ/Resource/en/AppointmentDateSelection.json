@@ -1,0 +1,14 @@
+﻿[
+  {
+    "title": "What can I do here?",
+    "description": "Here you can specify the days of week that suits you best. The doctor's office proposes hours based on this, but may also choose to give you time at another time if your wish can not be met within one to two weeks. \n\nPress «Next» without entering time if you want the doctor's office to find the first possible hour regardless of your wishes. This may result in a shorter waiting time. \n\nYou can change or cancel an unconfirmed appointment."
+  },
+  {
+    "title": "When do I get an appointment?",
+    "description": "Waiting time varies from doctor's office to doctor's office. It is common to have one to two weeks waiting time for a normal appointment."
+  },
+  {
+    "title": "What do I do when I need immediate help?",
+    "description": "Do not use this service for emergencies and need immediate help. If you need quick medical assistance during the day, please call the doctor's office. Outside the doctor's office hours, call the emergency room for immediate help 24 hours a day. In case of severe acute illness or injury, call emergency number 113."
+  }
+]

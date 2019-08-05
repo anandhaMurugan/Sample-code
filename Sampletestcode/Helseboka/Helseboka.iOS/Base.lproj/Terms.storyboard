@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="57912">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <scene sceneID="57911">
+            <objects>
+                <viewController id="57912" sceneMemberID="viewController" customClass="TermsViewController" storyboardIdentifier="TermsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="66872"/>
+                        <viewControllerLayoutGuide type="bottom" id="66873"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="57921">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="57914" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="88" width="375" height="579"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="57922">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="57922" id="57923">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" id="57918" key="tableFooterView" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="587" width="375" height="80"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.87058823529411766" green="0.87058823529411766" blue="0.87058823529411766" alpha="1"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="57916" translatesAutoresizingMaskIntoConstraints="NO" customClass="PrimaryActionButton">
+                                        <rect key="frame" x="105" y="17" width="165" height="46"/>
+                                        <state key="normal" title="Continue"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint id="57924" firstAttribute="bottom" secondItem="57916" secondAttribute="bottom" constant="17"/>
+                                    <constraint id="57925" firstItem="57916" firstAttribute="top" secondItem="57918" secondAttribute="top" constant="17"/>
+                                    <constraint id="57926" firstItem="57916" firstAttribute="leading" secondItem="57918" secondAttribute="leading" constant="105"/>
+                                    <constraint id="57927" firstAttribute="trailing" secondItem="57916" secondAttribute="trailing" constant="105"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Declaration Of Consent" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57920" customClass="PageTitleLabel">
+                                <rect key="frame" x="25" y="53.5" width="325" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <attributedString key="userComments">
+                                    <fragment content="Medicine Title"/>
+                                </attributedString>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint id="57929" firstItem="57914" firstAttribute="top" secondItem="66872" secondAttribute="bottom" constant="68"/>
+                            <constraint id="57931" firstItem="57914" firstAttribute="bottom" secondItem="57921" secondAttribute="bottom"/>
+                            <constraint id="57932" firstItem="57914" firstAttribute="trailing" secondItem="57921" secondAttribute="trailing"/>
+                            <constraint id="57933" firstAttribute="leading" secondItem="57914" secondAttribute="leading"/>
+                            <constraint id="57934" firstItem="57920" firstAttribute="leading" secondItem="57921" secondAttribute="leading" constant="25"/>
+                            <constraint id="57935" firstAttribute="trailing" secondItem="57920" secondAttribute="trailing" constant="25"/>
+                            <constraint id="57936" firstItem="57914" firstAttribute="top" secondItem="57920" secondAttribute="bottom" constant="14"/>
+                            <constraint id="57937" firstItem="57920" firstAttribute="top" secondItem="66872" secondAttribute="bottom" constant="15" relation="greaterThanOrEqual"/>
+                            <constraint id="57939" firstItem="66873" firstAttribute="bottom" secondItem="57918" secondAttribute="top" constant="80"/>
+                            <constraint id="57940" firstItem="57918" firstAttribute="trailing" secondItem="57921" secondAttribute="trailing"/>
+                            <constraint id="57941" firstItem="57918" firstAttribute="leading" secondItem="57921" secondAttribute="leading"/>
+                            <constraint id="64680" firstItem="57918" firstAttribute="bottom" secondItem="66873" secondAttribute="bottom"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="TermsTableView" destination="57914" id="57913"/>
+                        <outlet property="ContinueBtn" destination="57916" id="57915"/>
+                        <outlet property="FloatingBottomView" destination="57918" id="57917"/>
+                        <outlet property="TermsTitle" destination="57920" id="57919"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="57942" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-153" y="-223"/>
+        </scene>
+    </scenes>
+</document>

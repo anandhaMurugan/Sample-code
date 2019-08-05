@@ -1,0 +1,10 @@
+﻿[
+  {
+    "title": "Hvilke resepter har jeg?",
+    "description": "Du kan se dine aktive resepter ved å logge inn på helsenorge.no her: https://helsenorge.no/e-resept-og-mine-resepter/dine-resepter-pa-helsenorge-no"
+  },
+  {
+    "title": "Hvordan fungerer fornyelse av resept?",
+    "description": "Slik fungerer tjenesten:\n1. Trykk på «Forny resept» og velg medisinene du ønsker å fornye resept på. Dersom du ikke allerede har lagt inn medisinene dine i listen må du søke opp medisinene i søkefeltet.\n2. Melding om ønsket reseptfornyelse sendes til fastlegen din. Din melding og eventuelt svar fra legen finner du i Legedialog.\n3. Legen skriver ut elektronisk resept som apotekene får tilgang til. Legen bestemmer hvor mange uttak resepten gjelder for.\n4. Du kan hente medisinene dine hos apoteket etter 2-3 virkedager. Husk gyldig legitimasjon."
+  }
+]

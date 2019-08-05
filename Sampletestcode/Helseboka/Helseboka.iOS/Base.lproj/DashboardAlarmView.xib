@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1" customClass="DashboardAlarmView">
+            <rect key="frame" x="0.0" y="0.0" width="186" height="116"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R2l-78-bm4">
+                    <rect key="frame" x="33" y="14" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
+                    <color key="textColor" red="0.52241766452789307" green="0.5228312611579895" blue="0.52248173952102661" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ARY-1a-j9F" userLabel="Separator">
+                    <rect key="frame" x="33" y="14" width="83" height="1"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dashboard-medicine-separator" translatesAutoresizingMaskIntoConstraints="NO" id="N2f-nZ-5Sb">
+                            <rect key="frame" x="0.0" y="0.0" width="83" height="1"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="N2f-nZ-5Sb" firstAttribute="bottom" secondItem="ARY-1a-j9F" secondAttribute="bottom" id="65Z-ua-DCW"/>
+                        <constraint firstItem="N2f-nZ-5Sb" firstAttribute="leading" secondItem="ARY-1a-j9F" secondAttribute="leading" id="Fjp-og-ehG"/>
+                        <constraint firstItem="N2f-nZ-5Sb" firstAttribute="top" secondItem="ARY-1a-j9F" secondAttribute="top" id="ZeT-Hr-pR5"/>
+                        <constraint firstItem="N2f-nZ-5Sb" firstAttribute="trailing" secondItem="ARY-1a-j9F" secondAttribute="trailing" id="atZ-56-TIg"/>
+                        <constraint firstAttribute="height" constant="1" id="exo-Ps-LDf"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JFW-Bm-3hW" customClass="CheckBox">
+                    <rect key="frame" x="136" y="-3.5" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="35" id="k3K-eY-wi7"/>
+                        <constraint firstAttribute="height" constant="35" id="l0W-Ib-cai"/>
+                    </constraints>
+                    <state key="normal" image="Checkbox-unchecked"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8wq-0q-ly3">
+                    <rect key="frame" x="33" y="31.5" width="153" height="0.0"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="16"/>
+                    <color key="textColor" red="0.065899103879928589" green="0.065985687077045441" blue="0.065912492573261261" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9c-n7-WnN">
+                    <rect key="frame" x="33" y="31.5" width="138" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="topRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tablet-small-icon" translatesAutoresizingMaskIntoConstraints="NO" id="L22-wA-epD">
+                    <rect key="frame" x="7" y="36.5" width="16" height="15"/>
+                </imageView>
+                <view hidden="YES" alpha="0.73999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jAL-1Q-4m1" userLabel="Overlay">
+                    <rect key="frame" x="0.0" y="0.0" width="186" height="116"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="jAL-1Q-4m1" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="1fH-sG-fTE"/>
+                <constraint firstItem="8wq-0q-ly3" firstAttribute="trailing" secondItem="1" secondAttribute="trailing" id="69Z-om-TkS"/>
+                <constraint firstItem="z9c-n7-WnN" firstAttribute="trailing" secondItem="1" secondAttribute="trailing" constant="-15" id="98B-iW-OM7"/>
+                <constraint firstItem="L22-wA-epD" firstAttribute="top" secondItem="8wq-0q-ly3" secondAttribute="top" constant="5" id="BOq-Vz-2rl"/>
+                <constraint firstItem="8wq-0q-ly3" firstAttribute="leading" secondItem="R2l-78-bm4" secondAttribute="leading" id="CdP-ot-LFc"/>
+                <constraint firstItem="jAL-1Q-4m1" firstAttribute="trailing" secondItem="1" secondAttribute="trailing" id="MS4-wW-TFc"/>
+                <constraint firstItem="z9c-n7-WnN" firstAttribute="top" secondItem="8wq-0q-ly3" secondAttribute="bottom" id="PiD-f5-uGJ"/>
+                <constraint firstItem="R2l-78-bm4" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="33" id="RyN-KD-2sM"/>
+                <constraint firstItem="z9c-n7-WnN" firstAttribute="leading" secondItem="R2l-78-bm4" secondAttribute="leading" id="TlN-wV-wcM"/>
+                <constraint firstItem="jAL-1Q-4m1" firstAttribute="top" secondItem="1" secondAttribute="top" id="UYZ-bE-01n"/>
+                <constraint firstItem="8wq-0q-ly3" firstAttribute="top" secondItem="JFW-Bm-3hW" secondAttribute="bottom" id="aoq-ih-wfS"/>
+                <constraint firstItem="ARY-1a-j9F" firstAttribute="top" secondItem="R2l-78-bm4" secondAttribute="bottom" id="bk7-00-dPM"/>
+                <constraint firstItem="L22-wA-epD" firstAttribute="trailing" secondItem="8wq-0q-ly3" secondAttribute="leading" constant="-10" id="bnH-wB-Rz6"/>
+                <constraint firstItem="R2l-78-bm4" firstAttribute="top" secondItem="1" secondAttribute="top" constant="14" id="dE4-hm-nAb"/>
+                <constraint firstItem="JFW-Bm-3hW" firstAttribute="centerY" secondItem="ARY-1a-j9F" secondAttribute="centerY" id="fR8-L8-6TY"/>
+                <constraint firstItem="ARY-1a-j9F" firstAttribute="leading" secondItem="R2l-78-bm4" secondAttribute="leading" id="uJQ-Eo-0t4"/>
+                <constraint firstItem="ARY-1a-j9F" firstAttribute="trailing" secondItem="JFW-Bm-3hW" secondAttribute="leading" constant="-20" id="vdX-9A-N4Y"/>
+                <constraint firstItem="jAL-1Q-4m1" firstAttribute="bottom" secondItem="1" secondAttribute="bottom" id="wrm-k2-hDO"/>
+                <constraint firstItem="JFW-Bm-3hW" firstAttribute="trailing" secondItem="1" secondAttribute="trailing" constant="-15" id="ycp-oZ-7rC"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="AlarmDoneCheck" destination="JFW-Bm-3hW" id="name-outlet-JFW-Bm-3hW"/>
+                <outlet property="AlarmTimeLabel" destination="R2l-78-bm4" id="name-outlet-R2l-78-bm4"/>
+                <outlet property="MedicineNameLabel" destination="8wq-0q-ly3" id="name-outlet-8wq-0q-ly3"/>
+                <outlet property="MedicineStrengthLabel" destination="z9c-n7-WnN" id="name-outlet-z9c-n7-WnN"/>
+                <outlet property="Overlay" destination="jAL-1Q-4m1" id="gP7-c1-KtT"/>
+            </connections>
+            <point key="canvasLocation" x="-161" y="-748"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Checkbox-unchecked" width="22" height="22"/>
+        <image name="Dashboard-medicine-separator" width="93" height="1"/>
+        <image name="Tablet-small-icon" width="16" height="15"/>
+    </resources>
+</document>

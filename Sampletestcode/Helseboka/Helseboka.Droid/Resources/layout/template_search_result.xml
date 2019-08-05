@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/searchResultLabel"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignParentTop="true"
+        android:fontFamily="@font/avenir_next"
+        android:fontWeight="500"
+        android:textStyle="normal"
+        android:textSize="16sp"
+        android:textColor="#121212"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="20dp" />
+    <View
+        style="@style/separator_listview_style"
+        android:layout_below="@id/searchResultLabel"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp" />
+</RelativeLayout>

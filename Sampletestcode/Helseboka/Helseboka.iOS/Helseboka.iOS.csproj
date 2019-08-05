@@ -1,0 +1,2491 @@
+﻿<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\packages\Xamarin.Forms.3.4.0.1008975\build\Xamarin.Forms.props" Condition="Exists('..\..\packages\Xamarin.Forms.3.4.0.1008975\build\Xamarin.Forms.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">AppStore_Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{1BD0A6AB-D209-4EB5-8E37-B444960F054E}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Helseboka.iOS</RootNamespace>
+    <AssemblyName>Helseboka.iOS</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore_Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;APP_STORE;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <IOSDebuggerPort>62624</IOSDebuggerPort>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+    <NoWarn>0109</NoWarn>
+    <CodesignProvision>
+    </CodesignProvision>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore_Release|iPhone' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Distribution: HelseApps AS (NRHFK7S7LB)</CodesignKey>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARM64</MtouchArch>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodesignProvision>Helseboka_Distribution</CodesignProvision>
+    <DefineConstants>APP_STORE;</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore_Release|iPhoneSimulator' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+    <DefineConstants>APP_STORE;</DefineConstants>
+    <MtouchDebug>true</MtouchDebug>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore_Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;APP_STORE;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer: Gulshan Mandal (LUA46RY8D8)</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchProfiling>true</MtouchProfiling>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <IOSDebuggerPort>33656</IOSDebuggerPort>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARM64</MtouchArch>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodesignProvision>HelseBokaDeveloper</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Test_Debug|iPhoneSimulator'">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;TEST;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <IOSDebuggerPort>62624</IOSDebuggerPort>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+    <NoWarn>0109</NoWarn>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Test_Debug|iPhone'">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;TEST;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchProfiling>true</MtouchProfiling>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <IOSDebuggerPort>33656</IOSDebuggerPort>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARM64</MtouchArch>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Test_Release|iPhoneSimulator'">
+    <OutputPath>bin\iPhoneSimulator\Test_Release\</OutputPath>
+    <DefineConstants>TEST;</DefineConstants>
+    <Optimize>true</Optimize>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <MtouchArch>x86_64</MtouchArch>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Test_Release|iPhone'">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Distribution: HelseApps AS (NRHFK7S7LB)</CodesignKey>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARM64</MtouchArch>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodesignProvision>Helseboka_Distribution</CodesignProvision>
+    <DefineConstants>APP_STORE;</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="Xamarin.iOS.iCarousel.Binding">
+      <HintPath>..\..\packages\Xamarin.iOS.iCarousel.1.8.4\lib\Xamarin.iOS10\Xamarin.iOS.iCarousel.Binding.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.TTTAttributedLabel">
+      <HintPath>..\..\packages\Xamarin.TTTAttributedLabel.2.0.0.2\lib\Xamarin.iOS\Xamarin.TTTAttributedLabel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter">
+      <HintPath>..\..\packages\Microsoft.AppCenter.1.10.0\lib\Xamarin.iOS10\Microsoft.AppCenter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.iOS.Bindings">
+      <HintPath>..\..\packages\Microsoft.AppCenter.1.10.0\lib\Xamarin.iOS10\Microsoft.AppCenter.iOS.Bindings.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Analytics">
+      <HintPath>..\..\packages\Microsoft.AppCenter.Analytics.1.10.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Analytics.iOS.Bindings">
+      <HintPath>..\..\packages\Microsoft.AppCenter.Analytics.1.10.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Analytics.iOS.Bindings.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Crashes">
+      <HintPath>..\..\packages\Microsoft.AppCenter.Crashes.1.10.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Crashes.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Crashes.iOS.Bindings">
+      <HintPath>..\..\packages\Microsoft.AppCenter.Crashes.1.10.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Crashes.iOS.Bindings.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\..\packages\Xamarin.Forms.3.4.0.1008975\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform">
+      <HintPath>..\..\packages\Xamarin.Forms.3.4.0.1008975\lib\Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform.iOS">
+      <HintPath>..\..\packages\Xamarin.Forms.3.4.0.1008975\lib\Xamarin.iOS10\Xamarin.Forms.Platform.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml">
+      <HintPath>..\..\packages\Xamarin.Forms.3.4.0.1008975\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Splash.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Splash.imageset\group.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Splash.imageset\group%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Splash.imageset\group%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\SplashLogo.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\SplashLogo.imageset\logoSplash.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\SplashLogo.imageset\logoSplash%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\SplashLogo.imageset\logoSplash%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LoginBackground.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LoginBackground.imageset\rectangle6Copy3%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LoginBackground.imageset\rectangle6Copy3%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LoginBackground.imageset\rectangle6Copy3.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Legetimer.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Legetimer-active.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Legedialog.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Legedialog-active.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medisiner.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medisiner-active.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Profil-active.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Standard-button-background.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Standard-button-background.imageset\knapp%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Standard-button-background.imageset\knapp%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Standard-button-background.imageset\knapp.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Legetimer-Home.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Legetimer-Home.imageset\legetimerIllu.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Legetimer-Home.imageset\legetimerIllu%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Legetimer-Home.imageset\legetimerIllu%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Legedialog-home.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ArrowImage.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ArrowImage.imageset\path13Copy.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ArrowImage.imageset\path13Copy%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ArrowImage.imageset\path13Copy%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Help-icon.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Legedialog.imageset\legedialog.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Legedialog.imageset\legedialog%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Legedialog.imageset\legedialog%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Legedialog-active.imageset\legedialog active.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Legedialog-active.imageset\legedialog active%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Legedialog-active.imageset\legedialog active%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\TouchID-button-background.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\TouchID-button-background.imageset\TouchID Knapp.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\TouchID-button-background.imageset\TouchID Knapp%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\TouchID-button-background.imageset\TouchID Knapp%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\PIN-button-background.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\PIN-button-background.imageset\PIN-Kode knapp.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\PIN-button-background.imageset\PIN-Kode knapp%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\PIN-button-background.imageset\PIN-Kode knapp%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Signup-background-image.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Legetimer-active.imageset\Legetimer_active.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Legetimer-active.imageset\Legetimer_active%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Legetimer-active.imageset\Legetimer_active%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Legetimer.imageset\legetimer .png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Legetimer.imageset\legetimer %402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Legetimer.imageset\legetimer %403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medisiner-active.imageset\medisiner active.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medisiner-active.imageset\medisiner active%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medisiner-active.imageset\medisiner active%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medisiner.imageset\medisiner icon.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medisiner.imageset\medisiner icon%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medisiner.imageset\medisiner icon%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Profil-active.imageset\Profil active.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Profil-active.imageset\Profil active%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Profil-active.imageset\Profil active%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\FaceID-button-backgrround.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\FaceID-button-backgrround.imageset\FaceID Button.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\FaceID-button-backgrround.imageset\FaceID Button%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\FaceID-button-backgrround.imageset\FaceID Button%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Textbox-inactive-background.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Textbox-inactive-background.imageset\Rectangle 3 Copy 4.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Textbox-inactive-background.imageset\Rectangle 3 Copy 4%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Textbox-inactive-background.imageset\Rectangle 3 Copy 4%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Textbox-active-background.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Textbox-active-background.imageset\Rectangle 3 Copy 3.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Textbox-active-background.imageset\Rectangle 3 Copy 3%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Textbox-active-background.imageset\Rectangle 3 Copy 3%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Standard-button-disabled-background.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Standard-button-disabled-background.imageset\primary-disabled.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Standard-button-disabled-background.imageset\primary-disabled%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Standard-button-disabled-background.imageset\primary-disabled%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Signup-background-image.imageset\Pic_logg inn screens.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Modal-close-icon.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Modal-close-icon.imageset\Close.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Modal-close-icon.imageset\Close%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Modal-close-icon.imageset\Close%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Attachment-icon.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Attachment-icon.imageset\attach.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Attachment-icon.imageset\attach%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Attachment-icon.imageset\attach%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Back-icon.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Back-icon.imageset\Back.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Back-icon.imageset\Back%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Back-icon.imageset\Back%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Small-action-button-enabled-background.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Small-action-button-enabled-background.imageset\Knapp small.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Small-action-button-enabled-background.imageset\Knapp small%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Small-action-button-enabled-background.imageset\Knapp small%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Small-action-button-disabled-background.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Small-action-button-disabled-background.imageset\Knapp small Copy.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Small-action-button-disabled-background.imageset\Knapp small Copy%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Small-action-button-disabled-background.imageset\Knapp small Copy%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medium-action-button-enabled-background.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medium-action-button-enabled-background.imageset\Knapp.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medium-action-button-enabled-background.imageset\Knapp%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medium-action-button-enabled-background.imageset\Knapp%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medium-action-button-disabled-background.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medium-action-button-disabled-background.imageset\Knapp Copy.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medium-action-button-disabled-background.imageset\Knapp Copy%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medium-action-button-disabled-background.imageset\Knapp Copy%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dropdown-down.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dropdown-down.imageset\Path 13 Copy.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dropdown-down.imageset\Path 13 Copy%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dropdown-down.imageset\Path 13 Copy%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dropdown-up.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dropdown-up.imageset\Path 13 Copy.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dropdown-up.imageset\Path 13 Copy%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dropdown-up.imageset\Path 13 Copy%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Search-icon.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Search-icon.imageset\Page 1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Search-icon.imageset\Page 1%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Search-icon.imageset\Page 1%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medicine-help-image.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medicine-help-image.imageset\Medisin illu.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medicine-help-image.imageset\Medisin illu%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medicine-help-image.imageset\Medisin illu%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Legedialog-home.imageset\Legedialog illu.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Legedialog-home.imageset\Legedialog illu%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Legedialog-home.imageset\Legedialog illu%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Help-icon.imageset\question icon.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Help-icon.imageset\question icon%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Help-icon.imageset\question icon%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Checkbox-checked.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Checkbox-checked.imageset\Check- checked.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Checkbox-checked.imageset\Check- checked%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Checkbox-checked.imageset\Check- checked%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Checkbox-unchecked.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Checkbox-unchecked.imageset\chech unchecked.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Checkbox-unchecked.imageset\chech unchecked%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Checkbox-unchecked.imageset\chech unchecked%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Add-button-image.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Add-button-image.imageset\Add.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Add-button-image.imageset\Add%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Add-button-image.imageset\Add%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Close-button-image.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Close-button-image.imageset\Close Copy 4.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Close-button-image.imageset\Close Copy 4%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Close-button-image.imageset\Close Copy 4%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Profile-back-arrow.imageset\arrowNext.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Profile-back-arrow.imageset\arrowNext%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Profile-back-arrow.imageset\arrowNext%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Profile-back-arrow.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Separator-image.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Separator-image.imageset\lineCopy7.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Separator-image.imageset\lineCopy7%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Separator-image.imageset\lineCopy7%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medicine-header-separator.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medicine-header-separator.imageset\Rectangle 6 Copy 5%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medicine-header-separator.imageset\Rectangle 6 Copy 5%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medicine-header-separator.imageset\Rectangle 6 Copy 5.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Delete-icon.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Delete-icon.imageset\Delete.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Delete-icon.imageset\Delete%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Delete-icon.imageset\Delete%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Alarm-icon.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\Image.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\DisableButtonImage.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\DisableButtonImage.imageset\primaryDisabled.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\DisableButtonImage.imageset\primaryDisabled%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\DisableButtonImage.imageset\primaryDisabled%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\symptomTextBoxBg.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\symptomTextBoxBg.imageset\formRegularState.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\symptomTextBoxBg.imageset\formRegularState%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\symptomTextBoxBg.imageset\formRegularState%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\Image-1.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\oldLegeTimerBg.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\oldLegeTimerBg.imageset\rectangle13Copy2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\oldLegeTimerBg.imageset\rectangle13Copy2%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\oldLegeTimerBg.imageset\rectangle13Copy2%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\upComingTimeBg.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\upComingTimeBg.imageset\rectangle13.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\upComingTimeBg.imageset\rectangle13%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\upComingTimeBg.imageset\rectangle13%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Alarm-icon.imageset\Group 3.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Alarm-icon.imageset\Group 3%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Alarm-icon.imageset\Group 3%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\External-icon.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\External-icon.imageset\external link.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\External-icon.imageset\external link%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\External-icon.imageset\external link%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medicine-card-normal.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medicine-card-selected.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medicine-card-normal.imageset\Card Inactive Bg.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medicine-card-normal.imageset\Card Inactive Bg%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medicine-card-normal.imageset\Card Inactive Bg%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medicine-card-selected.imageset\Card Active Bg.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medicine-card-selected.imageset\Card Active Bg%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medicine-card-selected.imageset\Card Active Bg%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\Card-modal-background.imageset\Card Modal Bg.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\Card-modal-background.imageset\Card Modal Bg%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\Card-modal-background.imageset\Card Modal Bg%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\Card-modal-background.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\Modal-background.imageset\Card Modal Bg.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\Modal-background.imageset\Card Modal Bg%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\Modal-background.imageset\Card Modal Bg%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\Modal-background.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Modal-background.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Modal-background.imageset\Card Modal Bg.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Modal-background.imageset\Card Modal Bg%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Modal-background.imageset\Card Modal Bg%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-background.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-background.imageset\Rectangle 6 Copy 2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-background.imageset\Rectangle 6 Copy 2%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-background.imageset\Rectangle 6 Copy 2%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-medicine-background.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-medicine-background.imageset\Rectangle 21 Copy.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-medicine-background.imageset\Rectangle 21 Copy%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-medicine-background.imageset\Rectangle 21 Copy%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Tablet-big-icon.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Tablet-big-icon.imageset\Group Copy 13.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Tablet-big-icon.imageset\Group Copy 13%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Tablet-big-icon.imageset\Group Copy 13%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Tablet-small-icon.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Tablet-small-icon.imageset\Group Copy 10.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Tablet-small-icon.imageset\Group Copy 10%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Tablet-small-icon.imageset\Group Copy 10%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-doctor-icon.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-doctor-icon.imageset\Group.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-doctor-icon.imageset\Group%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-doctor-icon.imageset\Group%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-appointment-background.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-appointment-background.imageset\Rectangle 21 Copy 3.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-appointment-background.imageset\Rectangle 21 Copy 3%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-appointment-background.imageset\Rectangle 21 Copy 3%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-appointment-label-background.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-appointment-label-background.imageset\Rectangle 5.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-appointment-label-background.imageset\Rectangle 5%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-appointment-label-background.imageset\Rectangle 5%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-medicine-separator.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-medicine-separator.imageset\Line 6.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-medicine-separator.imageset\Line 6%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-medicine-separator.imageset\Line 6%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-forward-icon.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-forward-icon.imageset\Group Copy 2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-forward-icon.imageset\Group Copy 2%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-forward-icon.imageset\Group Copy 2%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-bacward-icon.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-bacward-icon.imageset\Group.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-bacward-icon.imageset\Group%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-bacward-icon.imageset\Group%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-nodata-left-background.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-nodata-left-background.imageset\Rectangle 21.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-nodata-left-background.imageset\Rectangle 21%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-nodata-left-background.imageset\Rectangle 21%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-nodata-right-background.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-nodata-right-background.imageset\Rectangle 21 Copy 2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-nodata-right-background.imageset\Rectangle 21 Copy 2%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-nodata-right-background.imageset\Rectangle 21 Copy 2%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Profil.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Profil.imageset\Profil.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Profil.imageset\Profil%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Profil.imageset\Profil%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard.imageset\Aktuelt.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard.imageset\Aktuelt%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard.imageset\Aktuelt%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-active.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-active.imageset\Aktuelt active.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-active.imageset\Aktuelt active%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-active.imageset\Aktuelt active%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Onboard-image-1.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Onboard-image-1.imageset\Onboarding 01 illu.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Onboard-image-1.imageset\Onboarding 01 illu%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Onboard-image-1.imageset\Onboarding 01 illu%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Onboard-image-2.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Onboard-image-3.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Onboard-image-3.imageset\Onboarding 03 illu.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Onboard-image-3.imageset\Onboarding 03 illu%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Onboard-image-3.imageset\Onboarding 03 illu%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Shadow-Separator.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Shadow-Separator.imageset\Shadow Slice.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Shadow-Separator.imageset\Shadow Slice%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Shadow-Separator.imageset\Shadow Slice%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Onboard-image-2.imageset\Onboarding 02 illu.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Onboard-image-2.imageset\Onboarding 02 illu%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Onboard-image-2.imageset\Onboarding 02 illu%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Appointment-status-confirmed-past.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Appointment-status-confirmed-past.imageset\Icon %28no container%29 - Appointment Over.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Appointment-status-confirmed-past.imageset\Icon %28no container%29 - Appointment Over%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Appointment-status-confirmed-past.imageset\Icon %28no container%29 - Appointment Over%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Appointment-status-canceled.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Appointment-status-canceled.imageset\Icon %28no container%29 - Appointment Over.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Appointment-status-canceled.imageset\Icon %28no container%29 - Appointment Over%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Appointment-status-canceled.imageset\Icon %28no container%29 - Appointment Over%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Appointment-status-confirmed.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Appointment-status-confirmed.imageset\Icon %28no container%29 - Appointment Confirmed.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Appointment-status-confirmed.imageset\Icon %28no container%29 - Appointment Confirmed%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Appointment-status-confirmed.imageset\Icon %28no container%29 - Appointment Confirmed%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Appointment-status-pending.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Appointment-status-pending.imageset\Icon %28no container%29 - Appointment Pending.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Appointment-status-pending.imageset\Icon %28no container%29 - Appointment Pending%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Appointment-status-pending.imageset\Icon %28no container%29 - Appointment Pending%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\App Icon iOS%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\App Icon iOS%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\App Icon iOS.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\App Icon iOS 40x40.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\App Icon iOS 58x58.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\App Icon iOS 87x87.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\App Icon iOS 80x80.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\App Icon iOS 1024x1024.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets.xcassets\Aktuelt-active.imageset\" />
+    <Folder Include="Assets.xcassets\Aktuelt.imageset\" />
+    <Folder Include="Assets.xcassets\Close-icon.imageset\" />
+    <Folder Include="Resources\Assets.xcassets\caret down.imageset\" />
+    <Folder Include="Resources\Assets.xcassets\caret up.imageset\" />
+    <Folder Include="Resources\Assets.xcassets\logo 100.imageset\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Base.lproj\Login.storyboard" />
+    <InterfaceDefinition Include="Base.lproj\BasicInfoAlert.xib" />
+    <InterfaceDefinition Include="Base.lproj\Dashboard.storyboard" />
+    <InterfaceDefinition Include="Base.lproj\DashboardAlarmView.xib" />
+    <InterfaceDefinition Include="Base.lproj\DatePickerDialog.xib" />
+    <InterfaceDefinition Include="Base.lproj\HelpTableViewCell.xib" />
+    <InterfaceDefinition Include="Base.lproj\HelpTableViewImageCell.xib" />
+    <InterfaceDefinition Include="Base.lproj\LaunchScreen.storyboard" />
+    <InterfaceDefinition Include="Base.lproj\Legedialog.storyboard" />
+    <InterfaceDefinition Include="Base.lproj\Legetimer.storyboard" />
+    <InterfaceDefinition Include="Base.lproj\MedicineSearchTableViewCell.xib" />
+    <InterfaceDefinition Include="Base.lproj\Medicine.storyboard" />
+    <InterfaceDefinition Include="Base.lproj\Profile.storyboard" />
+    <InterfaceDefinition Include="Base.lproj\RenewPrescriptionDialogView.xib" />
+    <InterfaceDefinition Include="Base.lproj\Startup.storyboard" />
+    <InterfaceDefinition Include="Base.lproj\TableViewLabelCell.xib" />
+    <InterfaceDefinition Include="Base.lproj\YesNoDialogView.xib" />
+    <InterfaceDefinition Include="Base.lproj\OnboardingContentView.xib" />
+    <InterfaceDefinition Include="Base.lproj\ModalHelpTableViewCell.xib" />
+    <InterfaceDefinition Include="Base.lproj\DateSelectionCell.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Base.lproj\Terms.storyboard" />
+    <InterfaceDefinition Include="Base.lproj\MobilePhoneNumbers.xib" />
+    <ImageAsset Include="Assets.xcassets\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Add-button-image.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Alarm-icon.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Appointment-status-canceled.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Appointment-status-confirmed-past.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Appointment-status-confirmed.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Appointment-status-pending.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ArrowImage.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Attachment-icon.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Back-icon.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\backArrow.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Checkbox-checked.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Checkbox-unchecked.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Close-button-image.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-active.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-appointment-background.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-appointment-label-background.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-background.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-bacward-icon.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-doctor-icon.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-forward-icon.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-medicine-background.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-medicine-separator.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-nodata-left-background.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-nodata-right-background.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Delete-icon.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dropdown-down.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dropdown-up.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\External-icon.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\FaceID-button-backgrround.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Help-icon.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Image.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Image.imageset\backArrow.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Image.imageset\separatorImage.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Legedialog-active.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Legedialog-home.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Legedialog.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Legetimer-active.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Legetimer-Home.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Legetimer.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LoginBackground.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medicine-card-normal.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medicine-card-selected.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medicine-header-separator.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medicine-help-image.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medisiner-active.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medisiner.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medium-action-button-disabled-background.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medium-action-button-enabled-background.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Modal-background.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Modal-close-icon.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Onboard-image-1.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Onboard-image-2.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Onboard-image-3.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\PIN-button-background.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Profil-active.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Profil.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Profile-back-arrow.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Search-icon.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Separator-image.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\separatorImage.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Shadow-Separator.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Signup-background-image.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Small-action-button-disabled-background.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Small-action-button-enabled-background.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Splash.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\SplashLogo.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Standard-button-background.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Standard-button-disabled-background.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Tablet-big-icon.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Tablet-small-icon.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Textbox-active-background.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Textbox-inactive-background.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\TouchID-button-background.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\videocall.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\View\PopUpDialogs\MobilePhoneNumbers.cs" />
+    <Compile Include="Common\View\PopUpDialogs\MobilePhoneNumbers.designer.cs">
+      <DependentUpon>MobilePhoneNumbers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Update\View\ForceUpdateViewController.cs" />
+    <Compile Include="Update\View\ForceUpdateViewController.designer.cs">
+      <DependentUpon>ForceUpdateViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="Startup\View\Splash.cs" />
+    <Compile Include="Startup\View\Splash.designer.cs">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\View\BaseView.cs" />
+    <Compile Include="Login\View\PINEntry.cs" />
+    <Compile Include="Login\View\PINEntry.designer.cs">
+      <DependentUpon>PINEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\LoginRouter.cs" />
+    <Compile Include="Common\View\CircularPinView.cs" />
+    <Compile Include="Common\View\Circle.cs" />
+    <Compile Include="Common\Constant\Colors.cs" />
+    <Compile Include="Home\View\HomeTabView.cs" />
+    <Compile Include="Home\View\HomeTabView.designer.cs">
+      <DependentUpon>HomeTabView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\View\DashboardHomeView.cs" />
+    <Compile Include="Dashboard\View\DashboardHomeView.designer.cs">
+      <DependentUpon>DashboardHomeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Legetimer\View\LegetimerListView.cs" />
+    <Compile Include="Legetimer\View\LegetimerListView.designer.cs">
+      <DependentUpon>LegetimerListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Medisiner\View\MedisinListView.cs" />
+    <Compile Include="Medisiner\View\MedisinListView.designer.cs">
+      <DependentUpon>MedisinListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profile\View\MyProfileView.cs" />
+    <Compile Include="Profile\View\MyProfileView.designer.cs">
+      <DependentUpon>MyProfileView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Legedialog\View\LegeDialogListView.cs" />
+    <Compile Include="Legedialog\View\LegeDialogListView.designer.cs">
+      <DependentUpon>LegeDialogListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\View\TitleLabel.cs" />
+    <Compile Include="Common\View\PrimaryActionButton.cs" />
+    <Compile Include="Legedialog\LegedialogRouter.cs" />
+    <Compile Include="Common\TableViewCell\HelpTableViewCell.cs" />
+    <Compile Include="Common\TableViewCell\HelpTableViewCell.designer.cs">
+      <DependentUpon>HelpTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\CommonImpl\DeviceHandler.cs" />
+    <Compile Include="Legedialog\View\DialogCell.cs" />
+    <Compile Include="Legedialog\View\DialogCell.designer.cs">
+      <DependentUpon>DialogCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\TableViewCell\BaseTableViewCell.cs" />
+    <Compile Include="Common\TableViewCell\BaseTableViewCell.designer.cs">
+      <DependentUpon>BaseTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\View\BankIdView.cs" />
+    <Compile Include="Login\View\BankIdView.designer.cs">
+      <DependentUpon>BankIdView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\View\BankIdWebView.cs" />
+    <Compile Include="Login\View\BankIdWebView.designer.cs">
+      <DependentUpon>BankIdWebView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\View\LoadingOverlay.cs" />
+    <Compile Include="Startup\View\BiometricPINRegistrationView.cs" />
+    <Compile Include="Startup\View\BiometricPINRegistrationView.designer.cs">
+      <DependentUpon>BiometricPINRegistrationView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\CommonImpl\SecureStorageHandler.cs" />
+    <Compile Include="Startup\View\PINConfirmation.cs" />
+    <Compile Include="Startup\View\PINConfirmation.designer.cs">
+      <DependentUpon>PINConfirmation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Startup\View\DoctorSelectionView.cs" />
+    <Compile Include="Startup\View\DoctorSelectionView.designer.cs">
+      <DependentUpon>DoctorSelectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Extension\UILabelExtension.cs" />
+    <Compile Include="Common\View\BaseTextfield.cs" />
+    <Compile Include="Startup\View\TableViewCell\SearchTableViewCell.cs" />
+    <Compile Include="Startup\View\TableViewCell\SearchTableViewCell.designer.cs">
+      <DependentUpon>SearchTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\TableViewDelegates\BaseTableViewSource.cs" />
+    <Compile Include="Legedialog\View\ChatView.cs" />
+    <Compile Include="Legedialog\View\ChatView.designer.cs">
+      <DependentUpon>ChatView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Legedialog\View\ChatDialogCell.cs" />
+    <Compile Include="Legedialog\View\ChatDialogCell.designer.cs">
+      <DependentUpon>ChatDialogCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Legedialog\View\NewDialogView.cs" />
+    <Compile Include="Legedialog\View\NewDialogView.designer.cs">
+      <DependentUpon>NewDialogView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Constant\Fonts.cs" />
+    <Compile Include="Medisiner\MedicineRouter.cs" />
+    <Compile Include="Common\View\HelpViewController.cs" />
+    <Compile Include="Common\Extension\UIViewExtension.cs" />
+    <Compile Include="Common\TableViewCell\TableViewLabelCell.cs" />
+    <Compile Include="Common\TableViewCell\TableViewLabelCell.designer.cs">
+      <DependentUpon>TableViewLabelCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\TableViewCell\HelpTableViewImageCell.cs" />
+    <Compile Include="Common\TableViewCell\HelpTableViewImageCell.designer.cs">
+      <DependentUpon>HelpTableViewImageCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Medisiner\View\MedicineSearchTableViewCell.cs" />
+    <Compile Include="Medisiner\View\MedicineSearchTableViewCell.designer.cs">
+      <DependentUpon>MedicineSearchTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Medisiner\View\MedicineAlarmView.cs" />
+    <Compile Include="Medisiner\View\MedicineAlarmView.designer.cs">
+      <DependentUpon>MedicineAlarmView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Medisiner\View\TableViewCell\FullWeekView.cs" />
+    <Compile Include="Medisiner\View\TableViewCell\ToggleAlarmCell.cs" />
+    <Compile Include="Medisiner\View\TableViewCell\ToggleAlarmCell.designer.cs">
+      <DependentUpon>ToggleAlarmCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Medisiner\View\TableViewCell\AddMoreMedicineCell.cs" />
+    <Compile Include="Medisiner\View\TableViewCell\AddMoreMedicineCell.designer.cs">
+      <DependentUpon>AddMoreMedicineCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Medisiner\View\TableViewCell\AddAlarmCell.cs" />
+    <Compile Include="Medisiner\View\TableViewCell\AddAlarmCell.designer.cs">
+      <DependentUpon>AddAlarmCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Medisiner\View\TableViewCell\DateSelectionCell.cs" />
+    <Compile Include="Medisiner\View\TableViewCell\DateSelectionCell.designer.cs">
+      <DependentUpon>DateSelectionCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\View\DateTimePicker\DatePickerDialog.cs" />
+    <Compile Include="Common\View\DateTimePicker\DatePickerDialog.designer.cs">
+      <DependentUpon>DatePickerDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\View\BaseModalViewController.cs" />
+    <Compile Include="Common\View\BaseModalViewController.designer.cs">
+      <DependentUpon>BaseModalViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Extension\DateExtension.cs" />
+    <Compile Include="Profile\View\UserTableCellModel.cs" />
+    <Compile Include="Profile\View\TableViewCell\UserPersonalInfoTableCell.cs" />
+    <Compile Include="Profile\View\TableViewCell\UserPersonalInfoTableCell.designer.cs">
+      <DependentUpon>UserPersonalInfoTableCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profile\View\TableViewCell\UserProfileTableViewCell.cs" />
+    <Compile Include="Profile\View\TableViewCell\UserProfileTableViewCell.designer.cs">
+      <DependentUpon>UserProfileTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profile\View\LegeDetailsViewController.cs" />
+    <Compile Include="Profile\View\LegeDetailsViewController.designer.cs">
+      <DependentUpon>LegeDetailsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profile\View\UserInfoViewController.cs" />
+    <Compile Include="Profile\View\UserInfoViewController.designer.cs">
+      <DependentUpon>UserInfoViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Legetimer\View\AppointmentDetailsView.cs" />
+    <Compile Include="Legetimer\View\AppointmentDetailsView.designer.cs">
+      <DependentUpon>AppointmentDetailsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Medisiner\View\MedicineOverview.cs" />
+    <Compile Include="Medisiner\View\MedicineOverview.designer.cs">
+      <DependentUpon>MedicineOverview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Legetimer\View\AppointmentDateSelectionView.cs" />
+    <Compile Include="Legetimer\View\AppointmentDateSelectionView.designer.cs">
+      <DependentUpon>AppointmentDateSelectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Medisiner\View\TableViewCell\MedicineReminderCell.cs" />
+    <Compile Include="Medisiner\View\TableViewCell\MedicineReminderCell.designer.cs">
+      <DependentUpon>MedicineReminderCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Legetimer\View\TableViewCell\SymptomTableViewCell.cs" />
+    <Compile Include="Legetimer\View\TableViewCell\SymptomTableViewCell.designer.cs">
+      <DependentUpon>SymptomTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\View\BaseTableView.cs" />
+    <Compile Include="Medisiner\View\SelectMedicineView.cs" />
+    <Compile Include="Medisiner\View\SelectMedicineView.designer.cs">
+      <DependentUpon>SelectMedicineView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Legetimer\View\TableViewCell\SymptomCellModel.cs" />
+    <Compile Include="Legetimer\View\AddSymptomsView.cs" />
+    <Compile Include="Legetimer\View\AddSymptomsView.designer.cs">
+      <DependentUpon>AddSymptomsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Legetimer\View\TableViewCell\SymptomInfoTableViewCell.cs" />
+    <Compile Include="Legetimer\View\TableViewCell\SymptomInfoTableViewCell.designer.cs">
+      <DependentUpon>SymptomInfoTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Medisiner\View\TableViewCell\SelectMedicineCell.cs" />
+    <Compile Include="Medisiner\View\TableViewCell\SelectMedicineCell.designer.cs">
+      <DependentUpon>SelectMedicineCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Legetimer\View\TableViewCell\UpcomingLegetimerTableCell.cs" />
+    <Compile Include="Legetimer\View\TableViewCell\UpcomingLegetimerTableCell.designer.cs">
+      <DependentUpon>UpcomingLegetimerTableCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Legetimer\View\TableViewCell\PreviousLegetimerTableCell.cs" />
+    <Compile Include="Legetimer\View\TableViewCell\PreviousLegetimerTableCell.designer.cs">
+      <DependentUpon>PreviousLegetimerTableCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Legetimer\View\TableViewCell\LegetimerCellModelData.cs" />
+    <Compile Include="Common\PlatformEnums\Enums.cs" />
+    <Compile Include="Common\Utilities\Device.cs" />
+    <Compile Include="Medisiner\View\RenewPrescriptionDialogView.cs" />
+    <Compile Include="Medisiner\View\RenewPrescriptionDialogView.designer.cs">
+      <DependentUpon>RenewPrescriptionDialogView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Legetimer\LegetimerRouter.cs" />
+    <Compile Include="Legetimer\View\WeekDayView.cs" />
+    <Compile Include="Legetimer\View\AppointmentConfirmationView.cs" />
+    <Compile Include="Legetimer\View\AppointmentConfirmationView.designer.cs">
+      <DependentUpon>AppointmentConfirmationView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profile\ProfileRouter.cs" />
+    <Compile Include="Common\View\PopUpDialogs\BasicInfoAlert.cs" />
+    <Compile Include="Common\View\PopUpDialogs\BasicInfoAlert.designer.cs">
+      <DependentUpon>BasicInfoAlert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notification\NotificationService.cs" />
+    <Compile Include="Dashboard\View\DashboardAlarmView.cs" />
+    <Compile Include="Dashboard\View\DashboardAlarmView.designer.cs">
+      <DependentUpon>DashboardAlarmView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Legetimer\View\TableViewCell\AppointmentListHeader.cs" />
+    <Compile Include="Legetimer\View\TableViewCell\AppointmentListHeader.designer.cs">
+      <DependentUpon>AppointmentListHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Startup\StartupRouter.cs" />
+    <Compile Include="Medisiner\View\ConflictReminderDialog.cs" />
+    <Compile Include="Medisiner\View\ConflictReminderDialog.designer.cs">
+      <DependentUpon>ConflictReminderDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Medisiner\View\TableViewCell\ReminderConflictAlertCell.cs" />
+    <Compile Include="Medisiner\View\TableViewCell\ReminderConflictAlertCell.designer.cs">
+      <DependentUpon>ReminderConflictAlertCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\View\PopUpDialogs\YesNoDialogView.cs" />
+    <Compile Include="Common\View\PopUpDialogs\YesNoDialogView.designer.cs">
+      <DependentUpon>YesNoDialogView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Extension\StringExtension.cs" />
+    <Compile Include="Startup\View\OnboardingContentView.cs" />
+    <Compile Include="Startup\View\OnboardingContentView.designer.cs">
+      <DependentUpon>OnboardingContentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Startup\View\OnboardingView.cs" />
+    <Compile Include="Startup\View\OnboardingView.designer.cs">
+      <DependentUpon>OnboardingView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\TableViewCell\ModalHelpTableViewCell.cs" />
+    <Compile Include="Common\TableViewCell\ModalHelpTableViewCell.designer.cs">
+      <DependentUpon>ModalHelpTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\View\ModalHelpViewController.cs" />
+    <Compile Include="Common\View\ModalHelpViewController.designer.cs">
+      <DependentUpon>ModalHelpViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Extension\KeyboardEventArgsExtension.cs" />
+    <Compile Include="Medisiner\View\TableViewCell\FullWeekTableViewCell.cs" />
+    <Compile Include="Medisiner\View\TableViewCell\FullWeekTableViewCell.designer.cs">
+      <DependentUpon>FullWeekTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Utilities\InActivityHandler.cs" />
+    <Compile Include="Legetimer\View\TableViewCell\AppointmentDetailsHeaderCell.cs" />
+    <Compile Include="Legetimer\View\TableViewCell\AppointmentDetailsHeaderCell.designer.cs">
+      <DependentUpon>AppointmentDetailsHeaderCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\CommonImpl\AnalyticsHandler.cs" />
+    <Compile Include="Startup\View\UrlConfigController.cs" />
+    <Compile Include="Startup\View\UrlConfigController.designer.cs">
+      <DependentUpon>UrlConfigController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Terms\TermsDataSource.cs" />
+    <Compile Include="Terms\TermsViewController.cs" />
+    <Compile Include="Terms\TermsViewController.designer.cs">
+      <DependentUpon>TermsViewController.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Helseboka.Core\Helseboka.Core.csproj">
+      <Project>{ED8BE8F6-C3ED-45A8-BEB5-72F924D49F24}</Project>
+      <Name>Helseboka.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Helseboka.Shared\Helseboka.Shared.csproj">
+      <Project>{DB54560B-E3BF-45C4-BBA2-99809E81D7A3}</Project>
+      <Name>Helseboka.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="alarm.caf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <ImageAsset Include="Assets.xcassets\videocall.imageset\baseline_video_call_black_18dp1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\videocall.imageset\baseline_video_call_black_18dp.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\TouchID-button-background.imageset\TouchID Knapp%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\TouchID-button-background.imageset\TouchID Knapp%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\TouchID-button-background.imageset\TouchID Knapp.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Textbox-inactive-background.imageset\Rectangle 3 Copy 4%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Textbox-inactive-background.imageset\Rectangle 3 Copy 4%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Textbox-inactive-background.imageset\Rectangle 3 Copy 4.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Textbox-active-background.imageset\Rectangle 3 Copy 3%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Textbox-active-background.imageset\Rectangle 3 Copy 3%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Textbox-active-background.imageset\Rectangle 3 Copy 3.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Tablet-small-icon.imageset\Group Copy 10%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Tablet-small-icon.imageset\Group Copy 10%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Tablet-small-icon.imageset\Group Copy 10.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Tablet-big-icon.imageset\Group Copy 13%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Tablet-big-icon.imageset\Group Copy 13%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Tablet-big-icon.imageset\Group Copy 13.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Standard-button-disabled-background.imageset\primary-disabled%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Standard-button-disabled-background.imageset\primary-disabled%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Standard-button-disabled-background.imageset\primary-disabled.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Standard-button-background.imageset\knapp%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Standard-button-background.imageset\knapp%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Standard-button-background.imageset\knapp.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\SplashLogo.imageset\logoSplash%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\SplashLogo.imageset\logoSplash%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\SplashLogo.imageset\logoSplash.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Splash.imageset\group%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Splash.imageset\group%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Splash.imageset\group.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Small-action-button-enabled-background.imageset\Knapp small%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Small-action-button-enabled-background.imageset\Knapp small%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Small-action-button-enabled-background.imageset\Knapp small.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Small-action-button-disabled-background.imageset\Knapp small Copy%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Small-action-button-disabled-background.imageset\Knapp small Copy%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Small-action-button-disabled-background.imageset\Knapp small Copy.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Signup-background-image.imageset\Pic_logg inn screens.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Shadow-Separator.imageset\Shadow Slice%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Shadow-Separator.imageset\Shadow Slice%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Shadow-Separator.imageset\Shadow Slice.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\separatorImage.imageset\lineCopy7%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\separatorImage.imageset\lineCopy7%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\separatorImage.imageset\lineCopy7.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Separator-image.imageset\lineCopy7%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Separator-image.imageset\lineCopy7%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Separator-image.imageset\lineCopy7.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Search-icon.imageset\Page 1%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Search-icon.imageset\Page 1%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Search-icon.imageset\Page 1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Profile-back-arrow.imageset\arrowNext%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Profile-back-arrow.imageset\arrowNext%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Profile-back-arrow.imageset\arrowNext.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Profil.imageset\Profil%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Profil.imageset\Profil%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Profil.imageset\Profil.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Profil-active.imageset\Profil active%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Profil-active.imageset\Profil active%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Profil-active.imageset\Profil active.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\PIN-button-background.imageset\PIN-Kode knapp%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\PIN-button-background.imageset\PIN-Kode knapp%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\PIN-button-background.imageset\PIN-Kode knapp.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Onboard-image-3.imageset\Onboarding 03 illu%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Onboard-image-3.imageset\Onboarding 03 illu%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Onboard-image-3.imageset\Onboarding 03 illu.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Onboard-image-2.imageset\Onboarding 02 illu%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Onboard-image-2.imageset\Onboarding 02 illu%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Onboard-image-2.imageset\Onboarding 02 illu.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Onboard-image-1.imageset\Onboarding 01 illu%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Onboard-image-1.imageset\Onboarding 01 illu%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Onboard-image-1.imageset\Onboarding 01 illu.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Modal-close-icon.imageset\Close%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Modal-close-icon.imageset\Close%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Modal-close-icon.imageset\Close.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Modal-background.imageset\Card Modal Bg%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Modal-background.imageset\Card Modal Bg%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Modal-background.imageset\Card Modal Bg.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medium-action-button-enabled-background.imageset\Knapp%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medium-action-button-enabled-background.imageset\Knapp%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medium-action-button-enabled-background.imageset\Knapp.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medium-action-button-disabled-background.imageset\Knapp Copy%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medium-action-button-disabled-background.imageset\Knapp Copy%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medium-action-button-disabled-background.imageset\Knapp Copy.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medisiner.imageset\medisiner icon%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medisiner.imageset\medisiner icon%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medisiner.imageset\medisiner icon.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medisiner-active.imageset\medisiner active%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medisiner-active.imageset\medisiner active%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medisiner-active.imageset\medisiner active.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medicine-help-image.imageset\Medisin illu%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medicine-help-image.imageset\Medisin illu%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medicine-help-image.imageset\Medisin illu.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medicine-header-separator.imageset\Rectangle 6 Copy 5%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medicine-header-separator.imageset\Rectangle 6 Copy 5%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medicine-header-separator.imageset\Rectangle 6 Copy 5.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medicine-card-selected.imageset\Card Active Bg%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medicine-card-selected.imageset\Card Active Bg%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medicine-card-selected.imageset\Card Active Bg.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medicine-card-normal.imageset\Card Inactive Bg%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medicine-card-normal.imageset\Card Inactive Bg%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Medicine-card-normal.imageset\Card Inactive Bg.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LoginBackground.imageset\rectangle6Copy3%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LoginBackground.imageset\rectangle6Copy3%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LoginBackground.imageset\rectangle6Copy3.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Legetimer.imageset\legetimer %403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Legetimer.imageset\legetimer %402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Legetimer.imageset\legetimer .png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Legetimer-Home.imageset\legetimerIllu%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Legetimer-Home.imageset\legetimerIllu%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Legetimer-Home.imageset\legetimerIllu.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Legetimer-active.imageset\Legetimer_active%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Legetimer-active.imageset\Legetimer_active%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Legetimer-active.imageset\Legetimer_active.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Legedialog.imageset\legedialog%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Legedialog.imageset\legedialog%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Legedialog.imageset\legedialog.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Legedialog-home.imageset\Legedialog illu%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Legedialog-home.imageset\Legedialog illu%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Legedialog-home.imageset\Legedialog illu.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Legedialog-active.imageset\legedialog active%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Legedialog-active.imageset\legedialog active%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Legedialog-active.imageset\legedialog active.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Image.imageset\separatorImage.imageset\lineCopy7%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Image.imageset\separatorImage.imageset\lineCopy7%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Image.imageset\separatorImage.imageset\lineCopy7.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Image.imageset\backArrow.imageset\arrowNext%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Image.imageset\backArrow.imageset\arrowNext%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Image.imageset\backArrow.imageset\arrowNext.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Help-icon.imageset\question icon%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Help-icon.imageset\question icon%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Help-icon.imageset\question icon.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\FaceID-button-backgrround.imageset\FaceID Button%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\FaceID-button-backgrround.imageset\FaceID Button%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\FaceID-button-backgrround.imageset\FaceID Button.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\External-icon.imageset\external link%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\External-icon.imageset\external link%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\External-icon.imageset\external link.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dropdown-up.imageset\Path 13 Copy%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dropdown-up.imageset\Path 13 Copy%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dropdown-up.imageset\Path 13 Copy.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dropdown-down.imageset\Path 13 Copy%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dropdown-down.imageset\Path 13 Copy%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dropdown-down.imageset\Path 13 Copy.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Delete-icon.imageset\Delete%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Delete-icon.imageset\Delete%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Delete-icon.imageset\Delete.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard.imageset\Aktuelt%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard.imageset\Aktuelt%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard.imageset\Aktuelt.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-nodata-right-background.imageset\Rectangle 21 Copy 2%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-nodata-right-background.imageset\Rectangle 21 Copy 2%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-nodata-right-background.imageset\Rectangle 21 Copy 2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-nodata-left-background.imageset\Rectangle 21%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-nodata-left-background.imageset\Rectangle 21%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-nodata-left-background.imageset\Rectangle 21.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-medicine-separator.imageset\Line 6%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-medicine-separator.imageset\Line 6%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-medicine-separator.imageset\Line 6.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-medicine-background.imageset\Rectangle 21 Copy%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-medicine-background.imageset\Rectangle 21 Copy%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-medicine-background.imageset\Rectangle 21 Copy.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-forward-icon.imageset\Group Copy 2%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-forward-icon.imageset\Group Copy 2%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-forward-icon.imageset\Group Copy 2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-doctor-icon.imageset\Group%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-doctor-icon.imageset\Group%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-doctor-icon.imageset\Group.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-bacward-icon.imageset\Group%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-bacward-icon.imageset\Group%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-bacward-icon.imageset\Group.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-background.imageset\Rectangle 6 Copy 2%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-background.imageset\Rectangle 6 Copy 2%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-background.imageset\Rectangle 6 Copy 2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-appointment-label-background.imageset\Rectangle 5%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-appointment-label-background.imageset\Rectangle 5%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-appointment-label-background.imageset\Rectangle 5.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-appointment-background.imageset\Rectangle 21 Copy 3%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-appointment-background.imageset\Rectangle 21 Copy 3%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-appointment-background.imageset\Rectangle 21 Copy 3.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-active.imageset\Aktuelt active%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-active.imageset\Aktuelt active%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Dashboard-active.imageset\Aktuelt active.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Close-button-image.imageset\Close Copy 4%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Close-button-image.imageset\Close Copy 4%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Close-button-image.imageset\Close Copy 4.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Checkbox-unchecked.imageset\chech unchecked%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Checkbox-unchecked.imageset\chech unchecked%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Checkbox-unchecked.imageset\chech unchecked.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Checkbox-checked.imageset\Check- checked%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Checkbox-checked.imageset\Check- checked%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Checkbox-checked.imageset\Check- checked.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\backArrow.imageset\arrowNext%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\backArrow.imageset\arrowNext%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\backArrow.imageset\arrowNext.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Back-icon.imageset\Back%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Back-icon.imageset\Back%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Back-icon.imageset\Back.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Attachment-icon.imageset\attach%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Attachment-icon.imageset\attach%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Attachment-icon.imageset\attach.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ArrowImage.imageset\path13Copy%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ArrowImage.imageset\path13Copy%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ArrowImage.imageset\path13Copy.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Appointment-status-pending.imageset\Icon %28no container%29 - Appointment Pending%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Appointment-status-pending.imageset\Icon %28no container%29 - Appointment Pending%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Appointment-status-pending.imageset\Icon %28no container%29 - Appointment Pending.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Appointment-status-confirmed.imageset\Icon %28no container%29 - Appointment Confirmed%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Appointment-status-confirmed.imageset\Icon %28no container%29 - Appointment Confirmed%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Appointment-status-confirmed.imageset\Icon %28no container%29 - Appointment Confirmed.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Appointment-status-confirmed-past.imageset\Icon %28no container%29 - Appointment Over%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Appointment-status-confirmed-past.imageset\Icon %28no container%29 - Appointment Over%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Appointment-status-confirmed-past.imageset\Icon %28no container%29 - Appointment Over.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Appointment-status-canceled.imageset\Icon %28no container%29 - Appointment Over%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Appointment-status-canceled.imageset\Icon %28no container%29 - Appointment Over%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Appointment-status-canceled.imageset\Icon %28no container%29 - Appointment Over.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\App Icon iOS%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\App Icon iOS%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\App Icon iOS.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\App Icon iOS 87x87.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\App Icon iOS 80x80.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\App Icon iOS 58x58.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\App Icon iOS 40x40.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\App Icon iOS 1024x1024.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Alarm-icon.imageset\Group 3%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Alarm-icon.imageset\Group 3%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Alarm-icon.imageset\Group 3.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Add-button-image.imageset\Add%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Add-button-image.imageset\Add%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Add-button-image.imageset\Add.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\en.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\nb.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\nb.lproj\Login.strings" />
+    <BundleResource Include="Resources\en.lproj\Login.strings" />
+    <BundleResource Include="Resources\en.lproj\BasicInfoAlert.strings" />
+    <BundleResource Include="Resources\en.lproj\Dashboard.strings" />
+    <BundleResource Include="Resources\en.lproj\DashboardAlarmView.strings" />
+    <BundleResource Include="Resources\en.lproj\DatePickerDialog.strings" />
+    <BundleResource Include="Resources\en.lproj\HelpTableViewCell.strings" />
+    <BundleResource Include="Resources\en.lproj\HelpTableViewImageCell.strings" />
+    <BundleResource Include="Resources\en.lproj\Legedialog.strings" />
+    <BundleResource Include="Resources\en.lproj\Legetimer.strings" />
+    <BundleResource Include="Resources\en.lproj\Medicine.strings" />
+    <BundleResource Include="Resources\en.lproj\MedicineSearchTableViewCell.strings" />
+    <BundleResource Include="Resources\en.lproj\Profile.strings" />
+    <BundleResource Include="Resources\en.lproj\RenewPrescriptionDialogView.strings" />
+    <BundleResource Include="Resources\en.lproj\Startup.strings" />
+    <BundleResource Include="Resources\en.lproj\TableViewLabelCell.strings" />
+    <BundleResource Include="Resources\en.lproj\YesNoDialogView.strings" />
+    <BundleResource Include="Resources\nb.lproj\BasicInfoAlert.strings" />
+    <BundleResource Include="Resources\nb.lproj\Dashboard.strings" />
+    <BundleResource Include="Resources\nb.lproj\DashboardAlarmView.strings" />
+    <BundleResource Include="Resources\nb.lproj\DatePickerDialog.strings" />
+    <BundleResource Include="Resources\nb.lproj\HelpTableViewCell.strings" />
+    <BundleResource Include="Resources\nb.lproj\HelpTableViewImageCell.strings" />
+    <BundleResource Include="Resources\nb.lproj\Legedialog.strings" />
+    <BundleResource Include="Resources\nb.lproj\Legetimer.strings" />
+    <BundleResource Include="Resources\nb.lproj\Medicine.strings" />
+    <BundleResource Include="Resources\nb.lproj\MedicineSearchTableViewCell.strings" />
+    <BundleResource Include="Resources\nb.lproj\Profile.strings" />
+    <BundleResource Include="Resources\nb.lproj\RenewPrescriptionDialogView.strings" />
+    <BundleResource Include="Resources\nb.lproj\Startup.strings" />
+    <BundleResource Include="Resources\nb.lproj\TableViewLabelCell.strings" />
+    <BundleResource Include="Resources\nb.lproj\YesNoDialogView.strings" />
+    <BundleResource Include="Resources\en.lproj\OnboardingContentView.strings" />
+    <BundleResource Include="Resources\nb.lproj\OnboardingContentView.strings" />
+    <BundleResource Include="Resources\nb.lproj\DateSelectionCell.strings" />
+    <BundleResource Include="Resources\en.lproj\DateSelectionCell.strings" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Compile Include="Constants\Colors.cs" />
+    <Compile Include="Constants\Fonts.cs" />
+    <Compile Include="Components\Cells\ReadMoreTextTableViewCell.cs" />
+    <Compile Include="Components\Cells\ReadMoreTextTableViewCell.designer.cs">
+      <DependentUpon>ReadMoreTextTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Cells\TextTableViewCell.cs" />
+    <Compile Include="Components\Cells\TextTableViewCell.designer.cs">
+      <DependentUpon>TextTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Cells\SwitchTableViewCell.cs" />
+    <Compile Include="Components\Cells\SwitchTableViewCell.designer.cs">
+      <DependentUpon>SwitchTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Views\RoundedCornerView.cs" />
+    <Compile Include="Components\Views\GradientView.cs" />
+    <Compile Include="Components\Views\GradientLayer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Roboto-Regular.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Roboto-Bold.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Roboto-Medium.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Components\Cells\ReadMoreTextTableViewCell.xib" />
+    <InterfaceDefinition Include="Components\Cells\TextTableViewCell.xib" />
+    <InterfaceDefinition Include="Components\Cells\SwitchTableViewCell.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Resources\Assets.xcassets\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\caret down.imageset\caret down.pdf">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\caret down.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\caret up.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\caret up.imageset\caret up.pdf">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\logo 100.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Assets.xcassets\logo 100.imageset\logo 100.pdf">
+      <Visible>false</Visible>
+    </ImageAsset>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Import Project="..\..\packages\Xamarin.Forms.3.4.0.1008975\build\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.3.4.0.1008975\build\Xamarin.Forms.targets')" />
+</Project>

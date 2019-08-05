@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"	
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/termsSwitchContainer"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+		android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+		android:layout_marginTop="14dp"
+		android:layout_marginBottom="14dp">
+		<TextView
+		android:id="@+id/termsTextView"
+		style="@style/terms_switchboxtext_style"
+		android:layout_height="wrap_content"
+		android:layout_width="250dp"
+		android:layout_marginLeft="15dp"
+		
+		android:layout_marginTop="10dp"
+		android:layout_marginBottom="10dp" />
+		<Switch
+		android:layout_marginTop="10dp"
+		android:layout_marginBottom="10dp"
+		android:layout_centerVertical="true"
+		android:layout_alignParentEnd="true"
+		android:layout_marginRight="20dp"
+		android:layout_toRightOf="@id/termsTextView"
+		android:layout_width="50dp"
+        android:layout_height="25dp"
+		android:thumb="@drawable/selector_switch_thumb"
+        android:track="@drawable/selector_switch_track"
+		android:id="@+id/termsSelection" />
+	</RelativeLayout>
+
+	<LinearLayout
+	android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+	android:orientation="vertical"
+	android:layout_below="@id/termsSwitchContainer"
+	>
+	<View		
+	android:layout_below="@id/termsTextView"	
+	style="@style/separator_listview_style"/>
+  </LinearLayout>
+
+</RelativeLayout>

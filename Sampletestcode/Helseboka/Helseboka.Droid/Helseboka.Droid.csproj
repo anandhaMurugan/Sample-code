@@ -1,0 +1,773 @@
+﻿<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\packages\Xamarin.Forms.3.4.0.1008975\build\Xamarin.Forms.props" Condition="Exists('..\..\packages\Xamarin.Forms.3.4.0.1008975\build\Xamarin.Forms.props')" />
+  <Import Project="..\..\packages\Xamarin.Build.Download.0.4.11\build\Xamarin.Build.Download.props" Condition="Exists('..\..\packages\Xamarin.Build.Download.0.4.11\build\Xamarin.Build.Download.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{49C0E6DB-FF2B-4B2D-BCDE-16D3983DA4EA}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Helseboka.Droid</RootNamespace>
+    <AssemblyName>Helseboka.Droid</AssemblyName>
+    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <AndroidSupportedAbis>armeabi-v7a;x86</AndroidSupportedAbis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore_Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;APP_STORE;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <JavaMaximumHeapSize>
+    </JavaMaximumHeapSize>
+    <AndroidSupportedAbis>x86</AndroidSupportedAbis>
+    <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
+    <AndroidExplicitCrunch>true</AndroidExplicitCrunch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore_Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidManagedSymbols>true</AndroidManagedSymbols>
+    <JavaMaximumHeapSize>
+    </JavaMaximumHeapSize>
+    <AndroidSupportedAbis>armeabi-v7a;x86;armeabi;arm64-v8a;x86_64</AndroidSupportedAbis>
+    <DefineConstants>APP_STORE;</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Test_Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Test_Debug\</OutputPath>
+    <DefineConstants>DEBUG;TEST;</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
+    <AndroidExplicitCrunch>true</AndroidExplicitCrunch>
+    <AndroidSupportedAbis>x86</AndroidSupportedAbis>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Test_Release|AnyCPU'">
+    <OutputPath>bin\Test_Release\</OutputPath>
+    <Optimize>true</Optimize>
+    <DebugType>portable</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <DefineConstants>TEST;</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="Xamarin.Android.Support.Constraint.Layout.Solver">
+      <HintPath>..\..\packages\Xamarin.Android.Support.Constraint.Layout.Solver.1.1.2\lib\MonoAndroid70\Xamarin.Android.Support.Constraint.Layout.Solver.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Constraint.Layout">
+      <HintPath>..\..\packages\Xamarin.Android.Support.Constraint.Layout.1.1.2\lib\MonoAndroid70\Xamarin.Android.Support.Constraint.Layout.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Annotations">
+      <HintPath>..\..\packages\Xamarin.Android.Support.Annotations.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Arch.Core.Common">
+      <HintPath>..\..\packages\Xamarin.Android.Arch.Core.Common.1.0.0.1\lib\MonoAndroid80\Xamarin.Android.Arch.Core.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Arch.Lifecycle.Common">
+      <HintPath>..\..\packages\Xamarin.Android.Arch.Lifecycle.Common.1.0.3.1\lib\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Arch.Lifecycle.Runtime">
+      <HintPath>..\..\packages\Xamarin.Android.Arch.Lifecycle.Runtime.1.0.3.1\lib\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Compat">
+      <HintPath>..\..\packages\Xamarin.Android.Support.Compat.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.Compat.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Core.UI">
+      <HintPath>..\..\packages\Xamarin.Android.Support.Core.UI.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.Core.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Core.Utils">
+      <HintPath>..\..\packages\Xamarin.Android.Support.Core.Utils.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.Core.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Fragment">
+      <HintPath>..\..\packages\Xamarin.Android.Support.Fragment.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.Fragment.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Media.Compat">
+      <HintPath>..\..\packages\Xamarin.Android.Support.Media.Compat.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.Media.Compat.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Transition">
+      <HintPath>..\..\packages\Xamarin.Android.Support.Transition.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.Transition.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>..\..\packages\Xamarin.Android.Support.v4.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.RecyclerView">
+      <HintPath>..\..\packages\Xamarin.Android.Support.v7.RecyclerView.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.v7.RecyclerView.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Vector.Drawable">
+      <HintPath>..\..\packages\Xamarin.Android.Support.Vector.Drawable.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.Vector.Drawable.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Animated.Vector.Drawable">
+      <HintPath>..\..\packages\Xamarin.Android.Support.Animated.Vector.Drawable.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.Animated.Vector.Drawable.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.AppCompat">
+      <HintPath>..\..\packages\Xamarin.Android.Support.v7.AppCompat.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Design">
+      <HintPath>..\..\packages\Xamarin.Android.Support.Design.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="CircleIndicator">
+      <HintPath>..\..\packages\Karamunting.Android.Ongakuer.CircleIndicator.1.2.2\lib\monoandroid71\CircleIndicator.dll</HintPath>
+    </Reference>
+    <Reference Include="Java.Interop" />
+    <Reference Include="Xamarin.GooglePlayServices.Basement">
+      <HintPath>..\..\packages\Xamarin.GooglePlayServices.Basement.60.1142.1\lib\MonoAndroid80\Xamarin.GooglePlayServices.Basement.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.Tasks">
+      <HintPath>..\..\packages\Xamarin.GooglePlayServices.Tasks.60.1142.1\lib\MonoAndroid80\Xamarin.GooglePlayServices.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.Base">
+      <HintPath>..\..\packages\Xamarin.GooglePlayServices.Base.60.1142.1\lib\MonoAndroid80\Xamarin.GooglePlayServices.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Firebase.Common">
+      <HintPath>..\..\packages\Xamarin.Firebase.Common.60.1142.1\lib\MonoAndroid80\Xamarin.Firebase.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Firebase.Iid">
+      <HintPath>..\..\packages\Xamarin.Firebase.Iid.60.1142.1\lib\MonoAndroid80\Xamarin.Firebase.Iid.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Firebase.Messaging">
+      <HintPath>..\..\packages\Xamarin.Firebase.Messaging.60.1142.1\lib\MonoAndroid80\Xamarin.Firebase.Messaging.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.CustomTabs">
+      <HintPath>..\..\packages\Xamarin.Android.Support.CustomTabs.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.CustomTabs.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors" />
+    <Reference Include="Microsoft.AppCenter.Android.Bindings">
+      <HintPath>..\..\packages\Microsoft.AppCenter.1.10.0\lib\MonoAndroid403\Microsoft.AppCenter.Android.Bindings.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter">
+      <HintPath>..\..\packages\Microsoft.AppCenter.1.10.0\lib\MonoAndroid403\Microsoft.AppCenter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Crashes.Android.Bindings">
+      <HintPath>..\..\packages\Microsoft.AppCenter.Crashes.1.10.0\lib\MonoAndroid403\Microsoft.AppCenter.Crashes.Android.Bindings.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Crashes">
+      <HintPath>..\..\packages\Microsoft.AppCenter.Crashes.1.10.0\lib\MonoAndroid403\Microsoft.AppCenter.Crashes.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Essentials">
+      <HintPath>..\..\packages\Xamarin.Essentials.0.11.0-preview\lib\monoandroid81\Xamarin.Essentials.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Analytics.Android.Bindings">
+      <HintPath>..\..\packages\Microsoft.AppCenter.Analytics.1.10.0\lib\MonoAndroid403\Microsoft.AppCenter.Analytics.Android.Bindings.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Analytics">
+      <HintPath>..\..\packages\Microsoft.AppCenter.Analytics.1.10.0\lib\MonoAndroid403\Microsoft.AppCenter.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.CardView">
+      <HintPath>..\..\packages\Xamarin.Android.Support.v7.CardView.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.v7.CardView.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.Palette">
+      <HintPath>..\..\packages\Xamarin.Android.Support.v7.Palette.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.v7.Palette.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.MediaRouter">
+      <HintPath>..\..\packages\Xamarin.Android.Support.v7.MediaRouter.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.v7.MediaRouter.dll</HintPath>
+    </Reference>
+    <Reference Include="FormsViewGroup">
+      <HintPath>..\..\packages\Xamarin.Forms.3.4.0.1008975\lib\MonoAndroid10\FormsViewGroup.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\..\packages\Xamarin.Forms.3.4.0.1008975\lib\MonoAndroid10\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform.Android">
+      <HintPath>..\..\packages\Xamarin.Forms.3.4.0.1008975\lib\MonoAndroid10\Xamarin.Forms.Platform.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform">
+      <HintPath>..\..\packages\Xamarin.Forms.3.4.0.1008975\lib\MonoAndroid10\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml">
+      <HintPath>..\..\packages\Xamarin.Forms.3.4.0.1008975\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MobilephoneNumber\Views\MobilePhoneNumberFragment.cs" />
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Common\Views\BaseActivity.cs" />
+    <Compile Include="Common\CommonImpl\SecureStorageHandler.cs" />
+    <Compile Include="Common\CommonImpl\DeviceHandler.cs" />
+    <Compile Include="Common\CommonImpl\NotificationHandler.cs" />
+    <Compile Include="Startup\Views\ForceUpdateFragment.cs" />
+    <Compile Include="Startup\Views\SplashFragment.cs" />
+    <Compile Include="Common\Views\BaseFragment.cs" />
+    <Compile Include="Startup\Views\BankIdOptionsFragment.cs" />
+    <Compile Include="Common\Views\CustomProgressIndicator.cs" />
+    <Compile Include="Startup\Views\BankIdWebViewFragment.cs" />
+    <Compile Include="Startup\Views\RegistrationOptionsFragment.cs" />
+    <Compile Include="Startup\Views\ConfirmationPinFragment.cs" />
+    <Compile Include="Startup\Views\DoctorSelectionFragment.cs" />
+    <Compile Include="Common\Adapters\GenericRecyclerAdapter.cs" />
+    <Compile Include="Common\Listners\RecyclerViewScrollListener.cs" />
+    <Compile Include="Common\Utils\BottomNavigationViewUtils.cs" />
+    <Compile Include="Common\Utils\DateUtils.cs" />
+    <Compile Include="Dashboard\Views\DashboardFragment.cs" />
+    <Compile Include="Startup\Views\LoginFragment.cs" />
+    <Compile Include="Chat\ChatRouter.cs" />
+    <Compile Include="Chat\Views\ChatHomeFragment.cs" />
+    <Compile Include="Common\Utils\DateExtension.cs" />
+    <Compile Include="Common\Utils\StringExtension.cs" />
+    <Compile Include="Chat\Views\ChatFragment.cs" />
+    <Compile Include="Common\Interfaces\IActivity.cs" />
+    <Compile Include="Common\EnumDefinitions\Enums.cs" />
+    <Compile Include="Common\Views\ModalHelpView.cs" />
+    <Compile Include="Chat\Views\NewChatFragment.cs" />
+    <Compile Include="Common\Utils\IntExtension.cs" />
+    <Compile Include="Common\Utils\ViewExtension.cs" />
+    <Compile Include="MedicineModule\MedicineRouter.cs" />
+    <Compile Include="Startup\MainActivity.cs" />
+    <Compile Include="Common\Utils\CustomTypefaceSpan.cs" />
+    <Compile Include="Common\Views\RoundRelativeLayout.cs" />
+    <Compile Include="MedicineModule\Views\MedicineHomeFragment.cs" />
+    <Compile Include="MedicineModule\Views\RenewPrescriptionDialog.cs" />
+    <Compile Include="Common\Views\MaxHeightRecyclerView.cs" />
+    <Compile Include="MedicineModule\Views\MedicineOverviewFragment.cs" />
+    <Compile Include="MedicineModule\Views\MedicineAlarmFragment.cs" />
+    <Compile Include="MedicineModule\Views\SelectMedicineFragment.cs" />
+    <Compile Include="Common\Views\BasicAlertDialog.cs" />
+    <Compile Include="MedicineModule\Views\ConflictReminderDialog.cs" />
+    <Compile Include="Common\Views\YesNoDialog.cs" />
+    <Compile Include="AppointmentModule\AppointmentRouter.cs" />
+    <Compile Include="Common\Router\BaseRouter.cs" />
+    <Compile Include="AppointmentModule\Views\AppointmentHomeFragment.cs" />
+    <Compile Include="AppointmentModule\Views\AppointmentOverviewFragment.cs" />
+    <Compile Include="AppointmentModule\Views\AppointmentDateSelectionFragment.cs" />
+    <Compile Include="AppointmentModule\Views\AppointmentSymptomSelectionFragment.cs" />
+    <Compile Include="AppointmentModule\Views\AppointmentConfirmationFragment.cs" />
+    <Compile Include="ProfileModule\Views\ProfileHomeFragment.cs" />
+    <Compile Include="ProfileModule\Views\DoctorDetailsFragment.cs" />
+    <Compile Include="ProfileModule\Views\PersonalSettingsFragment.cs" />
+    <Compile Include="Startup\Views\OnboardingFragment.cs" />
+    <Compile Include="Common\Utils\FingerprintHandler.cs" />
+    <Compile Include="Common\Utils\CryptoObjectHelper.cs" />
+    <Compile Include="Common\Utils\InactivitySessionHandler.cs" />
+    <Compile Include="Common\Receivers\AlarmReceiver.cs" />
+    <Compile Include="Common\Services\NotificationsService.cs" />
+    <Compile Include="Common\HelsebokaApplication.cs" />
+    <Compile Include="Common\Receivers\BootReceiver.cs" />
+    <Compile Include="Common\Constants\AndroidConstants.cs" />
+    <Compile Include="Common\Services\HelsebokaFirebaseIIDService.cs" />
+    <Compile Include="Common\Services\HelsebokaFirebaseMessagingService.cs" />
+    <Compile Include="Common\CommonImpl\AnalyticsHandler.cs" />
+    <Compile Include="Startup\Views\UrlFragment.cs" />
+    <Compile Include="Terms\Views\TermsDesignHelperFragment.cs" />
+    <Compile Include="Terms\Views\TermsFragment.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="packages.config" />
+    <None Include="Resources\ic_launcher-web.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\SplashBackground.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\SplashBackground.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\SplashBackground.png" />
+    <AndroidResource Include="Resources\layout\activity_main.axml" />
+    <AndroidResource Include="Resources\layout\fragment_startup_splash.axml" />
+    <AndroidResource Include="Resources\drawable-mdpi\SplashLogo.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\SplashLogo.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\SplashLogo.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\large_button_enabled_background.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\large_button_enabled_background.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\large_button_enabled_background.png" />
+    <AndroidResource Include="Resources\layout\fragment_pin_registration_options.axml" />
+    <AndroidResource Include="Resources\drawable-mdpi\touchid_background.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\touchid_background.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\touchid_background.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\pin_background.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\pin_background.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\pin_background.png" />
+    <AndroidResource Include="Resources\layout\fragment_pin_confirmation.axml" />
+    <AndroidResource Include="Resources\drawable\shape_pin_empty.xml" />
+    <AndroidResource Include="Resources\drawable\shape_pin_fill.xml" />
+    <AndroidResource Include="Resources\drawable\shape_doctor_selection_background.xml" />
+    <AndroidResource Include="Resources\drawable\shape_selectable_nodata_background.xml" />
+    <AndroidResource Include="Resources\drawable\shape_selectable_active_background.xml" />
+    <AndroidResource Include="Resources\drawable-mdpi\large_button_disabled_background.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\large_button_disabled_background.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\large_button_disabled_background.png" />
+    <AndroidResource Include="Resources\drawable\selector_large_button_background.xml" />
+    <AndroidResource Include="Resources\color\selector_large_button_text_color.xml" />
+    <AndroidResource Include="Resources\layout\template_search_result.xml" />
+    <AndroidResource Include="Resources\menu\bottom_navigation_main.xml" />
+    <AndroidResource Include="Resources\drawable-mdpi\dashboard_inactive.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\dashboard_inactive.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\dashboard_inactive.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\dashboard_active.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\dashboard_active.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\dashboard_active.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\appointment_inactive.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\appointment_inactive.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\appointment_inactive.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\appointment_active.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\appointment_active.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\appointment_active.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\chat_inactive.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\chat_inactive.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\chat_inactive.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\chat_active.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\chat_active.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\chat_active.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\medicine_inactive.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\medicine_inactive.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\medicine_inactive.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\medicine_active.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\medicine_active.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\medicine_active.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\profile_inactive.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\profile_inactive.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\profile_inactive.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\profile_active.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\profile_active.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\profile_active.png" />
+    <AndroidResource Include="Resources\color\selector_navbar_text_color.xml" />
+    <AndroidResource Include="Resources\drawable-mdpi\chat_home_illustration.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\chat_home_illustration.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\chat_home_illustration.png" />
+    <AndroidResource Include="Resources\color\selector_help_background_color.xml" />
+    <AndroidResource Include="Resources\drawable\shape_help_background.xml" />
+    <AndroidResource Include="Resources\drawable-mdpi\down_arrow.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\down_arrow.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\down_arrow.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\right_arrow.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\right_arrow.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\right_arrow.png" />
+    <AndroidResource Include="Resources\anim\slide_in_from_left.xml" />
+    <AndroidResource Include="Resources\anim\slide_in_from_right.xml" />
+    <AndroidResource Include="Resources\anim\slide_out_to_left.xml" />
+    <AndroidResource Include="Resources\anim\slide_out_to_right.xml" />
+    <AndroidResource Include="Resources\drawable-mdpi\back_icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\back_icon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\back_icon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\medium_button_disabled_background.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\medium_button_disabled_background.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\medium_button_disabled_background.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\medium_button_enabled_background.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\medium_button_enabled_background.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\medium_button_enabled_background.png" />
+    <AndroidResource Include="Resources\drawable\selector_small_button_background.xml" />
+    <AndroidResource Include="Resources\drawable\selector_medium_button_background.xml" />
+    <AndroidResource Include="Resources\drawable\shape_chat_sent_border.xml" />
+    <AndroidResource Include="Resources\drawable\shape_chat_received_border.xml" />
+    <AndroidResource Include="Resources\layout\template_modal_help.axml" />
+    <AndroidResource Include="Resources\drawable\shape_newchat_selected.xml" />
+    <AndroidResource Include="Resources\drawable\shape_newchat_unselected.xml" />
+    <AndroidResource Include="Resources\drawable\selector_chat_newchat_message_to_background.xml" />
+    <AndroidResource Include="Resources\font\avenir_next_lt_pro_bold.otf" />
+    <AndroidResource Include="Resources\font\avenir_next_lt_pro_demi.otf" />
+    <AndroidResource Include="Resources\font\avenir_next_lt_pro_heavy.otf" />
+    <AndroidResource Include="Resources\font\avenir_next_lt_pro_lt.otf" />
+    <AndroidResource Include="Resources\font\avenir_next_lt_pro_regular.otf" />
+    <AndroidResource Include="Resources\font\avenir_next.xml" />
+    <AndroidResource Include="Resources\drawable-mdpi\down_arrow_new_chat.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\down_arrow_new_chat.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\down_arrow_new_chat.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\medicine_home_illustration.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\medicine_home_illustration.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\medicine_home_illustration.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\help_icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\help_icon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\help_icon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\shadow_separator.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\shadow_separator.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\shadow_separator.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\search_icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\search_icon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\search_icon.png" />
+    <AndroidResource Include="Resources\layout\template_medicine_home.axml" />
+    <AndroidResource Include="Resources\drawable\shape_medicine_home_selected_background.xml" />
+    <AndroidResource Include="Resources\drawable-mdpi\arrow_right.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\arrow_right.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\arrow_right.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\checkbox_unchecked.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\checkbox_unchecked.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\checkbox_unchecked.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\checkbox_checked.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\checkbox_checked.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\checkbox_checked.png" />
+    <AndroidResource Include="Resources\drawable\selector_checkbox_background.xml" />
+    <AndroidResource Include="Resources\drawable\shape_medicine_home_not_selected_background.xml" />
+    <AndroidResource Include="Resources\drawable\selector_medicine_home_background.xml" />
+    <AndroidResource Include="Resources\drawable-mdpi\reminder_alarm_icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\reminder_alarm_icon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\reminder_alarm_icon.png" />
+    <AndroidResource Include="Resources\drawable\medicine_home_not_selected_background.9.png" />
+    <AndroidResource Include="Resources\drawable\medicine_home_selected_background.9.png" />
+    <AndroidResource Include="Resources\layout\template_renew_prescription_medicine.axml" />
+    <AndroidResource Include="Resources\drawable\dialog_background.9.png" />
+    <AndroidResource Include="Resources\values\attrs.xml" />
+    <AndroidResource Include="Resources\values\colors.xml" />
+    <AndroidResource Include="Resources\values\dimens.xml" />
+    <AndroidResource Include="Resources\values\strings.xml" />
+    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\values-nb\strings.xml" />
+    <AndroidResource Include="Resources\drawable-mdpi\delete_icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\delete_icon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\delete_icon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\external_link_icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\external_link_icon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\external_link_icon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\add_more_icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\add_more_icon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\add_more_icon.png" />
+    <AndroidResource Include="Resources\drawable\selector_switch_track.xml" />
+    <AndroidResource Include="Resources\drawable\shape_switch_track_on.xml" />
+    <AndroidResource Include="Resources\drawable\shape_switch_track_off.xml" />
+    <AndroidResource Include="Resources\drawable\selector_switch_thumb.xml" />
+    <AndroidResource Include="Resources\drawable\shape_switch_thumb_on.xml" />
+    <AndroidResource Include="Resources\drawable\shape_switch_thumb_off.xml" />
+    <AndroidResource Include="Resources\layout\template_weekview.axml" />
+    <AndroidResource Include="Resources\drawable\shape_medicine_alarmview_time_background.xml" />
+    <AndroidResource Include="Resources\layout\template_medicine_alarmview_time.axml" />
+    <AndroidResource Include="Resources\drawable-mdpi\alarmview_delete_time_icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\alarmview_delete_time_icon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\alarmview_delete_time_icon.png" />
+    <AndroidResource Include="Resources\layout\template_medicine_alarmview_selectmedicine.axml" />
+    <AndroidResource Include="Resources\layout\template_medicine_alarmview_selected_medicine.axml" />
+    <AndroidResource Include="Resources\layout\template_reminder_conflict_item.axml" />
+    <AndroidResource Include="Resources\drawable-mdpi\appointment_home_illustration.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\appointment_home_illustration.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\appointment_home_illustration.png" />
+    <AndroidResource Include="Resources\drawable\shape_upcomming_appointments_background.xml" />
+    <AndroidResource Include="Resources\drawable\shape_previous_appointments_background.xml" />
+    <AndroidResource Include="Resources\drawable-mdpi\appointment_upcomming_status_pending.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\appointment_upcomming_status_pending.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\appointment_upcomming_status_pending.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\appointment_upcomming_status_confirmed.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\appointment_upcomming_status_confirmed.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\appointment_upcomming_status_confirmed.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\appointment_previous_status_confirmed.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\appointment_previous_status_confirmed.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\appointment_previous_status_confirmed.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\appointment_previous_status_others.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\appointment_previous_status_others.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\appointment_previous_status_others.png" />
+    <AndroidResource Include="Resources\drawable\shape_appointment_message_background.xml" />
+    <AndroidResource Include="Resources\layout\fragment_new_appointment_date_selection.axml" />
+    <AndroidResource Include="Resources\drawable-mdpi\profile_logo.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\profile_logo.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\profile_logo.png" />
+    <AndroidResource Include="Resources\layout\fragment_profile_home.axml" />
+    <AndroidResource Include="Resources\drawable-mdpi\profile_back_icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\profile_back_icon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\profile_back_icon.png" />
+    <AndroidResource Include="Resources\layout\fragment_profile_doctor_details.axml" />
+    <AndroidResource Include="Resources\layout\fragment_profile_personal_settings.axml" />
+    <AndroidResource Include="Resources\drawable-mdpi\dashboard_appointment_doctor.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\dashboard_appointment_doctor.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\dashboard_appointment_doctor.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\dashboard_reminder_nodata_center.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\dashboard_reminder_nodata_center.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\dashboard_reminder_nodata_center.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\dashboard_reminder_nodata_right.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\dashboard_reminder_nodata_right.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\dashboard_reminder_nodata_right.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\dashboard_reminder_nodata_left.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\dashboard_reminder_nodata_left.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\dashboard_reminder_nodata_left.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\dashboard_reminder_tablet_big.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\dashboard_reminder_tablet_big.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\dashboard_reminder_tablet_big.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\dashboard_reminder_tablet_small.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\dashboard_reminder_tablet_small.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\dashboard_reminder_tablet_small.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\dashboard_background.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\dashboard_background.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\dashboard_background.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\dashboard_right_arrow.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\dashboard_right_arrow.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\dashboard_right_arrow.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\dashboard_left_arrow.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\dashboard_left_arrow.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\dashboard_left_arrow.png" />
+    <AndroidResource Include="Resources\drawable\dashboard_appointment_background.9.png" />
+    <AndroidResource Include="Resources\drawable\dashboard_reminder_background.9.png" />
+    <AndroidResource Include="Resources\drawable\dashboard_reminder_next.9.png" />
+    <AndroidResource Include="Resources\values\ic_launcher_background.xml" />
+    <AndroidResource Include="Resources\drawable\ic_launcher_background.xml" />
+    <AndroidResource Include="Resources\drawable\ic_launcher_foreground.xml" />
+    <AndroidResource Include="Resources\mipmap-anydpi-v26\ic_launcher.xml" />
+    <AndroidResource Include="Resources\mipmap-anydpi-v26\ic_launcher_round.xml" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher_round.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_launcher_round.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher_round.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher_round.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_round.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\onboarding_illustration_1.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\onboarding_illustration_1.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\onboarding_illustration_1.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\onboarding_illustration_2.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\onboarding_illustration_2.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\onboarding_illustration_2.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\onboarding_illustration_3.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\onboarding_illustration_3.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\onboarding_illustration_3.png" />
+    <AndroidResource Include="Resources\layout\fragment_onboarding.axml" />
+    <AndroidResource Include="Resources\drawable\selector_tab_dot.xml" />
+    <AndroidResource Include="Resources\drawable\shape_tab_dot_default.xml" />
+    <AndroidResource Include="Resources\drawable\shape_tab_dot_selected.xml" />
+    <AndroidResource Include="Resources\layout\template_onboarding_item.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_fp_40px.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_fp_40px.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_fp_40px.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_fp_40px.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_fp_40px.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\add_more_icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\alarmview_delete_time_icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\appointment_active.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\appointment_home_illustration.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\appointment_inactive.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\appointment_previous_status_confirmed.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\appointment_previous_status_others.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\appointment_upcomming_status_confirmed.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\appointment_upcomming_status_pending.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\arrow_right.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\back_icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\chat_active.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\chat_home_illustration.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\chat_inactive.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\checkbox_checked.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\checkbox_unchecked.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\close_modal_icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\dashboard_active.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\dashboard_appointment_doctor.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\dashboard_background.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\dashboard_inactive.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\dashboard_left_arrow.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\dashboard_reminder_nodata_center.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\dashboard_reminder_nodata_left.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\dashboard_reminder_nodata_right.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\dashboard_reminder_tablet_big.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\dashboard_reminder_tablet_small.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\dashboard_right_arrow.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\delete_icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\down_arrow_new_chat.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\down_arrow.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\external_link_icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\help_icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\large_button_disabled_background.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\large_button_enabled_background.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\login_background.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\login_container_background.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\medicine_active.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\medicine_home_illustration.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\medicine_inactive.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\medium_button_disabled_background.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\medium_button_enabled_background.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\onboarding_illustration_1.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\onboarding_illustration_2.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\onboarding_illustration_3.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\pin_background.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\profile_active.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\profile_back_icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\profile_inactive.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\profile_logo.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\reminder_alarm_icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\search_icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\shadow_separator.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\splash_background.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\splash_logo.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\touchid_background.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\login_background.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\login_container_background.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\login_background.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\login_container_background.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\login_background.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\login_container_background.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\add_more_icon.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\alarmview_delete_time_icon.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\appointment_active.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\appointment_home_illustration.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\appointment_inactive.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\appointment_previous_status_confirmed.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\appointment_previous_status_others.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\appointment_upcomming_status_confirmed.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\appointment_upcomming_status_pending.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\arrow_right.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\back_icon.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\chat_active.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\chat_home_illustration.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\chat_inactive.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\checkbox_checked.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\checkbox_unchecked.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\close_modal_icon.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\dashboard_active.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\dashboard_appointment_doctor.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\dashboard_background.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\dashboard_inactive.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\dashboard_left_arrow.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\dashboard_reminder_nodata_center.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\dashboard_reminder_nodata_left.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\dashboard_reminder_nodata_right.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\dashboard_reminder_tablet_big.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\dashboard_reminder_tablet_small.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\dashboard_right_arrow.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\delete_icon.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\down_arrow_new_chat.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\down_arrow.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\external_link_icon.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\help_icon.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\large_button_disabled_background.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\large_button_enabled_background.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\login_background.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\login_container_background.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\medicine_active.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\medicine_home_illustration.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\medicine_inactive.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\medium_button_disabled_background.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\medium_button_enabled_background.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\onboarding_illustration_1.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\onboarding_illustration_2.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\onboarding_illustration_3.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\pin_background.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\profile_active.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\profile_back_icon.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\profile_inactive.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\profile_logo.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\reminder_alarm_icon.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\search_icon.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\shadow_separator.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\splash_background.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\splash_logo.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\touchid_background.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\app_status_icon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\app_status_icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\app_status_icon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\app_status_icon.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\app_status_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Helseboka.Core\Helseboka.Core.csproj">
+      <Project>{ED8BE8F6-C3ED-45A8-BEB5-72F924D49F24}</Project>
+      <Name>Helseboka.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\fragment_new_chat.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\fragment_modal_help.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\close_modal_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\close_modal_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\close_modal_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fonts\avenir_next_lt_pro_bold.otf" />
+    <AndroidAsset Include="Assets\fonts\avenir_next_lt_pro_demi.otf" />
+    <AndroidAsset Include="Assets\fonts\avenir_next_lt_pro_heavy.otf" />
+    <AndroidAsset Include="Assets\fonts\avenir_next_lt_pro_lt.otf" />
+    <AndroidAsset Include="Assets\fonts\avenir_next_lt_pro_regular.otf" />
+  </ItemGroup>
+  <ItemGroup>
+    <GoogleServicesJson Include="google-services.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\fragment_terms.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\terms_list_template.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\rounded_corners_background.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\fragment_mobilephone_number.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\videocall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\videocall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\videocall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\videocall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\videocall.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.Android.Support.Annotations.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Annotations.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Annotations.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Annotations.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Arch.Core.Common.1.0.0.1\build\MonoAndroid80\Xamarin.Android.Arch.Core.Common.targets" Condition="Exists('..\packages\Xamarin.Android.Arch.Core.Common.1.0.0.1\build\MonoAndroid80\Xamarin.Android.Arch.Core.Common.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Arch.Lifecycle.Common.1.0.3.1\build\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Common.targets" Condition="Exists('..\packages\Xamarin.Android.Arch.Lifecycle.Common.1.0.3.1\build\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Common.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Arch.Lifecycle.Runtime.1.0.3.1\build\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Runtime.targets" Condition="Exists('..\packages\Xamarin.Android.Arch.Lifecycle.Runtime.1.0.3.1\build\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Runtime.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Compat.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Compat.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Compat.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Compat.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Core.UI.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Core.UI.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Core.UI.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Core.UI.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Core.Utils.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Core.Utils.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Core.Utils.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Core.Utils.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Fragment.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Fragment.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Fragment.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Fragment.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Media.Compat.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Media.Compat.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Media.Compat.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Media.Compat.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Vector.Drawable.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Vector.Drawable.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Vector.Drawable.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Animated.Vector.Drawable.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Animated.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Animated.Vector.Drawable.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Animated.Vector.Drawable.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.v7.AppCompat.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.v7.AppCompat.targets" Condition="Exists('..\packages\Xamarin.Android.Support.v7.AppCompat.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.v7.AppCompat.targets')" />
+  <Import Project="..\..\packages\Xamarin.Android.Support.Annotations.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Annotations.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Annotations.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Annotations.targets')" />
+  <Import Project="..\..\packages\Xamarin.Android.Arch.Core.Common.1.0.0.1\build\MonoAndroid80\Xamarin.Android.Arch.Core.Common.targets" Condition="Exists('..\..\packages\Xamarin.Android.Arch.Core.Common.1.0.0.1\build\MonoAndroid80\Xamarin.Android.Arch.Core.Common.targets')" />
+  <Import Project="..\..\packages\Xamarin.Android.Arch.Lifecycle.Common.1.0.3.1\build\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Common.targets" Condition="Exists('..\..\packages\Xamarin.Android.Arch.Lifecycle.Common.1.0.3.1\build\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Common.targets')" />
+  <Import Project="..\..\packages\Xamarin.Android.Arch.Lifecycle.Runtime.1.0.3.1\build\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Runtime.targets" Condition="Exists('..\..\packages\Xamarin.Android.Arch.Lifecycle.Runtime.1.0.3.1\build\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Runtime.targets')" />
+  <Import Project="..\..\packages\Xamarin.Android.Support.Compat.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Compat.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Compat.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Compat.targets')" />
+  <Import Project="..\..\packages\Xamarin.Android.Support.Core.UI.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Core.UI.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Core.UI.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Core.UI.targets')" />
+  <Import Project="..\..\packages\Xamarin.Android.Support.Core.Utils.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Core.Utils.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Core.Utils.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Core.Utils.targets')" />
+  <Import Project="..\..\packages\Xamarin.Android.Support.Fragment.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Fragment.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Fragment.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Fragment.targets')" />
+  <Import Project="..\..\packages\Xamarin.Android.Support.Media.Compat.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Media.Compat.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Media.Compat.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Media.Compat.targets')" />
+  <Import Project="..\..\packages\Xamarin.Android.Support.Transition.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Transition.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Transition.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Transition.targets')" />
+  <Import Project="..\..\packages\Xamarin.Android.Support.v4.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.v4.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.v4.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.v4.targets')" />
+  <Import Project="..\..\packages\Xamarin.Android.Support.v7.RecyclerView.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.v7.RecyclerView.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.v7.RecyclerView.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.v7.RecyclerView.targets')" />
+  <Import Project="..\..\packages\Xamarin.Android.Support.Vector.Drawable.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Vector.Drawable.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Vector.Drawable.targets')" />
+  <Import Project="..\..\packages\Xamarin.Android.Support.Animated.Vector.Drawable.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Animated.Vector.Drawable.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Animated.Vector.Drawable.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Animated.Vector.Drawable.targets')" />
+  <Import Project="..\..\packages\Xamarin.Android.Support.v7.AppCompat.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.v7.AppCompat.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.v7.AppCompat.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.v7.AppCompat.targets')" />
+  <Import Project="..\..\packages\Xamarin.Android.Support.Design.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Design.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Design.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Design.targets')" />
+  <Import Project="..\..\packages\Xamarin.Build.Download.0.4.11\build\Xamarin.Build.Download.targets" Condition="Exists('..\..\packages\Xamarin.Build.Download.0.4.11\build\Xamarin.Build.Download.targets')" />
+  <Import Project="..\..\packages\Xamarin.GooglePlayServices.Basement.60.1142.1\build\MonoAndroid80\Xamarin.GooglePlayServices.Basement.targets" Condition="Exists('..\..\packages\Xamarin.GooglePlayServices.Basement.60.1142.1\build\MonoAndroid80\Xamarin.GooglePlayServices.Basement.targets')" />
+  <Import Project="..\..\packages\Xamarin.GooglePlayServices.Tasks.60.1142.1\build\MonoAndroid80\Xamarin.GooglePlayServices.Tasks.targets" Condition="Exists('..\..\packages\Xamarin.GooglePlayServices.Tasks.60.1142.1\build\MonoAndroid80\Xamarin.GooglePlayServices.Tasks.targets')" />
+  <Import Project="..\..\packages\Xamarin.GooglePlayServices.Base.60.1142.1\build\MonoAndroid80\Xamarin.GooglePlayServices.Base.targets" Condition="Exists('..\..\packages\Xamarin.GooglePlayServices.Base.60.1142.1\build\MonoAndroid80\Xamarin.GooglePlayServices.Base.targets')" />
+  <Import Project="..\..\packages\Xamarin.Firebase.Common.60.1142.1\build\MonoAndroid80\Xamarin.Firebase.Common.targets" Condition="Exists('..\..\packages\Xamarin.Firebase.Common.60.1142.1\build\MonoAndroid80\Xamarin.Firebase.Common.targets')" />
+  <Import Project="..\..\packages\Xamarin.Firebase.Iid.60.1142.1\build\MonoAndroid80\Xamarin.Firebase.Iid.targets" Condition="Exists('..\..\packages\Xamarin.Firebase.Iid.60.1142.1\build\MonoAndroid80\Xamarin.Firebase.Iid.targets')" />
+  <Import Project="..\..\packages\Xamarin.Firebase.Messaging.60.1142.1\build\MonoAndroid80\Xamarin.Firebase.Messaging.targets" Condition="Exists('..\..\packages\Xamarin.Firebase.Messaging.60.1142.1\build\MonoAndroid80\Xamarin.Firebase.Messaging.targets')" />
+  <Import Project="..\..\packages\Xamarin.Android.Support.CustomTabs.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.CustomTabs.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.CustomTabs.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.CustomTabs.targets')" />
+  <Import Project="..\..\packages\Xamarin.Android.Support.v7.CardView.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.v7.CardView.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.v7.CardView.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.v7.CardView.targets')" />
+  <Import Project="..\..\packages\Xamarin.Android.Support.v7.Palette.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.v7.Palette.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.v7.Palette.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.v7.Palette.targets')" />
+  <Import Project="..\..\packages\Xamarin.Android.Support.v7.MediaRouter.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.v7.MediaRouter.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.v7.MediaRouter.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.v7.MediaRouter.targets')" />
+  <Import Project="..\..\packages\Xamarin.Forms.3.4.0.1008975\build\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.3.4.0.1008975\build\Xamarin.Forms.targets')" />
+</Project>

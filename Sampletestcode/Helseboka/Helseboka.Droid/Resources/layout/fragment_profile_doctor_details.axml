@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.constraint.Guideline
+        android:id="@+id/labelStartGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="30dp" />
+    <android.support.constraint.Guideline
+        android:id="@+id/labelEndGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="30dp" />
+    <android.support.constraint.Guideline
+        android:id="@+id/separatorStartGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="15dp" />
+    <android.support.constraint.Guideline
+        android:id="@+id/separatorEndGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="15dp" />
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:scaleType="fitStart"
+        android:src="@drawable/profile_back_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/medicalOfficeLabel"
+        style="@style/profile_label_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:text="@string/profile_home_medicalcenter"
+        app:layout_constraintBottom_toBottomOf="@+id/medicalOfficeValue"
+        app:layout_constraintEnd_toStartOf="@+id/medicalOfficeValue"
+        app:layout_constraintStart_toStartOf="@+id/labelStartGuide"
+        app:layout_constraintTop_toTopOf="@+id/medicalOfficeValue" />
+    <TextView
+        android:id="@+id/medicalOfficeValue"
+        style="@style/profile_value_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="50dp"
+        android:gravity="right"
+        android:text="Gildheim Legesenter"
+        app:layout_constraintEnd_toStartOf="@id/labelEndGuide"
+        app:layout_constraintTop_toBottomOf="@id/back"
+        app:layout_constraintWidth_percent="0.5" />
+    <TextView
+        android:id="@+id/doctorLabel"
+        style="@style/profile_label_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:text="@string/profile_home_doctor"
+        app:layout_constraintBottom_toBottomOf="@+id/doctorValue"
+        app:layout_constraintEnd_toStartOf="@+id/doctorValue"
+        app:layout_constraintStart_toStartOf="@+id/labelStartGuide"
+        app:layout_constraintTop_toTopOf="@+id/doctorValue" />
+    <TextView
+        android:id="@+id/doctorValue"
+        style="@style/profile_value_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:gravity="right"
+        android:layout_marginTop="20dp"
+        android:text="Anne Jacobsen"
+        app:layout_constraintEnd_toStartOf="@id/labelEndGuide"
+        app:layout_constraintTop_toBottomOf="@id/medicalOfficeValue"
+        app:layout_constraintWidth_percent="0.5" />
+    <TextView
+        android:id="@+id/changeDoctorDetails"
+        style="@style/profile_label_style"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:padding="20dp"
+        android:gravity="right|center_vertical"
+        android:text="@string/profile_home_change"
+        android:textColor="#5200a0"
+        app:layout_constraintTop_toBottomOf="@id/doctorValue"
+        app:layout_constraintEnd_toStartOf="@id/labelEndGuide" />
+    <View
+        android:id="@+id/separator"
+        style="@style/separator_listview_style"
+        android:layout_width="0dp"
+        app:layout_constraintEnd_toEndOf="@id/separatorEndGuide"
+        app:layout_constraintStart_toStartOf="@id/separatorStartGuide"
+        app:layout_constraintTop_toBottomOf="@id/changeDoctorDetails" />
+    <TextView
+        android:id="@+id/address"
+        style="@style/profile_label_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:lineSpacingExtra="10dp"
+        app:layout_constraintWidth_percent="0.5"
+        android:text="Innherredsveien 21C 7044 TRONDHEIM"
+        app:layout_constraintTop_toBottomOf="@+id/separator"
+        app:layout_constraintStart_toStartOf="@+id/labelStartGuide" />
+    <TextView
+        android:id="@+id/telephoneLabel"
+        style="@style/profile_label_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/profile_doctor_details_mobile"
+        app:layout_constraintTop_toBottomOf="@+id/address"
+        app:layout_constraintStart_toStartOf="@+id/labelStartGuide" />
+    <TextView
+        android:id="@+id/telephoneValue"
+        style="@style/profile_label_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textColor="#5200a0"
+        android:text="73 186 186"
+        app:layout_constraintBaseline_toBaselineOf="@id/telephoneLabel"
+        app:layout_constraintStart_toEndOf="@+id/telephoneLabel" />
+</android.support.constraint.ConstraintLayout>

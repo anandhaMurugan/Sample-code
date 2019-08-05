@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+        <ImageView
+            android:id="@+id/selectionBox"
+            style="@style/checkbox_style"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:visibility="gone" />
+        <RelativeLayout
+            android:id="@+id/medicineContainer"
+            android:background="@drawable/selector_medicine_home_background"
+            android:layout_width="match_parent"
+            android:layout_toRightOf="@id/selectionBox"
+            android:layout_height="80dp">
+            <ImageView
+                android:id="@+id/rightArrow"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/arrow_right"
+                android:scaleType="centerInside"
+                android:layout_marginRight="10dp"
+                android:adjustViewBounds="true" />
+            <TextView
+                android:id="@+id/medicineName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                style="@style/home_medicine_name_style"
+                android:text="Diclofenac Duo"
+                android:layout_alignParentLeft="true" />
+            <TextView
+                android:id="@+id/medicineStrength"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:ellipsize="end"
+                style="@style/home_medicine_strength_style"
+                android:text=" 600mg, tabletter Diclofenac DuoDiclofenac DuoDiclofenac DuoDiclofenac Duo"
+                android:layout_alignBaseline="@id/medicineName"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/rightArrow"
+                android:layout_toRightOf="@id/medicineName" />
+            <LinearLayout
+                android:id="@+id/reminderContainer"
+                android:visibility="invisible"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:paddingBottom="10dp"
+                android:layout_alignParentBottom="true"
+                android:layout_toLeftOf="@id/rightArrow">
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/reminder_alarm_icon"
+                    android:scaleType="centerInside"
+                    android:layout_marginRight="10dp"
+                    android:adjustViewBounds="true" />
+                <TextView
+                    android:id="@+id/reminderDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/avenir_next"
+                    android:textSize="15sp"
+                    android:fontWeight="500"
+                    android:textStyle="normal"
+                    android:textColor="#121212"
+                    android:text=" 600mg, tabletter Diclofenac DuoDiclofenac DuoDiclofenac DuoDiclofenac Duo"
+                    android:ellipsize="end" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

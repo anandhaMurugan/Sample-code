@@ -1,0 +1,10 @@
+﻿[
+  {
+    "title": "What prescriptions do I have?",
+    "description": "You can view your active recipes by logging into helsenorge.no here (link to https://helsenorge.no/e-resept-og-mine-resepter/dine-resepter-pa-helsenorge-no)."
+  },
+  {
+    "title": "How does the renewal of prescription work?",
+    "description": "How this service works:\n1. Tap «Renew Prescription» and select the medicines you want to renew your prescription. If you have not already entered your medicines in the list, you must apply for the medicines in the search box.\n2. Notification of prescription renewal will be sent to your doctor. Your message and any answers from your doctor can be found in the chat.\n3. The doctor will print an electronic prescription that the pharmacies can access. The doctor decides how many withdrawals the recipient applies to.\n4. You can pick up your medicine at the pharmacy after 2-3 business days. Remember to take a valid ID."
+  }
+]

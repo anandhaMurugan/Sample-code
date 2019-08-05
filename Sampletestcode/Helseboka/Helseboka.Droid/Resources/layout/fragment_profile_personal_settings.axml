@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:scaleType="fitStart"
+        android:src="@drawable/profile_back_icon"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+    <RelativeLayout
+        android:id="@+id/saveContainer"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#e7fbfb"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:id="@+id/saveButton"
+            style="@style/profile_label_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:text="@string/profile_personal_settings_save"
+            android:textColor="#5200a0" />
+    </RelativeLayout>
+    <ScrollView
+		android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/saveContainer"
+        android:layout_below="@id/back">
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.constraint.Guideline
+                android:id="@+id/labelStartGuide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="30dp" />
+            <android.support.constraint.Guideline
+                android:id="@+id/labelEndGuide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="30dp" />
+            <android.support.constraint.Guideline
+                android:id="@+id/separatorStartGuide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="15dp" />
+            <android.support.constraint.Guideline
+                android:id="@+id/separatorEndGuide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="15dp" />
+            <TextView
+                android:id="@+id/pageTitle"
+                style="@style/page_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:lineSpacingExtra="5dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="@id/labelStartGuide"
+                app:layout_constraintEnd_toStartOf="@id/labelEndGuide" />
+            <TextView
+                android:id="@+id/dobLabel"
+                style="@style/profile_label_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="@string/profile_personalsettings_dob"
+                app:layout_constraintBottom_toBottomOf="@+id/dobValue"
+                app:layout_constraintEnd_toStartOf="@+id/dobValue"
+                app:layout_constraintStart_toStartOf="@+id/labelStartGuide"
+                app:layout_constraintTop_toTopOf="@+id/dobValue" />
+            <TextView
+                android:id="@+id/dobValue"
+                style="@style/profile_value_style"
+                android:textColor="#a9a9a9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="40dp"
+                android:gravity="right"
+                app:layout_constraintEnd_toStartOf="@id/labelEndGuide"
+                app:layout_constraintTop_toBottomOf="@id/pageTitle"
+                app:layout_constraintWidth_percent="0.5" />
+            <View
+                android:id="@+id/dobSeparator"
+                style="@style/separator_listview_style"
+                android:layout_width="0dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="@id/separatorEndGuide"
+                app:layout_constraintStart_toStartOf="@id/separatorStartGuide"
+                app:layout_constraintTop_toBottomOf="@id/dobValue" />
+            <TextView
+                android:id="@+id/genderLabel"
+                style="@style/profile_label_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="@string/profile_personalsettings_gender"
+                app:layout_constraintBottom_toBottomOf="@+id/genderValue"
+                app:layout_constraintEnd_toStartOf="@+id/genderValue"
+                app:layout_constraintStart_toStartOf="@+id/labelStartGuide"
+                app:layout_constraintTop_toTopOf="@+id/genderValue" />
+            <TextView
+                android:id="@+id/genderValue"
+                style="@style/profile_value_style"
+                android:textColor="#a9a9a9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="20dp"
+                android:gravity="right"
+                app:layout_constraintEnd_toStartOf="@id/labelEndGuide"
+                app:layout_constraintTop_toBottomOf="@id/dobSeparator"
+                app:layout_constraintWidth_percent="0.5" />
+            <View
+                android:id="@+id/genderSeparator"
+                style="@style/separator_listview_style"
+                android:layout_width="0dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="@id/separatorEndGuide"
+                app:layout_constraintStart_toStartOf="@id/separatorStartGuide"
+                app:layout_constraintTop_toBottomOf="@id/genderValue" />
+            <TextView
+                android:id="@+id/addressLabel"
+                style="@style/profile_label_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="@string/profile_personalsettings_address"
+                app:layout_constraintBottom_toBottomOf="@+id/addressValue"
+                app:layout_constraintEnd_toStartOf="@+id/addressValue"
+                app:layout_constraintStart_toStartOf="@+id/labelStartGuide"
+                app:layout_constraintTop_toTopOf="@+id/addressValue" />
+            <EditText
+                android:id="@+id/addressValue"
+                style="@style/profile_value_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="20dp"
+                android:gravity="right"
+                android:background="@null"
+                app:layout_constraintEnd_toStartOf="@id/labelEndGuide"
+                app:layout_constraintTop_toBottomOf="@id/genderSeparator"
+                app:layout_constraintWidth_percent="0.5" />
+            <View
+                android:id="@+id/addressSeparator"
+                style="@style/separator_listview_style"
+                android:layout_width="0dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="@id/separatorEndGuide"
+                app:layout_constraintStart_toStartOf="@id/separatorStartGuide"
+                app:layout_constraintTop_toBottomOf="@id/addressValue" />
+            <TextView
+                android:id="@+id/telephoneLabel"
+                style="@style/profile_label_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="@string/profile_personalsettings_telefone"
+                app:layout_constraintBottom_toBottomOf="@+id/telephoneValue"
+                app:layout_constraintEnd_toStartOf="@+id/telephoneValue"
+                app:layout_constraintStart_toStartOf="@+id/labelStartGuide"
+                app:layout_constraintTop_toTopOf="@+id/telephoneValue" />
+            <EditText
+                android:id="@+id/telephoneValue"
+                style="@style/profile_value_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="20dp"
+                android:gravity="right"
+                android:background="@null"
+                android:inputType="phone"
+                app:layout_constraintEnd_toStartOf="@id/labelEndGuide"
+                app:layout_constraintTop_toBottomOf="@id/addressSeparator"
+                app:layout_constraintWidth_percent="0.4" />
+            <View
+                android:id="@+id/telephoneSeparator"
+                style="@style/separator_listview_style"
+                android:layout_width="0dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="@id/separatorEndGuide"
+                app:layout_constraintStart_toStartOf="@id/separatorStartGuide"
+                app:layout_constraintTop_toBottomOf="@id/telephoneValue" />
+			<TextView
+				android:id="@+id/errorLabel"
+                style="@style/profile_label_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+				android:layout_marginTop="50dp"
+				android:textColor="#ce2029"
+				android:layout_centerHorizontal="true"
+				android:visibility="gone"
+                android:text="@string/mobilephone_number_errormessage_hint"
+                app:layout_constraintBottom_toBottomOf="@+id/errorValue"
+                app:layout_constraintEnd_toStartOf="@+id/errorValue"
+                app:layout_constraintStart_toStartOf="@id/labelStartGuide"
+                app:layout_constraintTop_toTopOf="@+id/telephoneValue" />
+			<TextView
+                android:id="@+id/errorTextLabel"
+                style="@style/profile_label_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+				app:layout_constraintLeft_toLeftOf="parent"
+				android:layout_marginTop="80dp"
+				android:textColor="#ce2029"
+				android:visibility="gone"
+                android:text="@string/mobilephone_number_errormessagetext_hint"
+                app:layout_constraintBottom_toBottomOf="@+id/errorTextValue"
+                app:layout_constraintEnd_toStartOf="@+id/errorTextValue"
+                app:layout_constraintStart_toStartOf="@id/labelStartGuide"
+                app:layout_constraintTop_toTopOf="@+id/telephoneValue"/>
+			<View
+                android:id="@+id/errorSeparator"
+                style="@style/separator_listview_style"
+                android:layout_width="0dp"
+                android:layout_marginTop="65dp"
+				android:background="#FFFAFA"
+                app:layout_constraintEnd_toEndOf="@id/separatorEndGuide"
+                app:layout_constraintStart_toStartOf="@id/separatorStartGuide"
+                app:layout_constraintTop_toBottomOf="@id/telephoneSeparator" />
+            <Space
+                android:layout_height="30dp"
+                android:layout_width="1dp"
+                app:layout_constraintTop_toBottomOf="@id/errorSeparator" />
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</RelativeLayout>

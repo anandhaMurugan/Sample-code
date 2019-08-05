@@ -1,0 +1,10 @@
+﻿[
+  {
+    "title": "What can I do here?",
+    "description": "Here you can briefly describe your symptoms and reason for the appointment. The information will be read by the doctor's office in connection with the timing, as well as by the doctor in advance of your appointment. If your problem is such that you want an appointment for a short period of time, write some keywords. \n\nIf you have more than one theme you would like to record, it is desirable to sort them under «Symptom 1», «Symptom 2» etc. Please provide the theme you think is most important as «Symptom 1»."
+  },
+  {
+    "title": "What do I do during a normal appointment?",
+    "description": "A regular appointment lasts up to 15-20 minutes. Normally you will be able to address one to two topics, depending on the complexity of the issues. \n\nIf you have several issues, you can not expect the doctor to have time to evaluate everything during one appointment. You may want to think about what's important to pick up now and what to wait for any later appointment. If you find it difficult to prioritize, you can still enter the topics in this form and get the doctor's help to evaluate."
+  }
+]

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/back_icon"
+        android:scaleType="fitStart" />
+    <RelativeLayout
+        android:id="@+id/messageToContainer"
+        android:layout_below="@id/back"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="20dp"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/messageToContainerCollapsed"
+            android:layout_width="match_parent"
+            android:visibility="visible"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/downArrowCollapsed"
+                android:layout_height="15dp"
+                android:layout_width="15dp"
+                android:layout_alignParentRight="true"
+                android:scaleType="fitCenter"
+                android:layout_centerVertical="true"
+                android:src="@drawable/down_arrow_new_chat" />
+            <TextView
+                android:id="@+id/toTextViewCollapsed"
+                style="@style/chat_newchat_nodata_style"
+                android:layout_toLeftOf="@id/downArrowCollapsed"
+                android:layout_alignParentLeft="true"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/chat_newchat_to_placeholder" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/messageToContainerExpanded"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+            <View
+                android:id="@+id/emptySpace"
+                android:layout_height="20dp"
+                android:layout_width="1dp" />
+            <TextView
+                android:id="@+id/toTextView"
+                style="@style/chat_newchat_label_style"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/emptySpace"
+                android:text="@string/chat_newchat_to" />
+            <ImageView
+                android:id="@+id/downArrow"
+                android:layout_height="15dp"
+                android:layout_width="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/toTextView"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/down_arrow_new_chat" />
+            <TextView
+                android:id="@+id/messageToDoctor"
+                style="@style/chat_newchat_label_style"
+                android:layout_toLeftOf="@id/downArrow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/toTextView"
+                android:layout_below="@id/emptySpace"
+                android:text="Lege Anne Jacobson"
+                android:background="@drawable/selector_chat_newchat_message_to_background"
+                android:layout_alignBaseline="@id/toTextView" />
+            <TextView
+                android:id="@+id/messageToDoctorHint"
+                style="@style/chat_newchat_label_style"
+                android:layout_below="@id/messageToDoctor"
+                android:layout_alignLeft="@id/messageToDoctor"
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/chat_newchat_doctor_hint"
+                android:textSize="12sp" />
+            <TextView
+                android:id="@+id/messageToMedicalCenter"
+                style="@style/chat_newchat_label_style"
+                android:layout_below="@id/messageToDoctorHint"
+                android:layout_alignLeft="@id/messageToDoctor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:padding="10dp"
+                android:text="Legekontor (Helsesekretær)"
+                android:background="@drawable/selector_chat_newchat_message_to_background" />
+            <TextView
+                android:id="@+id/messageToMedicalCenterHint"
+                style="@style/chat_newchat_label_style"
+                android:layout_below="@id/messageToMedicalCenter"
+                android:layout_alignLeft="@id/messageToDoctor"
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/chat_newchat_medical_center_hint"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/separatorShadow"
+        style="@style/separator_shadow_style"
+        android:layout_below="@id/messageToContainer"
+        android:visibility="gone" />
+    <View
+        android:id="@+id/firstSeparator"
+        style="@style/home_chat_separator_style"
+        android:layout_below="@id/messageToContainer"
+        android:visibility="visible"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+    <EditText
+        android:id="@+id/messageSubjectField"
+        style="@style/chat_newchat_label_style"
+        android:layout_below="@id/firstSeparator"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@null"
+        android:hint="@string/chat_newchat_subject_hint" />
+    <View
+        android:id="@+id/secondSeparator"
+        style="@style/home_chat_separator_style"
+        android:layout_below="@id/messageSubjectField"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+    <RelativeLayout
+        android:id="@+id/footerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:id="@+id/sendMessageButton"
+            style="@style/button_action_medium"
+            android:layout_alignParentRight="true"
+            android:enabled="false"
+            android:text="@string/chat_newchat_button_title" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/avenir_next"
+            android:textSize="10sp"
+            android:textColor="#ff0000"
+            android:textStyle="normal"
+            android:fontWeight="400"
+            android:layout_toLeftOf="@id/sendMessageButton"
+            android:layout_alignParentLeft="true"
+            android:text="@string/chat_newchat_alert_message" />
+    </RelativeLayout>
+    <EditText
+        android:id="@+id/messageBody"
+        style="@style/chat_newchat_label_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:hint="@string/chat_newchat_body_hint"
+        android:maxHeight="200dp"
+        android:lines="10"
+        android:scrollbars="vertical"
+        android:gravity="top|left"
+        android:background="@null"
+        android:inputType="textMultiLine"
+        android:layout_below="@id/secondSeparator"
+        android:layout_above="@id/footerContainer" />
+</RelativeLayout>

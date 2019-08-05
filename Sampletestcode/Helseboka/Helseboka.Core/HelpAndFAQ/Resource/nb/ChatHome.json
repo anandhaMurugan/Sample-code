@@ -1,0 +1,14 @@
+﻿[
+  {
+    "title": "Hva kan jeg gjøre her?",
+    "description": "Via Helseboka kan du få medisinske råd fra legen din. Vanlige henvendelser er spørsmål om sykdom og plager legen kjenner til at du har, samt spørsmål om symptomer, medisiner og bivirkninger. Du kan be om resept, attest eller sykemelding for medisinske problemstillinger som allerede er kjent for legen. Merk at dersom henvendelsen krever at legen gjør en medisinsk vurdering må du betale for dette på linje med en vanlig legetime (se mer under «Hvor mye koster det?»).\n\nVia Helseboka kan du også få svar på praktiske spørsmål, få vite om prøvesvar har kommet og spørre om annet som ikke krever en medisinsk vurdering. Slike henvendelser besvares vanligvis av helsesekretærer på legekontoret. \n\nNB: Legedialog skal ikke brukes i akuttsituasjoner. Dersom du trenger rask helsehjelp på dagtid, vennligst ring legekontoret. Utenfor legekontorets åpningstider, ring legevakt for øyeblikkelig hjelp hele døgnet. Ved alvorlig akutt sykdom eller skade, ring nødnummer 113."
+  },
+  {
+    "title": "Hvor mye koster det?",
+    "description": "Dialog med lege eller helsesekretær som ikke krever medisinsk vurdering vil være gratis for deg. Legen din vil i hvert enkelt tilfelle vurdere om dialogen anses som en betalt konsultasjon som belastes med vanlig egenandel og fakturagebyr (inntil du eventuelt får frikort). \n\nFaktura utstedes av legekontoret i etterkant av dialogen.\n\nHelsenorge.no gir en prisoversikt over vanlige egenandeler hos lege her: https://helsenorge.no/betaling-for-helsetjenester/betaling-hos-lege \n\nDu må ikke betale gebyr til Helseboka for å bruke tjenesten."
+  },
+  {
+    "title": "Hvor lang tid tar det å få svar?",
+    "description": "Responstid vil variere fra legekontor til legekontor. Myndighetene anbefaler svarfrist på 5 virkedager."
+  }
+]

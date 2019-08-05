@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+  <android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <android.support.constraint.Guideline
+        android:id="@+id/labelStartGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="30dp" />
+    <android.support.constraint.Guideline
+        android:id="@+id/labelEndGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="30dp" />
+    <android.support.constraint.Guideline
+        android:id="@+id/separatorStartGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="15dp" />
+    <android.support.constraint.Guideline
+        android:id="@+id/separatorEndGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="15dp" />
+    <ImageView
+        android:id="@+id/applicationLogo"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:elevation="1dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/profile_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/helpButton"
+        android:layout_width="@dimen/help_button_width"
+        android:layout_height="@dimen/help_button_height"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:elevation="2dp"
+        android:layout_marginTop="@dimen/help_button_margin_top"
+        android:layout_marginRight="@dimen/help_button_margin_right"
+        android:src="@drawable/help_icon" />
+    <TextView
+        android:id="@+id/pageTitle"
+        style="@style/page_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:elevation="1dp"
+        android:lineSpacingExtra="5dp"
+        app:layout_constraintStart_toStartOf="@id/labelStartGuide"
+        app:layout_constraintTop_toBottomOf="@id/applicationLogo" />
+    <ImageView
+        android:id="@+id/separator"
+        style="@style/separator_shadow_style"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pageTitle" />
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#f4f4f4"
+        android:elevation="0dp"
+        app:layout_constraintBottom_toTopOf="@id/separator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/personalSettings"
+        style="@style/profile_label_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:lineSpacingExtra="3dp"
+        android:text="@string/profile_home_personalsettings"
+        app:layout_constraintEnd_toStartOf="@+id/personalSettingsArrow"
+        app:layout_constraintStart_toStartOf="@id/labelStartGuide"
+        app:layout_constraintTop_toBottomOf="@id/separator" />
+    <ImageView
+        android:id="@id/personalSettingsArrow"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:scaleType="fitEnd"
+        android:src="@drawable/right_arrow"
+        app:layout_constraintBottom_toBottomOf="@id/personalSettings"
+        app:layout_constraintEnd_toEndOf="@id/labelEndGuide"
+        app:layout_constraintTop_toTopOf="@id/personalSettings" />
+    <View
+        android:id="@+id/personalSettingsSeparator"
+        style="@style/separator_listview_style"
+        android:layout_width="0dp"
+        app:layout_constraintEnd_toEndOf="@id/separatorEndGuide"
+        app:layout_constraintStart_toStartOf="@id/separatorStartGuide"
+        app:layout_constraintTop_toBottomOf="@id/personalSettings" />
+    <TextView
+        android:id="@+id/medicalOfficeLabel"
+        style="@style/profile_label_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:text="@string/profile_home_medicalcenter"
+        app:layout_constraintBottom_toBottomOf="@+id/medicalOfficeValue"
+        app:layout_constraintEnd_toStartOf="@+id/medicalOfficeValue"
+        app:layout_constraintStart_toStartOf="@+id/labelStartGuide"
+        app:layout_constraintTop_toTopOf="@+id/medicalOfficeValue" />
+    <ImageView
+        android:id="@+id/medicalOfficeArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/medicalOfficeValue"
+        app:layout_constraintEnd_toStartOf="@+id/labelEndGuide"
+        app:layout_constraintTop_toTopOf="@+id/medicalOfficeValue"
+        app:srcCompat="@drawable/right_arrow" />
+    <TextView
+        android:id="@+id/medicalOfficeValue"
+        style="@style/profile_value_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:gravity="right"
+        app:layout_constraintEnd_toStartOf="@+id/medicalOfficeArrow"
+        app:layout_constraintTop_toBottomOf="@+id/personalSettingsSeparator"
+        app:layout_constraintWidth_percent="0.5" />
+    <View
+        android:id="@+id/medicalOfficeSeparator"
+        style="@style/separator_listview_style"
+        android:layout_width="0dp"
+        app:layout_constraintEnd_toEndOf="@id/separatorEndGuide"
+        app:layout_constraintStart_toStartOf="@id/separatorStartGuide"
+        app:layout_constraintTop_toBottomOf="@id/medicalOfficeValue" />
+    <TextView
+        android:id="@+id/doctorLabel"
+        style="@style/profile_label_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:text="@string/profile_home_doctor"
+        app:layout_constraintBottom_toBottomOf="@+id/doctorValue"
+        app:layout_constraintEnd_toStartOf="@+id/doctorValue"
+        app:layout_constraintStart_toStartOf="@+id/labelStartGuide"
+        app:layout_constraintTop_toTopOf="@+id/doctorValue" />
+    <ImageView
+        android:id="@+id/doctorArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/doctorValue"
+        app:layout_constraintEnd_toStartOf="@+id/labelEndGuide"
+        app:layout_constraintTop_toTopOf="@+id/doctorValue"
+        app:srcCompat="@drawable/right_arrow" />
+    <TextView
+        android:id="@+id/doctorValue"
+        style="@style/profile_value_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:gravity="right"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/doctorArrow"
+        app:layout_constraintTop_toBottomOf="@+id/medicalOfficeSeparator"
+        app:layout_constraintWidth_percent="0.5" />
+    <View
+        android:id="@+id/doctorSeparator"
+        style="@style/separator_listview_style"
+        android:layout_width="0dp"
+        app:layout_constraintEnd_toEndOf="@id/separatorEndGuide"
+        app:layout_constraintStart_toStartOf="@id/separatorStartGuide"
+        app:layout_constraintTop_toBottomOf="@id/doctorValue" />
+    <TextView
+        android:id="@+id/pinLabel"
+        style="@style/profile_label_style"
+        android:visibility="gone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:text="@string/profile_home_changepin"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toStartOf="@+id/changePINLabel"
+        app:layout_constraintStart_toStartOf="@+id/labelStartGuide"
+        app:layout_constraintTop_toBottomOf="@id/doctorSeparator" />
+    <TextView
+        android:id="@+id/changePINLabel"
+        style="@style/profile_label_style"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="right|center_vertical"
+        android:text="@string/profile_home_change"
+        android:textColor="#5200a0"
+        app:layout_constraintBottom_toBottomOf="@id/pinLabel"
+        app:layout_constraintEnd_toStartOf="@id/labelEndGuide"
+        app:layout_constraintTop_toTopOf="@id/pinLabel" />
+    <View
+        android:id="@+id/pinSeparator"
+        style="@style/separator_listview_style"
+        android:visibility="gone"
+        android:layout_width="0dp"
+        app:layout_constraintEnd_toEndOf="@id/separatorEndGuide"
+        app:layout_constraintStart_toStartOf="@id/separatorStartGuide"
+        app:layout_constraintTop_toBottomOf="@id/pinLabel" />
+        
+        
+               
+    <TextView
+        android:id="@+id/feedbackLabel"
+        style="@style/profile_label_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="3dp"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:text="@string/profile_home_feedback"
+        app:layout_constraintEnd_toStartOf="@+id/feedbackArrow"
+        app:layout_constraintStart_toStartOf="@id/labelStartGuide"
+        app:layout_constraintTop_toBottomOf="@id/pinSeparator" />
+    <ImageView
+        android:id="@id/feedbackArrow"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:scaleType="fitEnd"
+        android:src="@drawable/right_arrow"
+        app:layout_constraintBottom_toBottomOf="@id/feedbackLabel"
+        app:layout_constraintEnd_toEndOf="@id/labelEndGuide"
+        app:layout_constraintTop_toTopOf="@id/feedbackLabel" />
+    <View
+        android:id="@+id/feedbackSeparator"
+        style="@style/separator_listview_style"
+        android:layout_width="0dp"
+        app:layout_constraintEnd_toEndOf="@id/separatorEndGuide"
+        app:layout_constraintStart_toStartOf="@id/separatorStartGuide"
+        app:layout_constraintTop_toBottomOf="@id/feedbackLabel" />
+        
+        
+        
+        
+        
+        
+    <TextView
+        android:id="@+id/gdprLabel"
+        style="@style/profile_label_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="3dp"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:text="@string/profile_home_gdpr"
+        app:layout_constraintEnd_toStartOf="@+id/gdprArrow"
+        app:layout_constraintStart_toStartOf="@id/labelStartGuide"
+        app:layout_constraintTop_toBottomOf="@id/feedbackSeparator" />
+    <ImageView
+        android:id="@id/gdprArrow"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:scaleType="fitEnd"
+        android:src="@drawable/right_arrow"
+        app:layout_constraintBottom_toBottomOf="@id/gdprLabel"
+        app:layout_constraintEnd_toEndOf="@id/labelEndGuide"
+        app:layout_constraintTop_toTopOf="@id/gdprLabel" />
+    <View
+        android:id="@+id/gdprSeparator"
+        style="@style/separator_listview_style"
+        android:layout_width="0dp"
+        app:layout_constraintEnd_toEndOf="@id/separatorEndGuide"
+        app:layout_constraintStart_toStartOf="@id/separatorStartGuide"
+        app:layout_constraintTop_toBottomOf="@id/gdprLabel" />
+   <TextView
+        android:id="@+id/logoutLabel"
+        style="@style/profile_label_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:lineSpacingExtra="3dp"
+        android:text="@string/profile_home_logout"
+        android:textColor="#5200a0"
+        app:layout_constraintEnd_toEndOf="@id/labelEndGuide"
+        app:layout_constraintStart_toStartOf="@id/labelStartGuide"
+        app:layout_constraintTop_toBottomOf="@id/gdprSeparator" />
+    <View
+        android:id="@+id/logoutSeparator"
+        style="@style/separator_listview_style"
+        android:layout_width="0dp"
+        app:layout_constraintEnd_toEndOf="@id/separatorEndGuide"
+        app:layout_constraintStart_toStartOf="@id/separatorStartGuide"
+        app:layout_constraintTop_toBottomOf="@id/logoutLabel" />
+     <TextView
+        android:id="@+id/deleteProfileLabel"
+        style="@style/profile_label_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingBottom="20dp"
+        android:lineSpacingExtra="3dp"
+        android:text="@string/profile_home_delete_profile"
+        android:textColor="#ff0000"
+        app:layout_constraintEnd_toEndOf="@id/labelEndGuide"
+        app:layout_constraintStart_toStartOf="@id/labelStartGuide"
+        app:layout_constraintTop_toBottomOf="@id/logoutSeparator" />   
+        
+        <Space
+            android:layout_width="1dp"
+            android:layout_height="50dp"
+            app:layout_constraintTop_toBottomOf="@id/feedbackLabel" />
+    
+</android.support.constraint.ConstraintLayout>
+</ScrollView>

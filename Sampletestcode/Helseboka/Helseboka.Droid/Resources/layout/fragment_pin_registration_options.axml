@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/login_background" />
+        </LinearLayout>
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/splashlogo" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/login_container_background" />
+        <TextView
+            android:id="@+id/pageTitle"
+            style="@style/page_title"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/startup_registration_option_title"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp" />
+        <TextView
+            android:id="@+id/pageSubTitle"
+            style="@style/startup_subtitle"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/startup_registration_option_subtitle"
+            android:layout_below="@id/pageTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center" />
+        <Button
+            android:id="@+id/buttonTouchId"
+            style="@style/button_action_large"
+            android:background="@drawable/touchid_background"
+            android:text="@string/startup_registration_option_touchid"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/pageSubTitle"
+            android:layout_marginTop="20dp" />
+        <Button
+            android:id="@+id/buttonPIN"
+            style="@style/button_action_large"
+            android:background="@drawable/pin_background"
+            android:text="@string/startup_registration_option_pin"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/buttonTouchId"
+            android:layout_marginTop="20dp" />
+        <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/text_button"
+            android:text="@string/general_view_cancel"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/login_bankid_sparator"
+            android:layout_above="@id/cancelButton" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Helseboka</string>
+
+    <string name="today">I dag</string>
+    <string name="tomorrow">I morgen</string>
+    <string name="yesterday">I går</string>
+    <string name="monday">Mondag</string>
+    <string name="tuesday">Tirsdag</string>
+    <string name="wednesday">Onsdag</string>
+    <string name="thursday">Torsdag</string>
+    <string name="friday">Fredag</string>
+    <string name="saturday">Lørdag</string>
+    <string name="sunday">Søndag</string>
+    
+    <!--Dashboard-->
+    <string name="dashboard_appointment_title">Du har fått time hos</string>
+    <string name="dashboard_welcome_title">Velkommen til Helseboka!</string>
+    <string name="dashboard_appointment_nodata">Jeg har ingen viktige beskjeder til deg</string>
+    <string name="dashboard_alarm_confirmation_title">Bekreftelse</string>
+    <string name="dashboard_alarm_confirmation_message">Jeg har tatt denne medisinen nå.</string>
+    <string name="dashboard_alarm_confirmation_yes">Bekreft</string>
+    <string name="dashboard_noalarm_title">Sett påminnelse</string>
+    <string name="dashboard_noalarm_message">Så glemmer du ikke å ta medisinen din</string>
+    
+    <string name="chat_dialog_title_doctor">Lege</string>
+    <string name="chat_dialog_title_office">Legekontoret</string>
+    <string name="chat_newdialog_placeholder">Ditt spørsmål</string>
+    <string name="chat_newdialog_senderprefix">Til</string>
+    <string name="home_tabbar_chat_title">DIALOG</string>
+    <string name="home_tabbar_appointment_title">TIMER</string>
+    <string name="home_tabbar_medicine_title">MEDISINER</string>
+    <string name="home_tabbar_profile_title">PROFIL</string>
+    <string name="home_tabbar_dashboard_title">AKTUELT</string>
+    <string name="appointment_home_pending_title">Ikke bekreftet enda</string>
+    <string name="appointment_home_cancelled_title">Avbestilt</string>
+    <string name="appointment_details_symptom_title">Tema</string>
+    <string name="appointment_new_selecttime_helptext">Ved behov for rask helsehjelp på dagtid, vennligst ring legekontoret på .... (tlf.).</string>
+    <string name="appointment_details_feedback_button"><u>Avbestill</u></string>
+    <string name="appointment_home_header_upcomming">Kommende timer</string>
+    <string name="appointment_home_header_previous">Tidligere timer</string>
+    <string name="appointment_new_selecttime_monday">Man</string>
+    <string name="appointment_new_selecttime_tuesday">Tir</string>
+    <string name="appointment_new_selecttime_wednesday">Ons</string>
+    <string name="appointment_new_selecttime_thursday">Tor</string>
+    <string name="appointment_new_selecttime_friday">Fre</string>
+    <string name="medicine_reminder_monday">M</string>
+    <string name="medicine_reminder_tuesday">T</string>
+    <string name="medicine_reminder_wednesday">O</string>
+    <string name="medicine_reminder_thursday">T</string>
+    <string name="medicine_reminder_friday">F</string>
+    <string name="medicine_reminder_saturday">L</string>
+    <string name="medicine_reminder_sunday">S</string>
+    <string name="medicine_reminder_enddate_undefined">undefinert</string>
+    <string name="medicine_reminder_alert_nomedicine">Du har ingen medisin i listen din. Vennligst legg til dem først</string>
+    <string name="medicine_reminder_selectfrequency_title">Velg tid</string>
+    <string name="medicine_reminder_selectstartdate">Velg startdato</string>
+    <string name="medicine_reminder_selectenddate">Velg sluttdato</string>
+    <string name="medicine_home_button_renewprescription">Forny resept</string>
+    <string name="medicine_overview_alarmlabel_add_title">Sett påminnelse</string>
+    <string name="medicine_overview_alarmlabel_edit_title">Rediger påminnelse</string>
+    <string name="medicine_overview_monday">M</string>
+    <string name="medicine_overview_tuesday">Ti</string>
+    <string name="medicine_overview_wednesday">O</string>
+    <string name="medicine_overview_thursday">To</string>
+    <string name="medicine_overview_friday">F</string>
+    <string name="medicine_overview_saturday">L</string>
+    <string name="medicine_overview_sunday">S</string>
+    <string name="medicine_home_helptext">Her kan du legge inn og få oversikt over medisiner du bruker, få hjelp til å huske å ta dem til rett tid, samt be legen om å få fornyet resept på dine faste medisiner.</string>
+    <string name="profile_doctor_details_mobile">Tlf:</string>
+    <string name="profile_home_personalsettings">Dine personlige innstillinger</string>
+    <string name="profile_home_medicalcenter">Legekontor</string>
+    <string name="profile_home_doctor">Lege</string>
+    <string name="profile_home_changepin">PIN-kode</string>
+    <string name="profile_home_gdpr">Personvern og samtykke</string>
+    <string name="profile_home_delete_profile">Trekk tilbake samtykke og slett profil</string>
+    <string name="profile_home_feedback">Tilbakemelding</string>
+    <string name="profile_home_logout">Logg ut</string>
+    <string name="profile_home_change">Endre</string>
+    <string name="profile_personalsettings_dob">Fødselsdato</string>
+    <string name="profile_personalsettings_gender">Kjønn</string>
+    <string name="profile_personalsettings_address">Adresse</string>
+    <string name="profile_personalsettings_telefone">Telefonnummer</string>
+    <string name="login_biometric_helptext">Logg inn</string>
+    <string name="login_error_wrongpin">Feil PIN-kode, vennligst prøv igjen</string>
+    <string name="login_faceid_button">Face ID</string>
+    <string name="login_touchid_button">Touch ID</string>
+    <string name="login_biometric_registration_helptext">Biometrisk registrering</string>
+    <string name="login_pin_new_header">Skriv ny PIN-kode</string>
+    <string name="login_pin_confirm">Bekreft PIN-kode</string>
+    <string name="general_error_api_generic">Noe gikk galt. Prøv igjen senere</string>
+    <string name="general_error_api_timeout">Server tar for lang tid å svare. Vennligst prøv etter en gang</string>
+    <string name="general_view_loading">Vennligst vent</string>
+    <string name="general_view_timeprefix">kl.</string>
+    <string name="general_view_next">Neste</string>
+    <string name="general_view_ok">Ok</string>
+    <string name="general_view_cancel">Avbryt</string>
+    <string name="general_view_yes">Ja</string>
+    <string name="general_view_no">Nei</string>
+    <string name="general_view_alert_title">Hei</string>
+    <string name="general_push_reminder_title">Påminnelse om å ta medisin</string>
+    <string name="general_push_foreground_service_description">Helseboka medisin påminnelsestjeneste kjører</string>
+    
+
+    <string name="onboarding_continue_title">Gå videre</string>
+    <string name="onboarding_first_title">Kommuniser direkte med fastlegen din</string>
+    <string name="onboarding_second_title">Bestill time hos fastlegen</string>
+    <string name="onboarding_third_title">Få oversikt over medisinene dine</string>
+
+    <!--BankID/BankIDMobile option view-->
+    <string name="login_bankid_button">BankID</string>
+    <string name="login_bankid_mobile_button">BankID for mobil</string>
+    <string name="login_bankid_option_help">Hopp over</string>
+    <string name="login_bankid_option_title">Logg inn med</string>
+
+    <!--PIN/TouchID registration option-->
+    <string name="startup_registration_option_title">Velg innlogging</string>
+    <string name="startup_registration_option_subtitle">Hvordan vil du låse opp appen etter at den har vært inaktiv?</string>
+    <string name="startup_registration_option_touchid">TouchID</string>
+    <string name="startup_registration_option_pin">PIN-kode</string>
+
+    <!--TouchID Authentication-->
+    <string name="touchid_dialog_title">Fingeravtrykk Verification</string>
+    <string name="touchid_dialog_description">Bekreft fingeravtrykk for å fortsette</string>
+    <string name="touchid_registration_failure">Kan ikke bekrefte fingeravtrykk. Vennligst prøv igjen eller fortsett med PIN-kode</string>
+    <string name="touchid_login_failure">Kan ikke bekrefte fingeravtrykk. Trykk Ja for å prøve igjen eller fortsette med bankID</string>
+
+    <!--Doctor selection view-->
+    <string name="startup_doctor_selection_placeholder">Skriv navn du vil søke på her</string>
+
+    <!--Enter pin view-->
+    <string name="login_pin_header">Skriv inn PIN-kode</string>
+    <string name="startup_enterPin_forgotPIN">Glemt PIN-kode?</string>
+
+    <!--Chat home view-->
+    <string name="chat_home_title">Dialog</string>
+    <string name="chat_home_newChat_title">Nytt spørsmål</string>
+
+    <!--Chat chatView-->
+    <string name="chat_chatview_placeholder">Skriv din melding …</string>
+    <string name="chat_chatview_send_message">Svar</string>
+
+    <!--Chat new chat creation-->
+    <string name="chat_newchat_to">Til:</string>
+    <string name="chat_newchat_to_placeholder">To: Choose receiver here...</string>
+    <string name="chat_newchat_subject_hint">Tema:</string>
+    <string name="chat_newchat_body_hint">Ditt spørsmål…</string>
+    <string name="chat_newchat_doctor_hint">Velg lege dersom du har medisinske spørsmål: om sykdom, symptomer, medisiner, sykemelding etc.</string>
+    <string name="chat_newchat_medical_center_hint">Velg legekontoret dersom du har praktiske spørsmål til helsesekretærene om timebestilling, labtjenester, status på prøver eller tilsvarende</string>
+    <string name="chat_newchat_button_title">Send</string>
+    <string name="chat_newchat_alert_message">NB: Du vil kunne få opptil en faktura per forespørsel du sender til din lege her inntil du får et frikort som dekker dette.</string>
+
+    <!--Medicine home view-->
+    <string name="medicine_home_title">Medisiner</string>
+    <string name="medicine_renew_prescription_title">Følgende melding vil bli sendt til legen din:</string>
+    <string name="medicine_renew_prescription_message">Jeg ønsker å fornye min resept på:</string>
+    <string name="medicine_renew_prescription_footer_text">Merk at det kan ta 2-3 virkedager før ny resept er tilgjengelig hos apoteket.\n\nDu vil finne denne meldingen og eventuelt svar fra legen i Legedialog.</string>
+    <string name="medicine_renew_prescription_button">Send</string>
+    <string name="medicine_home_search_hint">Legg til medisin</string>
+
+    <!--Medicine overview view -->
+    <string name="medicine_overview_external_link_title">Les mer på Felleskatalogen.no</string>
+    <string name="medicine_overview_add_to_profile_button">Legg til i profilen min</string>
+    <string name="medicine_overview_confirm_delete_title">Vil du fjerne medisinen fra listen?</string>
+    <string name="medicine_overview_confirm_delete_message">Med dette vil medisinen forsvinne fra medisinoversikten din i Helseboka.</string>
+
+    <!--Medicine alarmView view -->
+    <string name="medicine_alarmview_save">Lagre</string>
+    <string name="medicine_alarmview_alarm">Alarm</string>
+    <string name="medicine_alarmview_add_medicine_header">Andre medisiner som tas på samme tidspunkt:</string>
+    <string name="medicine_alarmview_add_medicine_title">Legg til flere</string>
+    <string name="medicine_alarmview_add_reminder_header">Tidspunkt</string>
+    <string name="medicine_alarmview_add_reminder_title">Sett ny tidspunkt</string>
+    <string name="medicine_alarmview_select_medicine_title">Velg medisin som skal tas samtidig med</string>
+    <string name="medicine_alarmview_conflict_reminder_title">Du har allerede satt en påminnelse for følgende medisin:</string>
+
+    <!--Appointment home view -->
+    <string name="appointment_home_title">Timer</string>
+    <string name="appointment_home_new_appointment">Bestill ny time</string>
+
+    <!--Appointment details view -->
+    <string name="appointment_details_title">Legetime</string>
+    <string name="appointment_details_doctor_message_label">Beskjed fra legekontor/legen:</string>
+    <string name="appointment_details_symptom_header">Du skrev:</string>
+
+    <!--Appointment date selection view-->
+    <string name="appointment_dateselection_title">Når ønsker du legetime?</string>
+    <string name="appointment_dateselection_subtitle">Velg hvilke dager og tider på dagen det passer best med legetime. Du kan bruke et av Tema-feltene på neste side til å beskrive nærmere når det passer.</string>
+    <string name="appointment_dateselection_earlyday_label">Tidlig på dagen</string>
+    <string name="appointment_dateselection_earlyday_value">ca 08.00-10:00</string>
+    <string name="appointment_dateselection_midday_label">Midt på dagen</string>
+    <string name="appointment_dateselection_midday_value">ca 10.00-13.00</string>
+    <string name="appointment_dateselection_lateday_label">Sent på dagen</string>
+    <string name="appointment_dateselection_lateday_value">ca 13.00-15.00</string>
+    <string name="appointment_dateselection_help">Ved behov for rask helsehjelp på dagtid, vennligst ring legekontoret på telefon</string>
+
+     <!--Appointment date selection view-->
+    <string name="appointment_symptom_selection_title">Hva ønsker du å ta opp med legen?</string>
+    <string name="appointment_symptom_selection_add_more">Legg til flere</string>
+    <string name="appointment_symptom_selection_hint_1">For eks. influensa</string>
+    <string name="appointment_symptom_selection_hint_2">For eks. prevensjon</string>
+
+    <!--Appointment confirmation view-->
+    <string name="appointment_confirmation_title">Timebestillingen er sendt.</string>
+    <string name="appointment_confirmation_notenabled_title">Timebestilligen ble ikke sendt.</string>
+    <string name="appointment_confirmation_help">Forespørselen behandles så snart som mulig av legekontoret. Du vil motta bekreftelse i appen. \n\n<font color="#cf2323">Husk å slå på varsler for Helseboka så slipper du å glemme timen!</font></string>
+
+     <!--Profile personal settings view-->
+    <string name="profile_personal_settings_save">LAGRE</string>
+
+    <!--Notification-->
+    <string name="channel_name">Medisin påminnelse</string>
+    <string name="channel_description">Varsel om påminnelser om å ta medisin</string>
+
+    <!--ConfigUrlSelection-->
+    <string name="config_header_title">Miljøinnstillinger</string>
+    <string name="config_title_1">Velg Miljø</string>
+    <string name="config_server_dev">DEV</string>
+    <string name="config_server_test">TEST</string>
+    <string name="config_server_stag">STAGING</string>
+    <string name="config_server_prod">PROD</string>
+    <string name="config_title_2">Velg BankID-system</string>
+    <string name="config_bankid_preprod">PREPROD</string>
+    <string name="config_bankid_prod">PROD</string>
+    <string name="config_btn_continue">Fortsett å logge inn</string>
+    <string name="config_err_label">Velg hvilken som helst 1 fra hver gruppe</string>
+
+    <!--Terms-->
+    <string name="terms_page_title">SAMTYKKEERKLÆRING</string>
+    <string name="terms_continue_button">Godkjenn</string>
+    <string name="terms_text_showmore">Les mer</string>
+    <string name="terms_text_showless">Lukk</string>
+
+    <!--ForceUpdate-->
+    <string name="update_page_title">Hei</string>
+    <string name="update_update_buttonText">Oppdater</string>
+    <string name="update_close_buttonText">Lukk</string>
+    <string name="update_NotNow_buttonText">Ikke nå</string>
+
+    <!--MobilePhoneNumber-->
+    <string name="mobilephone_number_text">Registrer ditt mobilnummer. Nummeret vil sendes med meldingene du sender fra Helseboka.</string>
+    <string name="mobilephone_number_errormessage_hint">Skriv inn ditt mobilnummer</string>
+    <string name="mobilephone_number_errormessagetext_hint">Vennligst skriv inn gyldig telefonnummer</string>
+    <string name="mobilephone_number_popup_title">Mobilnummer mangler</string>
+
+</resources>

@@ -1,0 +1,107 @@
+﻿"Today" = "I dag";
+"Tomorrow" = "I morgen";
+"Yesterday" = "I går";
+"Monday" = "Mondag";
+"Tuesday" = "Tirsdag";
+"Wednesday" = "Onsdag";
+"Thursday" = "Torsdag";
+"Friday" = "Fredag";
+"Saturday" = "Lørdag";
+"Sunday" = "Søndag";
+
+"Dashboard.Appointment.Title" = "Du har fått time hos";
+"Dashboard.Appointment.NoData" = "Jeg har ingen viktige beskjeder til deg";
+"Dashboard.Alarm.Confirmation.Title" = "Bekreftelse";
+"Dashboard.Alarm.Confirmation.Message" = "Jeg har tatt denne medisinen nå.";
+"Dashboard.Alarm.Confirmation.Yes" = "Bekreft";
+
+"Chat.Dialog.Title.Doctor" = "Lege";
+"Chat.Dialog.Title.Office" = "Legekontoret";
+"Chat.NewDialog.Placeholder" = "Ditt spørsmål";
+
+"Home.TabBar.Chat.Title" = "DIALOG";
+"Home.TabBar.Appointment.Title" = "TIMER";
+"Home.TabBar.Medicine.Title" = "MEDISINER";
+"Home.TabBar.Profile.Title" = "PROFIL";
+"Home.TabBar.Dashboard.Title" = "AKTUELT";
+
+"Appointment.Home.Pending.Title" = "Ikke bekreftet enda";
+"Appointment.Home.Cancelled.Title" = "Avbestilt";
+"Appointment.Details.Symptom.Title" = "Tema";
+"Appointment.New.SelectTime.HelpText" = "Ved behov for rask helsehjelp på dagtid, vennligst ring legekontoret på telefon";
+"Appointment.Details.Feedback.Button" = "Avbestill";
+"Appointment.Home.Header.Upcomming" = "Kommende timer";
+"Appointment.Home.Header.Previous" = "Tidligere timer";
+"Appointment.New.SelectTime.Monday" = "Man";
+"Appointment.New.SelectTime.Tuesday" = "Tir";
+"Appointment.New.SelectTime.Wednesday" = "Ons";
+"Appointment.New.SelectTime.Thursday" = "Tor";
+"Appointment.New.SelectTime.Friday" = "Fre";
+"Appointment.Confirmation.NotEnabled.Title" = "Timebestilligen ble ikke sendt.";
+
+"Medicine.Reminder.Monday" = "M";
+"Medicine.Reminder.Tuesday" = "T";
+"Medicine.Reminder.Wednesday" = "O";
+"Medicine.Reminder.Thursday" = "T";
+"Medicine.Reminder.Friday" = "F";
+"Medicine.Reminder.Saturday" = "L";
+"Medicine.Reminder.Sunday" = "S";
+"Medicine.Reminder.EndDate.Undefined" = "undefinert";
+"Medicine.Reminder.Alert.NoMedicine" = "Du har ingen medisin i listen din. Vennligst legg til dem først";
+"Medicine.Reminder.SelectFrequency.Title" = "Velg tid";
+"Medicine.Reminder.SelectStartDate" = "Velg startdato";
+"Medicine.Reminder.SelectEndDate" = "Velg sluttdato";
+"Medicine.Home.Button.RenewPrescription" = "Forny resept";
+"Medicine.Overview.AlarmLabel.Add.Title" = "Sett påminnelse";
+"Medicine.Overview.AlarmLabel.Edit.Title" = "Rediger påminnelse";
+"Medicine.Overview.Monday" = "M";
+"Medicine.Overview.Tuesday" = "Ti";
+"Medicine.Overview.Wednesday" = "O";
+"Medicine.Overview.Thursday" = "To";
+"Medicine.Overview.Friday" = "F";
+"Medicine.Overview.Saturday" = "L";
+"Medicine.Overview.Sunday" = "S";
+"Medicine.Home.HelpText" = "Her kan du legge inn og få oversikt over medisiner du bruker, få hjelp til å huske å ta dem til rett tid, samt be legen om å få fornyet resept på dine faste medisiner.";
+
+"Profile.Doctor.Details.Mobile" = "Tlf";
+"Profile.Home.PersonalSettings" = "Dine personlige innstillinger";
+"Profile.Home.MedicalCenter" = "Legekontor";
+"Profile.Home.Doctor" = "Lege";
+"Profile.Home.ChangePIN" = "PIN-kode";
+"Profile.Home.GDPR" = "Personvern og samtykke";
+"Profile.Home.Logout" = "Logg ut";
+"Profile.Home.DeleteProfile" = "Trekk tilbake samtykke og slett profil";
+"Profile.Home.Feedback" = "Tilbakemelding";
+"Profile.Home.Change" = "Endre";
+"Profile.PersonalSettings.DOB" = "Fødselsdato";
+"Profile.PersonalSettings.Gender" = "Kjønn";
+"Profile.PersonalSettings.Address" = "Adresse";
+"Profile.PersonalSettings.Telefone" = "Telefonnummer";
+"Profile.PersonalSettings.ErrorMessage" = "Skriv inn ditt mobilnummer";
+"Profile.PersonalSettings.ErrorMessageText" = "Vennligst skriv inn gyldig telefonnummer";
+
+"Login.Biometric.HelpText" = "Logg inn";
+"Login.Error.WrongPIN" = "Feil PIN-kode, vennligst prøv igjen";
+"Login.FaceID.Button" = "Face ID";
+"Login.TouchId.Button" = "Touch ID";
+"Login.Biometric.Registration.HelpText" = "Biometrisk registrering";
+"Login.PIN.New.Header" = "Skriv inn PIN-kode";
+"Login.PIN.Confirm" = "Bekreft pin";
+
+"General.Error.API.Generic" = "Noe gikk galt. Prøv igjen senere";
+"General.Error.API.Timeout" = "Server tar for lang tid å svare. Vennligst prøv etter en gang";
+"General.View.Loading" = "Vennligst vent...";
+"General.View.TimePrefix" = "kl.";
+"General.View.Next" = "Neste";
+"General.View.Cancel" = "Avbryt";
+"General.Push.Reminder.Title" = "Påminnelse om å ta medisin";
+
+"Update.Title.Text"="Hei";
+"Update.UpdateButton.Text"="Oppdater";
+"Update.CloseButton.Text"="Lukk";
+"Update.NotNowButton.Text"="Ikke nå";
+
+"Terms.Page.Title" = "Samtykkeerklæring";
+"Terms.ContinueButton.Text" = "Godkjenn";
+"Terms.ShowMore.Text" = "Les mer";
+"Terms.ShowLess.Text" = "Lukk";

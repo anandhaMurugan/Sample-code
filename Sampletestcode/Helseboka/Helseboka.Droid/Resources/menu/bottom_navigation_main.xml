@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+  <item
+      android:id="@+id/menu_dashboard"
+      android:enabled="true"
+      android:showAsAction="ifRoom"
+      android:icon="@drawable/dashboard_inactive"
+      android:title="@string/home_tabbar_dashboard_title" />
+ 
+  <item
+      android:id="@+id/menu_appointment"
+      android:enabled="true"
+      android:showAsAction="ifRoom"
+      android:icon="@drawable/appointment_inactive"
+      android:title="@string/home_tabbar_appointment_title" />
+ 
+  <item
+      android:id="@+id/menu_chat"
+      android:enabled="true"
+      android:showAsAction="ifRoom"
+      android:icon="@drawable/chat_inactive"
+      android:title="@string/home_tabbar_chat_title" />
+
+    <item
+      android:id="@+id/menu_medicine"
+      android:enabled="true"
+      android:showAsAction="ifRoom"
+      android:icon="@drawable/medicine_inactive"
+      android:title="@string/home_tabbar_medicine_title" />
+
+    <item
+      android:id="@+id/menu_profile"
+      android:enabled="true"
+      android:showAsAction="ifRoom"
+      android:icon="@drawable/profile_inactive"
+      android:title="@string/home_tabbar_profile_title" />
+</menu>

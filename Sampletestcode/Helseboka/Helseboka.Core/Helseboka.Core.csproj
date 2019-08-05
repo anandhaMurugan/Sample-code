@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\packages\Xamarin.Forms.3.4.0.1008975\build\Xamarin.Forms.props" Condition="Exists('..\..\packages\Xamarin.Forms.3.4.0.1008975\build\Xamarin.Forms.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ED8BE8F6-C3ED-45A8-BEB5-72F924D49F24}</ProjectGuid>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Helseboka.Core</RootNamespace>
+    <AssemblyName>Helseboka.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore_Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;APP_STORE;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore_Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>APP_STORE;</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Test_Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Test_Debug\</OutputPath>
+    <DefineConstants>DEBUG;TEST;</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Test_Release|AnyCPU'">
+    <OutputPath>bin\Test_Release\</OutputPath>
+    <Optimize>true</Optimize>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <DefineConstants>TEST;</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Common\CommonImpl\DeviceDetails.cs" />
+    <Compile Include="MobilephoneNumber\Interface\IMobilePhoneNumberPresenter.cs" />
+    <Compile Include="MobilephoneNumber\Presenter\MobilePhoneNumberPresenter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BankAuthApi.cs" />
+    <Compile Include="DataApi.cs" />
+    <Compile Include="MessageApi.cs" />
+    <Compile Include="Startup\Interface\IUrlPresenter.cs" />
+    <Compile Include="Startup\Presenter\UrlPresenter.cs" />
+    <Compile Include="Terms\DataAccess\TermsDataHandler.cs" />
+    <Compile Include="Terms\Interface\ITermsAPI.cs" />
+    <Compile Include="Terms\Interface\ITermsPresenter.cs" />
+    <Compile Include="Terms\Model\ParagraphInfo.cs" />
+    <Compile Include="Terms\Model\TermsAndParagraphs.cs" />
+    <Compile Include="Terms\Model\TermsInfo.cs" />
+    <Compile Include="Terms\Model\TermsListModel.cs" />
+    <Compile Include="Terms\Presenter\TermsPresenter.cs" />
+    <Compile Include="UpdateApp\DataAccess\UpdateVersionDataHandlers.cs" />
+    <Compile Include="UpdateApp\Interface\IUpdatePresenter.cs" />
+    <Compile Include="UpdateApp\Model\UpdateAppModel.cs" />
+    <Compile Include="UpdateApp\Presenter\UpdatePresenter.cs" />
+    <Compile Include="UserApi.cs" />
+    <Compile Include="Models\AuthStartModel.cs" />
+    <Compile Include="Models\DataModels.cs" />
+    <Compile Include="Models\MessageModel.cs" />
+    <Compile Include="Models\UserModel.cs" />
+    <Compile Include="Common\Interfaces\IHttpClient.cs" />
+    <Compile Include="Common\CommonImpl\RESTClient.cs" />
+    <Compile Include="Common\Interfaces\ISerializer.cs" />
+    <Compile Include="Common\CommonImpl\JSONSerializer.cs" />
+    <Compile Include="Common\Model\Response.cs" />
+    <Compile Include="Common\EnumDefinitions\APIError.cs" />
+    <Compile Include="Common\EnumDefinitions\ClientError.cs" />
+    <Compile Include="Common\Interfaces\IConfig.cs" />
+    <Compile Include="Common\CommonImpl\DevConfig.cs" />
+    <Compile Include="Common\Constant\APIConstant.cs" />
+    <Compile Include="Common\NetworkAccess\BasicAPIhandler.cs" />
+    <Compile Include="Startup\Presenter\SplashPresenter.cs" />
+    <Compile Include="Startup\Interface\ISplashPresenter.cs" />
+    <Compile Include="Common\Interfaces\IBaseView.cs" />
+    <Compile Include="Common\Interfaces\IBasePresenter.cs" />
+    <Compile Include="Common\Interfaces\IBaseRouter.cs" />
+    <Compile Include="Startup\Interface\IStartupRouter.cs" />
+    <Compile Include="Login\Interface\ILoginPresenter.cs" />
+    <Compile Include="Login\Interface\ILoginRouter.cs" />
+    <Compile Include="Login\Presenter\LoginPresenter.cs" />
+    <Compile Include="Common\Presenter\BasePresenter.cs" />
+    <Compile Include="Common\Extension\StringExtension.cs" />
+    <Compile Include="Common\Model\HelpFAQDataModel.cs" />
+    <Compile Include="Legedialog\Interface\ILegedialogListPresenter.cs" />
+    <Compile Include="Legedialog\Presenter\LegedialogListPresenter.cs" />
+    <Compile Include="Legedialog\Interface\IChatRouter.cs" />
+    <Compile Include="Legedialog\Interface\IMessagingAPI.cs" />
+    <Compile Include="Legedialog\DataAccess\MessagingDataHandler.cs" />
+    <Compile Include="Common\Interfaces\IDeviceHandler.cs" />
+    <Compile Include="Auth\Model\AuthService.cs" />
+    <Compile Include="Common\Model\ApplicationCore.cs" />
+    <Compile Include="Auth\Model\AuthStartResponse.cs" />
+    <Compile Include="Common\Interfaces\IMedisineAPI.cs" />
+    <Compile Include="Auth\DataAccess\AuthDataHandler.cs" />
+    <Compile Include="Auth\Interface\IAuthAPI.cs" />
+    <Compile Include="Common\Constant\AppConstant.cs" />
+    <Compile Include="Common\Constant\APIEndPoints.cs" />
+    <Compile Include="Common\DataAccess\BaseDataHandler.cs" />
+    <Compile Include="Auth\Model\AuthenticateResponse.cs" />
+    <Compile Include="Common\Extension\TaskExtension.cs" />
+    <Compile Include="Startup\Interface\ISignupPresenter.cs" />
+    <Compile Include="Startup\Presenter\SignupPresenter.cs" />
+    <Compile Include="Common\Interfaces\ISecureDataStorage.cs" />
+    <Compile Include="Common\Interfaces\ICrypto.cs" />
+    <Compile Include="Startup\Presenter\DoctorSelectionPresenter.cs" />
+    <Compile Include="Profile\Model\User.cs" />
+    <Compile Include="Profile\Interface\IUserAPI.cs" />
+    <Compile Include="Profile\DataAccess\ProfileDataHandler.cs" />
+    <Compile Include="Common\Model\MedicalCenter.cs" />
+    <Compile Include="Common\Model\Doctor.cs" />
+    <Compile Include="Common\Interfaces\IARService.cs" />
+    <Compile Include="Common\DataAccess\ARDataHandler.cs" />
+    <Compile Include="Common\Model\PaginationResponse.cs" />
+    <Compile Include="Legedialog\Model\MessageThread.cs" />
+    <Compile Include="Legedialog\Model\LegeDialogManager.cs" />
+    <Compile Include="Legedialog\Model\ChatMessage.cs" />
+    <Compile Include="Common\Extension\DateExtension.cs" />
+    <Compile Include="Common\EnumDefinitions\Enums.cs" />
+    <Compile Include="Legedialog\Presenter\ChatPresenter.cs" />
+    <Compile Include="Legedialog\Interface\IChatPresenter.cs" />
+    <Compile Include="Legedialog\Model\SendMessageRequest.cs" />
+    <Compile Include="Legedialog\Interface\INewLegeDialogPresenter.cs" />
+    <Compile Include="Legedialog\Presenter\NewLegeDialogPresenter.cs" />
+    <Compile Include="MedicineModule\Interface\IMedicineRouter.cs" />
+    <Compile Include="Common\Model\BaseDummyRequest.cs" />
+    <Compile Include="Legedialog\Model\CreateThreadRequest.cs" />
+    <Compile Include="MedicineModule\Interface\IMedicineHomePresenter.cs" />
+    <Compile Include="MedicineModule\Presenter\MedicineHomePresenter.cs" />
+    <Compile Include="MedicineModule\DataAccess\MedicineDataHandler.cs" />
+    <Compile Include="MedicineModule\Interface\IMedicineAPI.cs" />
+    <Compile Include="MedicineModule\Model\MedicineManager.cs" />
+    <Compile Include="MedicineModule\Model\MedicineInfo.cs" />
+    <Compile Include="MedicineModule\Interface\IMedicineAlarmPresenter.cs" />
+    <Compile Include="MedicineModule\Model\AddMedicineRequest.cs" />
+    <Compile Include="MedicineModule\Model\ReminderInfo.cs" />
+    <Compile Include="MedicineModule\Model\MedicineReminder.cs" />
+    <Compile Include="Common\Extension\ClassExtensions.cs" />
+    <Compile Include="Common\Model\SelectableEntityCollection.cs" />
+    <Compile Include="AppointmentModule\Model\AppointmentInfo.cs" />
+    <Compile Include="AppointmentModule\Model\AppointmentDetails.cs" />
+    <Compile Include="AppointmentModule\Interface\IAppointmentAPI.cs" />
+    <Compile Include="AppointmentModule\DataAccess\AppointmentDataHandler.cs" />
+    <Compile Include="AppointmentModule\Presenter\AppointmentPresenter.cs" />
+    <Compile Include="AppointmentModule\Interface\IAppointmentRouter.cs" />
+    <Compile Include="AppointmentModule\Interface\IAppointmentPresenter.cs" />
+    <Compile Include="Profile\Interface\IProfilePresenter.cs" />
+    <Compile Include="Profile\Presenter\ProfilePresenter.cs" />
+    <Compile Include="Profile\Interface\IProfileRouter.cs" />
+    <Compile Include="Profile\Model\AddPushNotificationTokenRequest.cs" />
+    <Compile Include="Common\Interfaces\INotificationService.cs" />
+    <Compile Include="AppointmentModule\Model\AppointmentCollection.cs" />
+    <Compile Include="Dashboard\Interface\IDashboardPresenter.cs" />
+    <Compile Include="Dashboard\Presenter\DashboardPresenter.cs" />
+    <Compile Include="Common\Model\GetAlarmResponse.cs" />
+    <Compile Include="MedicineModule\Model\AlarmDetails.cs" />
+    <Compile Include="MedicineModule\Model\AlarmInfo.cs" />
+    <Compile Include="MedicineModule\Model\RenewPrescriptionRequest.cs" />
+    <Compile Include="Common\CommonImpl\BCCryptoHandler.cs" />
+    <Compile Include="HelpAndFAQ\DataAccess\HelpDataHandler.cs" />
+    <Compile Include="Common\EnumDefinitions\HelpFAQType.cs" />
+    <Compile Include="HelpAndFAQ\Interface\IHelpFAQDataAccess.cs" />
+    <Compile Include="HelpAndFAQ\Model\HelpFAQManager.cs" />
+    <Compile Include="Common\Interfaces\ICloneable.cs" />
+    <Compile Include="Resources\StringResources\AppResources.Designer.cs">
+      <DependentUpon>AppResources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\StringResources\AppResources.no.Designer.cs">
+      <DependentUpon>AppResources.no.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Common\CommonImpl\UnityContainerImpl.cs" />
+    <Compile Include="Common\Interfaces\IContainer.cs" />
+    <Compile Include="Common\Interfaces\ILogger.cs" />
+    <Compile Include="Common\CommonImpl\ConsoleLogger.cs" />
+    <Compile Include="Common\Interfaces\IAnalytics.cs" />
+    <Compile Include="Common\EnumDefinitions\HelsebokaEvent.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\packages\Newtonsoft.Json.11.0.2\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple">
+      <HintPath>..\..\packages\System.ValueTuple.4.5.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="CommonServiceLocator">
+      <HintPath>..\..\packages\Unity.5.8.11\lib\netstandard1.0\CommonServiceLocator.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ServiceLocation">
+      <HintPath>..\..\packages\Unity.5.8.11\lib\netstandard1.0\Unity.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation">
+      <HintPath>..\..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\netstandard1.1\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Abstractions">
+      <HintPath>..\..\packages\Unity.Abstractions.3.3.1\lib\netstandard1.0\Unity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Container">
+      <HintPath>..\..\packages\Unity.Container.5.8.11\lib\netstandard1.0\Unity.Container.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto">
+      <HintPath>..\..\packages\BouncyCastle.1.8.4\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter">
+      <HintPath>..\..\packages\Microsoft.AppCenter.1.11.0\lib\portable-net45+win8+wpa81+wp8\Microsoft.AppCenter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Analytics">
+      <HintPath>..\..\packages\Microsoft.AppCenter.Analytics.1.11.0\lib\portable-net45+win8+wpa81+wp8\Microsoft.AppCenter.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Crashes">
+      <HintPath>..\..\packages\Microsoft.AppCenter.Crashes.1.11.0\lib\portable-net45+win8+wpa81+wp8\Microsoft.AppCenter.Crashes.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.3.4.0.1008975\lib\netstandard1.0\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.3.4.0.1008975\lib\netstandard1.0\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.3.4.0.1008975\lib\netstandard1.0\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dashboard\Model\" />
+    <Folder Include="Login\Model\" />
+    <Folder Include="Startup\Model\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="HelpAndFAQ\Resource\en\ChatHome.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpAndFAQ\Resource\nb\ChatHome.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpAndFAQ\Resource\en\MedicineHome.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpAndFAQ\Resource\nb\MedicineHome.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpAndFAQ\Resource\en\AppointmentDateSelection.json" />
+    <EmbeddedResource Include="HelpAndFAQ\Resource\nb\AppointmentDateSelection.json" />
+    <EmbeddedResource Include="HelpAndFAQ\Resource\en\AppointmentSymptom.json" />
+    <EmbeddedResource Include="HelpAndFAQ\Resource\nb\AppointmentSymptom.json" />
+    <EmbeddedResource Include="HelpAndFAQ\Resource\en\AppointmentConfirmation.json" />
+    <EmbeddedResource Include="HelpAndFAQ\Resource\nb\AppointmentConfirmation.json" />
+    <EmbeddedResource Include="Resources\StringResources\AppResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\StringResources\AppResources.no.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.no.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpAndFAQ\Resource\en\ProfileHome.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpAndFAQ\Resource\nb\ProfileHome.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.3.4.0.1008975\build\Xamarin.Forms.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.3.4.0.1008975\build\Xamarin.Forms.props'))" />
+    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.3.4.0.1008975\build\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.3.4.0.1008975\build\Xamarin.Forms.targets'))" />
+  </Target>
+  <Import Project="..\..\packages\Xamarin.Forms.3.4.0.1008975\build\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.3.4.0.1008975\build\Xamarin.Forms.targets')" />
+</Project>
